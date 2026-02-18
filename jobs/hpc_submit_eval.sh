@@ -20,7 +20,7 @@ conda activate adaptation
 
 # Set variables
 MODEL_TYPE="mistral_small"
-DATASET="test"
+DATASET="mmlu-arabic"
 
 # Copy outputs into designated directory
 LOGS_DIR=/scratch/mk8737/farah/Adaptation/logs/${MODEL_TYPE}_${DATASET}_${SLURM_JOB_ID}
@@ -28,7 +28,7 @@ mkdir -p $LOGS_DIR
 
 # Main Command
 source .env
-python scripts/run_evaluation.py configs/task1/${MODEL_TYPE}.yaml
+python scripts/run_evaluation.py configs/task1/${MODEL_TYPE}_${DATASET}.yaml
 
 # Cleanup: Move logs to the designated directory
 mv /scratch/mk8737/farah/Adaptation/tmp_logs/job_${SLURM_JOB_ID}.out $LOGS_DIR/job_${SLURM_JOB_ID}.out
