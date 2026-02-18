@@ -14,7 +14,7 @@ from transformers import (
 
 HF_CACHE = "/scratch/ca2627/huggingface"
 
-os.environ["HF_HOME"] = HF_CACHE
+os.environ.setdefault("HF_HOME", HF_CACHE)  # Only set if not already set
 os.environ["HF_HUB_OFFLINE"] = "1"
 
 os.environ.setdefault("CUDA_LAUNCH_BLOCKING", "1")

@@ -20,7 +20,7 @@ cache*/
 **/refs/
 
 # outputs / logs
-results/
+# results/
 figures/
 evaluations/
 *.log

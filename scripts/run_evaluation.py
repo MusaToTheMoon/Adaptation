@@ -12,7 +12,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+from dotenv import load_dotenv
+load_dotenv()
 
+import os
+print(f"-3 HF_HOME={os.environ.get('HF_HOME')}")
 
 import json
 import logging
@@ -20,12 +24,25 @@ import atexit
 import signal
 from pathlib import Path
 
+print(f"11 HF_HOME={os.environ.get('HF_HOME')}")
+
 from tqdm import tqdm
 from scripts.utils import load_config, save_predictions
+
+print(f"12 HF_HOME={os.environ.get('HF_HOME')}")
+
 from models import load_model_handler
+
+print(f"13 HF_HOME={os.environ.get('HF_HOME')}")
+
 from evals.evaluator import evaluate, split_prediction
 
+print(f"14 HF_HOME={os.environ.get('HF_HOME')}")
+
+
 SAVE_EVERY = 50
+
+print(f"-2 HF_HOME={os.environ.get('HF_HOME')}")
 
 
 def build_mcq_text(item: dict) -> str:
@@ -66,6 +83,7 @@ def run_experiment(config_path):
         raise ValueError(f"unsupported task.type:{task_type} expected mcq only")
 
     logging.info(f"initializing model:{config['model']['name']}")
+    print(f"-1 HF_HOME={os.environ.get('HF_HOME')}")
     model_handler = load_model_handler(config)
 
     logging.info(f"loading dataset from {config['dataset']['path']}")

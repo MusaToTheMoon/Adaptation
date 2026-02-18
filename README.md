@@ -88,6 +88,15 @@ Make sure the required API keys are set as environment variables:
 ```bash
 export OPENAI_API_KEY="your_openai_api_key_here"
 ```
+#### HuggingFace
+
+Ensure appropriate huggingface model is downloaded and present in the path pointed to by $HF_HOME env var. 
+
+If not already present, you should run the script with offline=False the first time, allowing for the model to be cached and should run with offline=True in subsequence runs.
+
+Alternatively, you may separately download the model into `$HF_HOME` prior to using it over hpc compute nodes. You can do this by unsetting `HF_HUB_OFFLINE`, then downloading the model, and finally resetting `HF_HUB_OFFLINE=1`.
+
+Exact command for downloading through the terminal: `python -c "from transformers import Mistral3ForConditionalGeneration; Mistral3ForConditionalGeneration.from_pretrained('mistralai/Mistral-Small-3.2-24B-Instruct-2506', device_map='cpu')"`
 
 ### Configure the Experiment
 
@@ -97,7 +106,6 @@ Each config defines:
 * model type and model name
 * dataset paths
 * prompt/task settings
-
 
 ### Run the Experiment
 

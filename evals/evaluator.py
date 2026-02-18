@@ -7,7 +7,7 @@ import json
 import sys
 import pandas as pd
 
-from evaluations.metrics import (
+from evals.metrics import (
     calculate_accuracy,
     calculate_bleu,
     calculate_rouge,

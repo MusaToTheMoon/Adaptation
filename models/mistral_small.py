@@ -1,13 +1,19 @@
 import os
 import re
-import torch
 
+# SET HF_HOME **BEFORE** importing transformers/mistral libraries
+# Otherwise they read the system default during import
+HF_CACHE = "/scratch/mk8737/huggingface" # update this to a path on your system
+os.environ.setdefault("HF_HOME", HF_CACHE)  # Only set if not already set
+
+print(f"1 HF_HOME={os.environ.get('HF_HOME')}")
+
+import torch
 from mistral_common.protocol.instruct.request import ChatCompletionRequest
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 from transformers import Mistral3ForConditionalGeneration
 
-HF_CACHE = "/scratch/ca2627/huggingface"
-os.environ["HF_HOME"] = HF_CACHE
+print(f"2 HF_HOME={os.environ.get('HF_HOME')}")
 
 os.environ.setdefault("CUDA_LAUNCH_BLOCKING", "1")
 os.environ.setdefault("TORCH_USE_CUDA_DSA", "1")
@@ -28,6 +34,9 @@ class MistralSmallMCQHandler:
         offline: bool = True,
     ):
         print(f"[MistralSmallMCQ] Handler file: {__file__}")
+        
+        print(f"21 HF_HOME={os.environ.get('HF_HOME')}")
+
         print(f"[MistralSmallMCQ] HF_HOME={os.environ.get('HF_HOME')}")
         print(f"[MistralSmallMCQ] cache_dir={cache_dir}")
         print(f"[MistralSmallMCQ] offline={offline}")
