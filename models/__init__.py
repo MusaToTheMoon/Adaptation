@@ -1,6 +1,7 @@
 from .openai_handler import OpenAIHandler
 # do same here to import other model handlers !!!!!!!
 from .mistral_small import MistralSmallMCQHandler #first name is name of python file and second name is that of the class from mistral.py 
+from .mistral_7b import Mistral7BMCQHandler
 from .medgemma import MedGemma27BMCQHandler
 
 import os
@@ -35,6 +36,19 @@ def load_model_handler(config):
             model_name=model_cfg.get(
                 "name",
                 "mistralai/Mistral-Small-3.2-24B-Instruct-2506"
+            ),
+            cache_dir=model_cfg.get("cache_dir"),
+            offline=model_cfg.get("offline", True),
+        )
+
+    elif model_type == "mistral_7b":
+        print(f"cache_dir={model_cfg.get('cache_dir')}")
+        print(f"0 HF_HOME={os.environ.get('HF_HOME')}")
+
+        return Mistral7BMCQHandler(
+            model_name=model_cfg.get(
+                "name",
+                "mistralai/Mistral-7B-Instruct-v0.3"
             ),
             cache_dir=model_cfg.get("cache_dir"),
             offline=model_cfg.get("offline", True),
