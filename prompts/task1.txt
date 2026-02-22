@@ -8,6 +8,7 @@ ANSWER: <LETTER>
 
 Rules:
 - Output ONLY that line.
-- Do not explain or add any other text text.
-
-
+- Do NOT repeat or paraphrase the question.
+- Do NOT translate anything.
+- Do NOT explain your reasoning.
+- Do NOT list the options.

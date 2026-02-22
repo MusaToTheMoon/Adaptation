@@ -16,34 +16,18 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import os
-print(f"-3 HF_HOME={os.environ.get('HF_HOME')}")
-
 import json
 import logging
 import atexit
 import signal
 from pathlib import Path
-
-print(f"11 HF_HOME={os.environ.get('HF_HOME')}")
-
 from tqdm import tqdm
+
 from scripts.utils import load_config, save_predictions
-
-print(f"12 HF_HOME={os.environ.get('HF_HOME')}")
-
 from models import load_model_handler
-
-print(f"13 HF_HOME={os.environ.get('HF_HOME')}")
-
 from evals.evaluator import evaluate, split_prediction
 
-print(f"14 HF_HOME={os.environ.get('HF_HOME')}")
-
-
-SAVE_EVERY = 50
-
-print(f"-2 HF_HOME={os.environ.get('HF_HOME')}")
-
+# SAVE_EVERY = 50
 
 def build_mcq_text(item: dict) -> str:
     """Build a readable MCQ block from the new dataset schema."""
@@ -83,7 +67,6 @@ def run_experiment(config_path):
         raise ValueError(f"unsupported task.type:{task_type} expected mcq only")
 
     logging.info(f"initializing model:{config['model']['name']}")
-    print(f"-1 HF_HOME={os.environ.get('HF_HOME')}")
     model_handler = load_model_handler(config)
 
     logging.info(f"loading dataset from {config['dataset']['path']}")
@@ -187,7 +170,7 @@ def run_experiment(config_path):
                 {
                     "id": item_id,
                     "input": input_text,
-                    "prediction": pred_letter,     # <-- clean letter only
+                    "prediction": pred_letter,     
                     "ground_truth": letter_gt,
                 }
             )
@@ -195,9 +178,9 @@ def run_experiment(config_path):
 
 
 
-                if len(predictions) % SAVE_EVERY == 0:
-                    save_now(partial_path)
-                    logging.info(f"saved {len(predictions)} partial predictions to {partial_path}")
+                # if len(predictions) % SAVE_EVERY == 0:
+                #     save_now(partial_path)
+                #     logging.info(f"saved {len(predictions)} partial predictions to {partial_path}")
 
     else:
         logging.info("using prompt per-example")
@@ -233,21 +216,27 @@ def run_experiment(config_path):
             predictions.append(
             {
                 "id": item_id,
-                "input": input_text,
-                "prediction": pred_letter,     # <-- clean letter only
+                "question": (item.get("question") or "").strip(),
+                "opa": (item.get("opa") or "").strip(),
+                "opb": (item.get("opb") or "").strip(),
+                "opc": (item.get("opc") or "").strip(),
+                "opd": (item.get("opd") or "").strip(),
+                "ope": (item.get("ope") or "").strip() if item.get("ope") is not None else "",
+                "opf": (item.get("opf") or "").strip() if item.get("opf") is not None else "",
+                "prediction": pred_letter,
                 "ground_truth": letter_gt,
             }
         )
 
 
 
-            if len(predictions) % SAVE_EVERY == 0:
-                save_now(partial_path)
-                logging.info(f"saved {len(predictions)} partial predictions to {partial_path}")
+            # if len(predictions) % SAVE_EVERY == 0:
+            #     save_now(partial_path)
+            #     logging.info(f"saved {len(predictions)} partial predictions to {partial_path}")
 
     logging.info(f"saving predictions to {output_path}")
     save_now(output_path)
-    save_now(partial_path)
+    # save_now(partial_path)
 
     logging.info("starting evaluation")
     m = evaluate(output_path, metrics_path, "mcq")
