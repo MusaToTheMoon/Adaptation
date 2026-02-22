@@ -1,6 +1,6 @@
 # model dataset pairs for jobs/hpc_submit_eval_array.sh
 # format: model dataset
 
-mistral_7b arastem
-mistral_7b medarabench
-mistral_7b mmlu-arabic
+llama33_70b_inst arastem
+llama33_70b_inst medarabench
+llama33_70b_inst mmlu-arabic

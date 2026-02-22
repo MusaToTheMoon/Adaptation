@@ -67,6 +67,7 @@ mkdir -p "$LOGS_DIR"
 # Main Command
 cd "$PROJECT_ROOT"
 source .env
+export HF_HUB_ENABLE_HF_TRANSFER=1
 python scripts/run_evaluation.py "configs/task1/${MODEL_TYPE}_${DATASET}.yaml"
 
 # Cleanup: Move logs to the designated directory

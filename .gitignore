@@ -1,3 +1,7 @@
+# specific files
+foo.sh
+configs/task1/test.yaml
+
 # Python
 __pycache__/
 *.pyc
