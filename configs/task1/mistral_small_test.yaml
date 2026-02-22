@@ -24,5 +24,5 @@ task:
   type: ${constants.task.type}                #task 1: mcq or task 2: answer_generation
 
 output:
-  predictions_path: results/predictions/${constants.task.name}/${constants.dataset}/${constants.model.name}.csv #specify output pred file
-  metrics_path: results/metrics/${constants.task.name}/${constants.dataset}/${constants.model.name}.json  #specift output pred file
+  predictions_path: results/predictions/${constants.task.name}/${constants.dataset}/${constants.model.type}.csv #specify output pred file
+  metrics_path: results/metrics/${constants.task.name}/${constants.dataset}/${constants.model.type}.json  #specift output pred file
