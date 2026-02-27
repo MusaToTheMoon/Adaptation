@@ -1,9 +1,9 @@
 constants:
   model: 
-    type: mistral_small
-    name: mistralai/Mistral-Small-3.2-24B-Instruct-2506
-    offline: true
-  dataset: arastem
+    type: aya_expanse_8b
+    name: CohereLabs/aya-expanse-8b
+    offline: false
+  dataset: medarabiq
   task: 
     name: task1
     type: mcq

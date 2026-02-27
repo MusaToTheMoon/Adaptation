@@ -12,7 +12,7 @@ from transformers import (
     BitsAndBytesConfig,
 )
 
-HF_CACHE = "/scratch/ca2627/huggingface"
+HF_CACHE = "/scratch/mk8737/huggingface"
 
 os.environ.setdefault("HF_HOME", HF_CACHE)  # Only set if not already set
 os.environ["HF_HUB_OFFLINE"] = "1"
@@ -102,7 +102,38 @@ class Llama70MCQHandler:
     # ----------------------------
     # helpers (internal)
     # ----------------------------
-    def _extract_user_text(self, input_text: str):
+    def _extract_user_text(self, input_text):
+        if isinstance(input_text, dict):
+            stem = str(input_text.get("question") or "").strip()
+            if not stem:
+                return None
+
+            option_map = {
+                "A": input_text.get("opa"),
+                "B": input_text.get("opb"),
+                "C": input_text.get("opc"),
+                "D": input_text.get("opd"),
+                "E": input_text.get("ope"),
+                "F": input_text.get("opf"),
+            }
+
+            lines = []
+            for letter in ["A", "B", "C", "D", "E", "F"]:
+                txt = option_map.get(letter)
+                if txt is None:
+                    continue
+                txt = str(txt).strip()
+                if not txt:
+                    continue
+                lines.append(f"{letter}) {txt}")
+
+            if not lines:
+                return None
+
+            input_text = stem + "\n\n" + "\n".join(lines)
+        else:
+            input_text = str(input_text)
+
         options = re.findall(
             r"[A-F]\s*[\.\)]\s*.*?(?=\s+[A-F]\s*[\.\)]|\s*$)",
             input_text,
@@ -164,7 +195,7 @@ class Llama70MCQHandler:
     # batching support (FAST: model.generate)
     # ----------------------------
     def prompt_batch(self, input_texts, instruction: str, task_type=None, max_tokens: int = 68):
-        max_tokens = 120
+        max_tokens = 8 # originally set to 128
         system_prompt = self._system_prompt(instruction)
 
         prompt_strs = [None] * len(input_texts)

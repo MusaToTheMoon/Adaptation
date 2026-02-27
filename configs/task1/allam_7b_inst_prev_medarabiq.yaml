@@ -1,9 +1,9 @@
 constants:
   model: 
-    type: mistral_small
-    name: mistralai/Mistral-Small-3.2-24B-Instruct-2506
-    offline: true
-  dataset: arastem
+    type: allam_7b_inst_prev
+    name: humain-ai/ALLaM-7B-Instruct-preview
+    offline: false
+  dataset: medarabiq
   task: 
     name: task1
     type: mcq

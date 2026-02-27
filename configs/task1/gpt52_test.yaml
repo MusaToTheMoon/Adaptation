@@ -1,9 +1,10 @@
 constants:
   model: 
-    type: mistral_small
-    name: mistralai/Mistral-Small-3.2-24B-Instruct-2506
-    offline: true
-  dataset: arastem
+    type: gpt52
+    name: gpt-5.2
+    max_tokens: 16 # this is hardset to 64 or 128 in the script, because below that, GPT API just returns nothing for most MCQs
+
+  dataset: test
   task: 
     name: task1
     type: mcq
@@ -12,9 +13,10 @@ experiment_name: task1_${constants.model.type}
 
 model:
   type: ${constants.model.type}            #model handler type as written in models/__init__.py
-  name: ${constants.model.name}  # just as it appears in huggingface
-  cache_dir: /scratch/mk8737/huggingface #modify to your own cache directory
-  offline: ${constants.model.offline}     #set to true if you want to load model from local cache, false to download from HuggingFace
+  name: ${constants.model.name}  # OpenAI model name, e.g. gpt-5
+  # api_key: sk-...                  # optional; if omitted, OPENAI_API_KEY env var is used
+  max_tokens: ${constants.model.max_tokens}
+
 
 dataset:
   path: datasets/qa/${constants.dataset}.json   #path to dataset JSON file

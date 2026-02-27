@@ -1,9 +1,9 @@
 constants:
   model: 
-    type: mistral_small
-    name: mistralai/Mistral-Small-3.2-24B-Instruct-2506
-    offline: true
-  dataset: arastem
+    type: gemma3_27b_it
+    name: google/gemma-3-27b-it
+    offline: false
+  dataset: medarabiq
   task: 
     name: task1
     type: mcq

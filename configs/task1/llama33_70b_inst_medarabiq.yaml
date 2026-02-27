@@ -1,9 +1,9 @@
 constants:
   model: 
-    type: mistral_small
-    name: mistralai/Mistral-Small-3.2-24B-Instruct-2506
+    type: llama33_70b_inst
+    name: meta-llama/Llama-3.3-70B-Instruct
     offline: true
-  dataset: arastem
+  dataset: medarabiq
   task: 
     name: task1
     type: mcq
@@ -15,6 +15,9 @@ model:
   name: ${constants.model.name}  # just as it appears in huggingface
   cache_dir: /scratch/mk8737/huggingface #modify to your own cache directory
   offline: ${constants.model.offline}     #set to true if you want to load model from local cache, false to download from HuggingFace
+  load_in_4bit: true
+  batch_size: 2
+  max_tokens: 8
 
 dataset:
   path: datasets/qa/${constants.dataset}.json   #path to dataset JSON file
