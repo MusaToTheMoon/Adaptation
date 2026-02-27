@@ -1,17 +1,18 @@
 #!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=8
-#SBATCH --gres=gpu:a100:2
-#SBATCH -p nvidia
-#SBATCH --mem=64G
-#SBATCH -t 0-7:59:59
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=16G
+#SBATCH -t 23:00:00
 #SBATCH -o /scratch/mk8737/farah/Adaptation/tmp_logs/job_%j.out
 #SBATCH -e /scratch/mk8737/farah/Adaptation/tmp_logs/job_%j.err
 
-# make sure '/scratch/mk8737/farah/Adaptation/tmp_logs/' already exists before running this script; slurm won't create it automatically
-
 set -euo pipefail
+
+PROJECT_ROOT="/scratch/mk8737/farah/Adaptation"
+MODEL_TYPE="${1:-gpt52}"
+DATASET="${2:-test}"
+CONFIG_PATH="${PROJECT_ROOT}/configs/task1/${MODEL_TYPE}_${DATASET}.yaml"
 
 START_TS=$(date +%s)
 echo "START: $(date -Is)"
@@ -34,25 +35,14 @@ log_job_timing() {
 }
 trap log_job_timing EXIT
 
-if [[ $# -lt 2 ]]; then
-  echo "Usage: sbatch jobs/hpc_submit_eval_cli.sh <MODEL_TYPE> <DATASET>"
-  echo "Example: sbatch jobs/hpc_submit_eval_cli.sh mistral_7b test"
-  exit 1
-fi
-
-MODEL_TYPE="$1"
-DATASET="$2"
-
-PROJECT_ROOT="/scratch/mk8737/farah/Adaptation"
-CONFIG_PATH="${PROJECT_ROOT}/configs/task1/${MODEL_TYPE}_${DATASET}.yaml"
-
 if [[ ! -f "$CONFIG_PATH" ]]; then
   echo "Error: Config not found: $CONFIG_PATH"
+  echo "Usage: sbatch jobs/run_gpt5fam_hpc.sh [model_type] [dataset]"
+  echo "Example: sbatch jobs/run_gpt5fam_hpc.sh gpt52 test"
   exit 1
 fi
 
-module purge
-module load cuda/11.8.0
+cd "$PROJECT_ROOT"
 
 # Make sure Conda is initialised for non-interactive shells
 set +u
@@ -60,14 +50,22 @@ eval "$(/share/apps/NYUAD5/miniconda/3-4.11.0/bin/conda shell.bash hook)"
 conda activate adaptation
 set -u
 
+if [[ -f ".env" ]]; then
+  set -a
+  source .env
+  set +a
+fi
+
+if [[ -z "${OPENAI_API_KEY:-}" ]]; then
+  echo "Error: OPENAI_API_KEY is not set."
+  echo "Set it in shell or in ${PROJECT_ROOT}/.env"
+  exit 1
+fi
+
 # Copy outputs into designated directory
 LOGS_DIR=${PROJECT_ROOT}/logs/${MODEL_TYPE}_${DATASET}_${SLURM_JOB_ID}
 mkdir -p "$LOGS_DIR"
 
-# Main Command
-cd "$PROJECT_ROOT"
-source .env
-export HF_HUB_ENABLE_HF_TRANSFER=1
 python scripts/run_evaluation.py "configs/task1/${MODEL_TYPE}_${DATASET}.yaml"
 
 # Cleanup: Move logs to the designated directory

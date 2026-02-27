@@ -5,7 +5,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH -p nvidia
 #SBATCH --mem=32G
-#SBATCH -t 23:00:00
+#SBATCH -t 3-23:59:59
 #SBATCH -o /scratch/mk8737/farah/Adaptation/tmp_logs/job_%A_%a.out
 #SBATCH -e /scratch/mk8737/farah/Adaptation/tmp_logs/job_%A_%a.err
 
