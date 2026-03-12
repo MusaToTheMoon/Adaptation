@@ -189,3 +189,5 @@ def calculate_bert_score(
         }
     except Exception:
         return None
+
+

@@ -1,10 +1,9 @@
 constants:
   model: 
-    type: gpt52
-    name: gpt-5.2
-    max_tokens: 16 # this is hardset to 128 in the script, because below that, GPT API just returns nothing for most MCQs
+    type: gemini
+    name: gemini-3.1-pro-preview
 
-  dataset: test
+  dataset: mmlu-arabic
   task: 
     name: task1
     type: mcq
@@ -13,10 +12,8 @@ experiment_name: task1_${constants.model.type}
 
 model:
   type: ${constants.model.type}            #model handler type as written in models/__init__.py
-  name: ${constants.model.name}  # OpenAI model name, e.g. gpt-5
-  # api_key: sk-...                  # optional; if omitted, OPENAI_API_KEY env var is used
-  max_tokens: ${constants.model.max_tokens}
-
+  name: ${constants.model.name}  # Gemini model name
+  # api_key: ...                  # optional; if omitted, GEMINI_API_KEY env var is used
 
 dataset:
   path: datasets/qa/${constants.dataset}.json   #path to dataset JSON file

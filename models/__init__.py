@@ -1,6 +1,7 @@
 from .openai_handler import OpenAIHandler
 # do same here to import other model handlers !!!!!!!
 from .mistral_small import MistralSmallMCQHandler #first name is name of python file and second name is that of the class from mistral.py 
+from .mistral_small_chaimae import MistralSmallHandler
 from .mistral_7b import Mistral7BMCQHandler
 from .llama70 import Llama70MCQHandler
 from .llama31_8b_inst import Llama31_8BInstMCQHandler
@@ -12,6 +13,7 @@ from .medgemma import MedGemma27BMCQHandler
 from .allam_7b_inst_prev import ALLaM7BInstPrevMCQHandler
 from .aya_expanse_8b import AyaExpanse8BMCQHandler
 from .gemma3_27b_it import Gemma3_27BMCQHandler
+from .gemini import Gemini3ProHandler
 
 import os
 
@@ -42,6 +44,19 @@ def load_model_handler(config):
         print(f"0 HF_HOME={os.environ.get('HF_HOME')}")
 
         return MistralSmallMCQHandler(
+            model_name=model_cfg.get(
+                "name",
+                "mistralai/Mistral-Small-3.2-24B-Instruct-2506"
+            ),
+            cache_dir=model_cfg.get("cache_dir"),
+            offline=model_cfg.get("offline", True),
+        )
+    
+    elif model_type == "mistral_small_chaimae":
+        print(f"cache_dir={model_cfg.get('cache_dir')}")
+        print(f"0 HF_HOME={os.environ.get('HF_HOME')}")
+
+        return MistralSmallHandler(
             model_name=model_cfg.get(
                 "name",
                 "mistralai/Mistral-Small-3.2-24B-Instruct-2506"
@@ -186,6 +201,15 @@ def load_model_handler(config):
             ),
             cache_dir=model_cfg.get("cache_dir"),
             offline=model_cfg.get("offline", True),
+        )
+
+    elif model_type == "gemini":
+        return Gemini3ProHandler(
+            api_key=os.getenv("GEMINI_API_KEY"),
+            model=model_cfg.get(
+                "name",
+                "gemini-3.1-pro-preview"
+            ),
         )
 
     else:

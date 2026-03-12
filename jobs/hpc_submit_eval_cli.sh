@@ -34,17 +34,18 @@ log_job_timing() {
 }
 trap log_job_timing EXIT
 
-if [[ $# -lt 2 ]]; then
-  echo "Usage: sbatch jobs/hpc_submit_eval_cli.sh <MODEL_TYPE> <DATASET>"
-  echo "Example: sbatch jobs/hpc_submit_eval_cli.sh mistral_7b test"
+if [[ $# -lt 3 ]]; then
+  echo "Usage: sbatch jobs/hpc_submit_eval_cli.sh <TASK_NUM> <MODEL_TYPE> <DATASET>"
+  echo "Example: sbatch jobs/hpc_submit_eval_cli.sh 1 mistral_7b test"
   exit 1
 fi
 
-MODEL_TYPE="$1"
-DATASET="$2"
+TASK_NUM="$1"
+MODEL_TYPE="$2"
+DATASET="$3"
 
 PROJECT_ROOT="/scratch/mk8737/farah/Adaptation"
-CONFIG_PATH="${PROJECT_ROOT}/configs/task1/${MODEL_TYPE}_${DATASET}.yaml"
+CONFIG_PATH="${PROJECT_ROOT}/configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
 
 if [[ ! -f "$CONFIG_PATH" ]]; then
   echo "Error: Config not found: $CONFIG_PATH"
@@ -61,14 +62,14 @@ conda activate adaptation
 set -u
 
 # Copy outputs into designated directory
-LOGS_DIR=${PROJECT_ROOT}/logs/${MODEL_TYPE}_${DATASET}_${SLURM_JOB_ID}
+LOGS_DIR=${PROJECT_ROOT}/logs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}_${SLURM_JOB_ID}
 mkdir -p "$LOGS_DIR"
 
 # Main Command
 cd "$PROJECT_ROOT"
 source .env
 export HF_HUB_ENABLE_HF_TRANSFER=1
-python scripts/run_evaluation.py "configs/task1/${MODEL_TYPE}_${DATASET}.yaml"
+python scripts/run_evaluation.py "configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
 
 # Cleanup: Move logs to the designated directory
 mv "${PROJECT_ROOT}/tmp_logs/job_${SLURM_JOB_ID}.out" "$LOGS_DIR/job_${SLURM_JOB_ID}.out"

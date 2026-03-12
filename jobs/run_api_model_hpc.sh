@@ -10,9 +10,10 @@
 set -euo pipefail
 
 PROJECT_ROOT="/scratch/mk8737/farah/Adaptation"
-MODEL_TYPE="${1:-gpt52}"
-DATASET="${2:-test}"
-CONFIG_PATH="${PROJECT_ROOT}/configs/task1/${MODEL_TYPE}_${DATASET}.yaml"
+TASK_NUM="${1:-1}"
+MODEL_TYPE="${2:-gpt52}"
+DATASET="${3:-test}"
+CONFIG_PATH="${PROJECT_ROOT}/configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
 
 START_TS=$(date +%s)
 echo "START: $(date -Is)"
@@ -37,8 +38,8 @@ trap log_job_timing EXIT
 
 if [[ ! -f "$CONFIG_PATH" ]]; then
   echo "Error: Config not found: $CONFIG_PATH"
-  echo "Usage: sbatch jobs/run_gpt5fam_hpc.sh [model_type] [dataset]"
-  echo "Example: sbatch jobs/run_gpt5fam_hpc.sh gpt52 test"
+  echo "Usage: sbatch jobs/run_api_model_hpc.sh [task_num] [model_type] [dataset]"
+  echo "Example: sbatch jobs/run_api_model_hpc.sh 1 gpt52 test"
   exit 1
 fi
 
@@ -56,17 +57,17 @@ if [[ -f ".env" ]]; then
   set +a
 fi
 
-if [[ -z "${OPENAI_API_KEY:-}" ]]; then
-  echo "Error: OPENAI_API_KEY is not set."
-  echo "Set it in shell or in ${PROJECT_ROOT}/.env"
-  exit 1
-fi
+# if [[ -z "${OPENAI_API_KEY:-}" ]]; then
+#   echo "Error: OPENAI_API_KEY is not set."
+#   echo "Set it in shell or in ${PROJECT_ROOT}/.env"
+#   exit 1
+# fi
 
 # Copy outputs into designated directory
-LOGS_DIR=${PROJECT_ROOT}/logs/${MODEL_TYPE}_${DATASET}_${SLURM_JOB_ID}
+LOGS_DIR=${PROJECT_ROOT}/logs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}_${SLURM_JOB_ID}
 mkdir -p "$LOGS_DIR"
 
-python scripts/run_evaluation.py "configs/task1/${MODEL_TYPE}_${DATASET}.yaml"
+python scripts/run_evaluation.py "configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
 
 # Cleanup: Move logs to the designated directory
 mv "${PROJECT_ROOT}/tmp_logs/job_${SLURM_JOB_ID}.out" "$LOGS_DIR/job_${SLURM_JOB_ID}.out"

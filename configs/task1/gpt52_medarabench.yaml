@@ -2,7 +2,7 @@ constants:
   model: 
     type: gpt52
     name: gpt-5.2
-    max_tokens: 16 # this is hardset to 64 or 128 in the script, because below that, GPT API just returns nothing for most MCQs
+    max_tokens: 16 # this is hardset to 128 in the script, because below that, GPT API just returns nothing for most MCQs
 
   dataset: medarabench
   task: 

@@ -1,9 +1,9 @@
 # model dataset pairs for jobs/hpc_submit_eval_array.sh
 # format: model dataset
 
-allam_7b_inst_prev arastem
-allam_7b_inst_prev medarabench
-allam_7b_inst_prev mmlu-arabic
-aya_expanse_8b arastem
-aya_expanse_8b medarabench
-aya_expanse_8b mmlu-arabic
+1 allam_7b_inst_prev arastem
+1 allam_7b_inst_prev medarabench
+1 allam_7b_inst_prev mmlu-arabic
+1 aya_expanse_8b arastem
+1 aya_expanse_8b medarabench
+1 aya_expanse_8b mmlu-arabic

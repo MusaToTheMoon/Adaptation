@@ -1,0 +1,32 @@
+constants:
+  model: 
+    type: mistral_small_chaimae
+    name: mistralai/Mistral-Small-3.2-24B-Instruct-2506
+    offline: true
+    # max_tokens: 1024
+  dataset: test # also change answer-gen in dataset.path down below
+  task: 
+    name: task2
+    type: answer_generation
+    lang: ar
+
+experiment_name: ${constants.task.name}_${constants.model.type}_${constants.dataset}
+
+model:
+  type: ${constants.model.type}            #model handler type as written in models/__init__.py
+  name: ${constants.model.name}  # just as it appears in huggingface
+  cache_dir: /scratch/mk8737/huggingface #modify to your own cache directory
+  offline: ${constants.model.offline}     #set to true if you want to load model from local cache, false to download from HuggingFace
+  # max_tokens: ${constants.model.max_tokens}
+
+dataset:
+  path: datasets/answer-gen/${constants.dataset}.json   #path to dataset JSON file
+  instruction_path: prompts/${constants.task.name}.txt  #path to instruction file (default.txt)
+
+task:
+  type: ${constants.task.type}                #task 1: mcq or task 2: answer_generation
+  lang: ${constants.task.lang}
+
+output:
+  predictions_path: results/predictions/${constants.task.name}/${constants.dataset}/${constants.model.type}.csv #specify output pred file
+  metrics_path: results/metrics/${constants.task.name}/${constants.dataset}/${constants.model.type}.json  #specift output pred file

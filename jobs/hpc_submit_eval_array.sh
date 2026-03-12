@@ -64,23 +64,26 @@ if (( INDEX < 0 || INDEX >= ${#PAIRS[@]} )); then
 fi
 
 PAIR="${PAIRS[$INDEX]}"
+TASK_NUM=""
 MODEL_TYPE=""
 DATASET=""
 
-if [[ "$PAIR" == *:* ]]; then
-  MODEL_TYPE="${PAIR%%:*}"
-  DATASET="${PAIR##*:}"
+if [[ "$PAIR" == *:*:* ]]; then
+  TASK_NUM="${PAIR%%:*}"
+  REST="${PAIR#*:}"
+  MODEL_TYPE="${REST%%:*}"
+  DATASET="${REST##*:}"
 else
-  read -r MODEL_TYPE DATASET <<< "$PAIR"
+  read -r TASK_NUM MODEL_TYPE DATASET <<< "$PAIR"
 fi
 
-if [[ -z "$MODEL_TYPE" || -z "$DATASET" ]]; then
+if [[ -z "$TASK_NUM" || -z "$MODEL_TYPE" || -z "$DATASET" ]]; then
   echo "Error: Invalid pair format at index $INDEX: '$PAIR'"
-  echo "Use either 'model:dataset' or 'model dataset'"
+  echo "Use either 'task_num:model:dataset' or 'task_num model dataset'"
   exit 1
 fi
 
-CONFIG_PATH="${PROJECT_ROOT}/configs/task1/${MODEL_TYPE}_${DATASET}.yaml"
+CONFIG_PATH="${PROJECT_ROOT}/configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
 if [[ ! -f "$CONFIG_PATH" ]]; then
   echo "Error: Config not found: $CONFIG_PATH"
   exit 1
@@ -94,18 +97,19 @@ eval "$(/share/apps/NYUAD5/miniconda/3-4.11.0/bin/conda shell.bash hook)"
 conda activate adaptation
 set -u
 
-LOGS_DIR="${PROJECT_ROOT}/logs/${MODEL_TYPE}_${DATASET}_${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}"
+LOGS_DIR="${PROJECT_ROOT}/logs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}_${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}"
 mkdir -p "$LOGS_DIR"
 
 echo "ARRAY_JOB_ID=${SLURM_ARRAY_JOB_ID}"
 echo "ARRAY_TASK_ID=${SLURM_ARRAY_TASK_ID}"
+echo "TASK_NUM=${TASK_NUM}"
 echo "MODEL_TYPE=${MODEL_TYPE}"
 echo "DATASET=${DATASET}"
 
-echo "Running config: configs/task1/${MODEL_TYPE}_${DATASET}.yaml"
+echo "Running config: configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
 cd "$PROJECT_ROOT"
 source .env
-python scripts/run_evaluation.py "configs/task1/${MODEL_TYPE}_${DATASET}.yaml"
+python scripts/run_evaluation.py "configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
 
 mv "${PROJECT_ROOT}/tmp_logs/job_${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}.out" "$LOGS_DIR/job_${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}.out"
 mv "${PROJECT_ROOT}/tmp_logs/job_${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}.err" "$LOGS_DIR/job_${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}.err"
