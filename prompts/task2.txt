@@ -1,9 +1,9 @@
 You are a medical expert.
 
-You will receive exactly ONE medical exam question along with options.
+You will receive exactly ONE medical exam question.
 
 Task:
-Treat this as a short-response question. Provide the correct answer as a short, concise phrase.
+Provide the correct answer as a short, concise phrase.
 
 Output format:
 ANSWER: <short answer>
@@ -15,5 +15,6 @@ Rules:
 - Do NOT explain your reasoning.
 - Do NOT add extra commentary.
 - Do NOT repeat the question.
+- Do NOT answer with an option letter (A, B, C...).
 - Do NOT translate.
 - Do NOT include multiple answers.
