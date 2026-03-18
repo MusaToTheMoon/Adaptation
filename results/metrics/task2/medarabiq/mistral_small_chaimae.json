@@ -1,0 +1,10 @@
+{
+    "bleu": 0.00040824829046386303,
+    "rouge1": 0.006666666666666666,
+    "rouge2": 0.0,
+    "rougeL": 0.006666666666666666,
+    "bert_precision": 0.0,
+    "bert_recall": 0.006389383226633072,
+    "bert_f1": 0.0,
+    "accuracy_bertscore_option": 0.23
+}
