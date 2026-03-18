@@ -5,7 +5,7 @@ This script implements metrics for mcq and answer_generation evaluation. It prov
 '''
 
 import re
-from typing import List, Optional, Dict, Any
+from typing import List, Optional, Dict, Any, Tuple
 import numpy as np
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 from nltk.tokenize import word_tokenize
@@ -58,7 +58,96 @@ def calculate_accuracy(predictions, ground_truths):
 
     return correct / total if total > 0 else 0.0
 
+##################### Acc via bertscore #########################
+def parse_options_from_input(input_text: str) -> Dict[str, str]:
+    """Parse MCQ options from the input column text (e.g. 'A) option text')."""
+    if not input_text:
+        return {}
+    option_re = re.compile(r"^\s*([A-Fa-f])\s*[\)\.:\-]\s*(.+)$", re.MULTILINE)
+    options: Dict[str, str] = {}
+    for m in option_re.finditer(str(input_text)):
+        letter = m.group(1).upper()
+        text = m.group(2).strip()
+        if text:
+            options[letter] = text
+    return options
 
+
+def calculate_bertscore_option_accuracy(
+    predictions: List[str],
+    ground_truths: List[str],
+    inputs: List[str],
+    lang: str = "en",
+    model_type: Optional[str] = None,
+    device: str = "cpu",
+    rescale_with_baseline: bool = True,
+) -> Optional[float]:
+    """
+    Accuracy via BERTScore semantic option matching.
+    For each sample:
+      1) Parse options A..F from the input text.
+      2) Compute BERTScore F1 between prediction and each option.
+      3) Select the option with highest F1.
+      4) Compare selected letter to ground-truth letter -> 1 or 0.
+    Returns average accuracy across all samples.
+    """
+    if bert_score is None:
+        return None
+
+    n = len(predictions)
+    if n == 0:
+        return 0.0
+
+    # Build flat lists for a single batched BERTScore call
+    flat_hyps: List[str] = []
+    flat_refs: List[str] = []
+    pair_meta: List[Tuple[int, str]] = []  # (sample_index, option_letter)
+
+    for i in range(n):
+        hyp = "" if predictions[i] is None else str(predictions[i]).strip()
+        opts = parse_options_from_input(inputs[i])
+        for letter in sorted(opts):
+            flat_hyps.append(hyp)
+            flat_refs.append(opts[letter])
+            pair_meta.append((i, letter))
+
+    if not flat_hyps:
+        return 0.0
+
+    try:
+        _, _, F1 = bert_score.score(
+            flat_hyps,
+            flat_refs,
+            lang=lang,
+            model_type=model_type,
+            device=device,
+            rescale_with_baseline=rescale_with_baseline,
+            verbose=False,
+        )
+    except Exception:
+        return None
+
+    f1_scores = np.clip(F1.detach().cpu().numpy(), 0.0, 1.0)
+
+    # Pick highest-scoring option per sample
+    best: Dict[int, Tuple[str, float]] = {}  # idx -> (letter, score)
+    for score_val, (idx, letter) in zip(f1_scores.tolist(), pair_meta):
+        prev = best.get(idx)
+        if prev is None or score_val > prev[1]:
+            best[idx] = (letter, score_val)
+
+    correct = 0
+    for i in range(n):
+        chosen = best.get(i)
+        if chosen is None:
+            continue
+        gt_letter = extract_letter(ground_truths[i])
+        if gt_letter and chosen[0] == gt_letter:
+            correct += 1
+
+    return float(correct / n)
+
+#####################################################
 #------------------------------------------Task 2 ----------------------------------------------#
 
 def _safe_tokenize(text: str, lang: str = "en") -> List[str]:

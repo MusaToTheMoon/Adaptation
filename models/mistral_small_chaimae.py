@@ -231,8 +231,8 @@ class MistralSmallHandler:
             return None
 
         if task_type == "answer_generation":
-            # user_text = self._build_ansgen_text(sample)
-            user_text = self._build_mcq_text(sample)
+            user_text = self._build_ansgen_text(sample)
+            # user_text = self._build_mcq_text(sample)
             if not user_text:
                 print("[MistralSmall] Empty question; cannot build answer-generation prompt.")
                 return ""

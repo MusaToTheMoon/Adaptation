@@ -9,6 +9,7 @@ from evals.metrics import (
     calculate_bleu,
     calculate_rouge,
     calculate_bert_score,
+    calculate_bertscore_option_accuracy, # acc via bertscore
     extract_letter,
 )
 
@@ -86,6 +87,22 @@ def evaluate(predictions_path: str, metrics_path: str, task_type: str, lang: str
                 lang,
                 device,
             )
+        
+        ######## accuracy via bertscore ##############
+        inputs = df["input"].fillna("").astype(str).tolist() if "input" in df.columns else []
+        if inputs:
+            sem_acc = calculate_bertscore_option_accuracy(
+                preds, gts, inputs, lang=lang, device=device,
+            )
+            if sem_acc is not None:
+                metrics["accuracy_bertscore_option"] = sem_acc
+            else:
+                logging.warning(
+                    "BERTScore option-matching accuracy was not computed. "
+                    "predictions_path=%s lang=%s device=%s",
+                    predictions_path, lang, device,
+                )
+        ##############################################
 
     else:
         raise ValueError(f"unsupported task_type:{task_type} expected mcq or answer_generation")

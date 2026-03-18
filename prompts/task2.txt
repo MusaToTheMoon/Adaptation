@@ -15,6 +15,5 @@ Rules:
 - Do NOT explain your reasoning.
 - Do NOT add extra commentary.
 - Do NOT repeat the question.
-- Do NOT answer with an option letter (A, B, C...).
 - Do NOT translate.
 - Do NOT include multiple answers.

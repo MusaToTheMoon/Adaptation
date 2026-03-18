@@ -1,0 +1,67 @@
+[
+  {
+    "id": "1",
+    "question": "عضلات الكم المدوره للكتف",
+    "answer": "C",
+    "level": "Y2",
+    "specialty": "Anatomy",
+    "umbrella_specialty": "Anatomy",
+    "group": "ABCDE",
+    "opa": "هى ثلاث عضلات",
+    "opb": "كلها تدير العضد للخارج",
+    "opc": "وحدة منها ترتكز على الحديبية الصغرى",
+    "opd": "المدورة الكبيرة اهم واحده منها"
+  },
+  {
+    "id": "2",
+    "question": "دراسة وظائف العضو ووظائف الاتصال:",
+    "answer": "C",
+    "level": "Y1",
+    "specialty": "Anatomy",
+    "umbrella_specialty": "Anatomy",
+    "group": "ABCD",
+    "opa": "التشريح الوصفي",
+    "opb": "التشريح السريري",
+    "opc": "التشريح الفيزيولوجي",
+    "opd": "التشريح الجهازي"
+  },
+  {
+    "id": "3",
+    "question": "مايلي صحيح عن مخاطية البوق عدا:",
+    "answer": "B",
+    "level": "Y2",
+    "specialty": "Histology",
+    "umbrella_specialty": "Anatomy",
+    "group": "ABCD",
+    "opa": "تبطن بظهارة بسيطة اسطوانية.",
+    "opb": "خلايا الظهارة المهدبة تضرب أهدابها باتجاه المبيض.",
+    "opc": "خلايا الظهارة المفرزة غير مهدبة.",
+    "opd": "الخاليا الوتدية cells peg تفرز غليكوبروتينات."
+  },
+  {
+    "id": "4",
+    "question": "عصب ينقل إحساس الذوق من ثلث اللسان الخلفي :",
+    "answer": "B",
+    "level": "Y1",
+    "specialty": "Anatomy",
+    "umbrella_specialty": "Anatomy",
+    "group": "ABCD",
+    "opa": "السابع",
+    "opb": "التاسع",
+    "opc": "العاشر",
+    "opd": "الخامس"
+  },
+  {
+    "id": "5",
+    "question": "القناة الدافقة إختر الإجابة الخاطئة :",
+    "answer": "C",
+    "level": "Y1",
+    "specialty": "Anatomy",
+    "umbrella_specialty": "Anatomy",
+    "group": "ABCD",
+    "opa": "تقيس القناة الدافقة أقل من واحد سم",
+    "opb": "تتشكل من إتحاد البربخ مع قناة الحويصلة المنوية",
+    "opc": "تنقب السطح الخلفي للمثانة",
+    "opd": "تنفتح على الجزء الموثي من الإحليل"
+  }
+]
