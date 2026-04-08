@@ -257,16 +257,16 @@ def run_experiment(config_path: str):
                 item_id = item.get("id", str(global_idx))
 
                 # --- FIXED GT SELECTION ---
-                # gt = get_ground_truth_or_die(item, task_type, item_id)
-                gt = get_ground_truth_or_die(item, "mcq", item_id)
+                gt = get_ground_truth_or_die(item, task_type, item_id)
+                # gt = get_ground_truth_or_die(item, "mcq", item_id)
 
                 if task_type == "mcq":
                     input_text = build_mcq_text(item)
                     pred_main, _ = split_prediction(prediction, "mcq")
                     pred_out = "" if pred_main is None else pred_main
                 else:
-                    # input_text = build_ansgen_text(item)
-                    input_text = build_mcq_text(item)
+                    input_text = build_ansgen_text(item)
+                    # input_text = build_mcq_text(item)
                     pred_out = "" if prediction is None else str(prediction).strip()
 
                 # debug first few rows
@@ -310,6 +310,14 @@ def run_experiment(config_path: str):
 
             # --- FIXED GT SELECTION ---
             gt = get_ground_truth_or_die(item, task_type, item_id)
+
+            if task_type == "mcq":
+                input_text = build_mcq_text(item)
+                pred_main, _ = split_prediction(prediction, "mcq")
+                pred_out = "" if pred_main is None else pred_main
+            else:
+                input_text = build_ansgen_text(item)
+                pred_out = "" if prediction is None else str(prediction).strip()
 
             if idx <= 3:
                 logging.info(f"[DEBUG] id={item_id} task_type={task_type} gt_written={gt!r}")

@@ -1,0 +1,41 @@
+{
+  "task": "task1_mcq",
+  "created_at_utc": "2026-04-05T11:13:41.828320+00:00",
+  "source_dataset_path": "datasets/qa/test.json",
+  "source_dataset_sha256": "c108d1986e306f199c2973cdad69cedb9696dbe877f243f52a487c2e7516f24f",
+  "split": {
+    "k": 5,
+    "seed": 42,
+    "conditioning_count": 5,
+    "inference_count": 1
+  },
+  "stats": {
+    "total_items": 6,
+    "valid_items": 6,
+    "invalid_items": 0,
+    "invalid_item_indices": [],
+    "conditioning_source_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "conditioning_ids": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "inference_ids": [
+      "5"
+    ],
+    "duplicate_ids_detected": []
+  },
+  "artifacts": {
+    "conditioning_path": "datasets/qa/fewshot/test/k5_seed42/conditioning.json",
+    "inference_path": "datasets/qa/fewshot/test/k5_seed42/inference.json",
+    "metadata_path": "datasets/qa/fewshot/test/k5_seed42/metadata.json"
+  }
+}

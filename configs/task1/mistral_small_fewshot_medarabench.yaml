@@ -1,0 +1,28 @@
+constants:
+  model:
+    type: mistral_small
+    name: mistralai/Mistral-Small-3.2-24B-Instruct-2506
+    offline: true
+  dataset: medarabench
+  task:
+    name: task1
+    type: mcq
+
+experiment_name: task1_${constants.model.type}_fewshot
+
+model:
+  type: ${constants.model.type}            #model handler type as written in models/__init__.py
+  name: ${constants.model.name}  # just as it appears in huggingface
+  cache_dir: /scratch/mk8737/huggingface #modify to your own cache directory
+  offline: ${constants.model.offline}     #set to true if you want to load model from local cache, false to download from HuggingFace
+
+dataset:
+  path: datasets/qa/fewshot/${constants.dataset}/k5_seed42/inference.json  #path to dataset JSON file
+  instruction_path: prompts/${constants.task.name}_fewshot/${constants.dataset}.txt  #path to prompt
+
+task:
+  type: ${constants.task.type}                #task 1: mcq or task 2: answer_generation -- for internal use in run_evaluation.py and model scripts
+
+output:
+  predictions_path: results/predictions/${constants.task.name}/${constants.dataset}/${constants.model.type}_fewshot.csv #specify output pred file
+  metrics_path: results/metrics/${constants.task.name}/${constants.dataset}/${constants.model.type}_fewshot.json  #specift output pred file

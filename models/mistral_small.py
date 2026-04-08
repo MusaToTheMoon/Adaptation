@@ -137,7 +137,14 @@ class MistralSmallMCQHandler:
 
         return stem + "\n\n" + "\n".join(lines)
 
-    def prompt(self, sample: dict, instruction: str, max_tokens: int = 12):
+    def prompt(
+        self,
+        sample: dict,
+        instruction: str,
+        max_tokens: int = 12,
+        task_type: str = "mcq",
+        **kwargs,
+    ):
         """
         MCQ-only interface:
         - sample is ONE JSON record (dict).

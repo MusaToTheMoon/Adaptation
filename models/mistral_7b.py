@@ -1,5 +1,6 @@
 import os
 import re
+from typing import List, Optional
 
 # SET HF_HOME **BEFORE** importing transformers/mistral libraries
 # Otherwise they read the system default during import
@@ -22,9 +23,13 @@ os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
 
 class Mistral7BMCQHandler:
     """
-    MCQ-only handler.
-    - Input is a dict (one sample) with keys: question, opa/opb/opc/opd/(ope/opf optional)
-    - Output is a single letter A–F.
+    Unified handler for:
+      - task_type="mcq"              -> returns a single letter A–F (or None)
+      - task_type="answer_generation"-> returns generated text (or "")
+
+    Input sample (dict):
+      - For MCQ: question + opa/opb/opc/opd (+ optional ope/opf)
+      - For Answer generation: question (and optionally any extra fields you add later)
     """
 
     def __init__(
@@ -137,83 +142,126 @@ class Mistral7BMCQHandler:
 
         return stem + "\n\n" + "\n".join(lines)
 
-    def prompt(self, sample: dict, instruction: str, max_tokens: int = 12):
+    @staticmethod
+    def _build_ansgen_text(sample: dict) -> str:
         """
-        MCQ-only interface:
-        - sample is ONE JSON record (dict).
-        - returns: 'A'..'F' or None
+        For answer_generation:
+        Only expose the question.
+        Explicitly ignore all option fields and gold fields.
         """
+        question = (sample.get("question") or "").strip()
+        if not question:
+            return ""
+    
+        # Defensive: never include options even if present
+        return f"QUESTION:\n{question}"
 
-        user_text = self._build_mcq_text(sample)
-        if not user_text:
-            print("[Mistral7BMCQ] Empty stem/options; cannot build prompt.")
-            return None
-
-        system_prompt = instruction.strip()
-
+    # -------------------------
+    # Core generation
+    # -------------------------
+    def _generate(self, system_prompt: str, user_text: str, max_tokens: int, do_sample: bool = False) -> str:
         messages = [
-            {"role": "system", "content": system_prompt},
-            {
-                "role": "user",
-                "content": [{"type": "text", "text": user_text}],
-            },
+            {"role": "system", "content": (system_prompt or "").strip()},
+            {"role": "user", "content": [{"type": "text", "text": user_text}]},
         ]
 
-        print("[Mistral7BMCQ] MAX TOKENS:", max_tokens)
         try:
             torch.cuda.empty_cache()
 
             req = ChatCompletionRequest(messages=messages)
             tokenized = self.tokenizer.encode_chat_completion(req)
 
-            input_ids = torch.tensor(
-                [tokenized.tokens],
-                dtype=torch.long,
-                device=self.model.device,
-            )
+            input_ids = torch.tensor([tokenized.tokens], dtype=torch.long, device=self.model.device)
             attention_mask = torch.ones_like(input_ids)
 
-            with torch.no_grad():
+            with torch.inference_mode():
                 outputs = self.model.generate(
                     input_ids=input_ids,
                     attention_mask=attention_mask,
                     max_new_tokens=max_tokens,
-                    do_sample=False,  # greedy
+                    do_sample=do_sample,
                 )
 
-        except Exception as e:
-            print("[Mistral7BMCQ] Error during generation:", e)
-            return None
+            if outputs is None or outputs.shape[0] == 0:
+                print(f"[Mistral7BMCQ] Generation produced no output tokens (max_new_tokens={max_tokens})")
+                return ""
+
+            input_len = len(tokenized.tokens)
+            gen_ids = outputs[0][input_len:]
+            generated_tokens = int(gen_ids.shape[0])
+            print(
+                f"[Mistral7BMCQ] Token usage: generated={generated_tokens} "
+                f"max_new_tokens={max_tokens} prompt_tokens={input_len}"
+            )
+            if isinstance(gen_ids, torch.Tensor):
+                gen_ids = gen_ids.detach().cpu().tolist()
+            raw_text = self.tokenizer.decode(gen_ids).strip()
+            return raw_text or ""
+
         finally:
             torch.cuda.empty_cache()
 
-        if outputs is None or outputs.shape[0] == 0:
-            print("[Mistral7BMCQ] Empty generation output.")
+    # -------------------------
+    # Public API
+    # -------------------------
+    def prompt(self, sample: dict, instruction: str, max_tokens: int = 12, task_type: str = "mcq"):
+        """
+        task_type:
+          - "mcq": returns A-F or None
+          - "answer_generation": returns generated string (may be empty string)
+        """
+        task_type = (task_type or "mcq").strip().lower()
+
+        if task_type == "mcq":
+            user_text = self._build_mcq_text(sample)
+            if not user_text:
+                print("[Mistral7BMCQ] Empty stem/options; cannot build MCQ prompt.")
+                return None
+
+            system_prompt = (instruction or "").strip()
+
+            raw_text = self._generate(system_prompt=system_prompt, user_text=user_text, max_tokens=max_tokens)
+
+            if not raw_text:
+                return None
+
+            print(f"[Mistral7BMCQ] MCQ raw generated: {repr(raw_text)}")
+            upper = raw_text.upper()
+
+            m = re.search(r"\bANSWER\s*[:=]\s*([A-F])\b", upper)
+            if m:
+                return m.group(1)
+
+            m = re.search(r"\b([A-F])\b", upper)
+            if m:
+                return m.group(1)
+
+            print("[Mistral7BMCQ] Could not extract a clean letter.")
             return None
 
-        input_len = len(tokenized.tokens)
-        gen_ids = outputs[0][input_len:]
-        if isinstance(gen_ids, torch.Tensor):
-            gen_ids = gen_ids.detach().cpu().tolist()
-        raw_text = self.tokenizer.decode(gen_ids).strip()
+        if task_type == "answer_generation":
+            user_text = self._build_ansgen_text(sample)
+            if not user_text:
+                print("[Mistral7BMCQ] Empty question; cannot build answer-generation prompt.")
+                return ""
 
-        if not raw_text:
-            return None
+            system_prompt = (instruction or "").strip()
 
-        print(f"[Mistral7BMCQ] MCQ raw generated: {repr(raw_text)}")
+            raw_text = self._generate(system_prompt=system_prompt, user_text=user_text, max_tokens=max_tokens)
 
-        # Extract letter
-        upper = raw_text.upper()
+            # For task2 we return raw text (no regex)
+            if raw_text:
+                print(f"[Mistral7BMCQ] Answer-gen raw generated (trunc): {repr(raw_text[:300])}")
+            return raw_text.strip()
 
-        # Prefer strict format: ANSWER: X
-        m = re.search(r"\bANSWER\s*[:=]\s*([A-F])\b", upper)
-        if m:
-            return m.group(1)
+        raise ValueError(f"Unsupported task_type={task_type}. Expected 'mcq' or 'answer_generation'.")
 
-        # Fallbacks (if model deviates)
-        m = re.search(r"\b([A-F])\b", upper)
-        if m:
-            return m.group(1)
-
-        print("[Mistral7BMCQ] Could not extract a clean letter.")
-        return None
+    def prompt_batch(
+        self,
+        samples: List[dict],
+        instruction: str,
+        max_tokens: int = 12,
+        task_type: str = "mcq",
+    ):
+        # Simple safe batching (sequential). Real batching is possible but more work with mistral_common.
+        return [self.prompt(s, instruction=instruction, max_tokens=max_tokens, task_type=task_type) for s in samples]
