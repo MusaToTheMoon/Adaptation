@@ -1,26 +1,41 @@
 import json
 import sys
-import logging
 import pandas as pd
 import torch
 
-from evals.metrics import (
+'''from evals.metrics import (
     calculate_accuracy,
     calculate_bleu,
+    calculate_bleu_per_example,
     calculate_rouge,
+    calculate_rouge_per_example,
     calculate_bert_score,
-    calculate_bertscore_option_accuracy, # acc via bertscore
+    calculate_bert_score_per_example,
+    extract_letter,
+)'''
+
+from evals.metrics import (
+    calculate_accuracy,
+    calculate_bert_score,
+    calculate_bert_score_per_example,
     extract_letter,
 )
 
 import re
-import inspect
+'''import inspect
 assert "lang" in str(inspect.signature(calculate_bleu)), (
     f"Wrong calculate_bleu loaded from {inspect.getsourcefile(calculate_bleu)} "
     f"sig={inspect.signature(calculate_bleu)}"
-)
+)'''
 
 print(f"[DEBUG evaluator] imported evaluator from: {__file__}")
+
+def strip_answer_prefix(text):
+    if text is None:
+        return ""
+    text = str(text).strip()
+    text = re.sub(r"^\s*ANSWER\s*[:=：]\s*", "", text, flags=re.IGNORECASE)
+    return text.strip()
 
 def split_prediction(prediction, task_type):
     """
@@ -70,40 +85,24 @@ def evaluate(predictions_path: str, metrics_path: str, task_type: str, lang: str
         metrics["accuracy_letter"] = calculate_accuracy(pred_letters, gts)
 
     elif task_type == "answer_generation":
-        metrics["bleu"] = calculate_bleu(preds, gts, lang=lang)
-        metrics.update(calculate_rouge(preds, gts, lang=lang))
-
+        preds_clean = [strip_answer_prefix(p) for p in preds]
+        gts_clean = [strip_answer_prefix(g) for g in gts]
+    
+        df["prediction_clean"] = preds_clean
+        df["ground_truth_clean"] = gts_clean
+    
         device = "cuda" if torch.cuda.is_available() else "cpu"
-        bs = calculate_bert_score(preds, gts, lang=lang, device=device)
+        bs = calculate_bert_score(preds_clean, gts_clean, lang=lang, device=device)
         if bs is not None:
             metrics.update(bs)
-        else:
-            logging.warning(
-                "BERTScore was not added to metrics for task_type='answer_generation'. "
-                "See earlier log lines from evals.metrics for the root cause. "
-                "predictions_path=%s metrics_path=%s lang=%s device=%s",
-                predictions_path,
-                metrics_path,
-                lang,
-                device,
-            )
-        
-        ######## accuracy via bertscore ##############
-        inputs = df["input"].fillna("").astype(str).tolist() if "input" in df.columns else []
-        if inputs:
-            sem_acc = calculate_bertscore_option_accuracy(
-                preds, gts, inputs, lang=lang, device=device,
-            )
-            if sem_acc is not None:
-                metrics["accuracy_bertscore_option"] = sem_acc
-            else:
-                logging.warning(
-                    "BERTScore option-matching accuracy was not computed. "
-                    "predictions_path=%s lang=%s device=%s",
-                    predictions_path, lang, device,
-                )
-        ##############################################
-
+    
+        bert_rows = calculate_bert_score_per_example(preds_clean, gts_clean, lang=lang, device=device)
+        if bert_rows is not None:
+            df["bert_precision_example"] = [r["bert_precision"] for r in bert_rows]
+            df["bert_recall_example"]    = [r["bert_recall"]    for r in bert_rows]
+            df["bert_f1_example"]        = [r["bert_f1"]        for r in bert_rows]
+    
+        df.to_csv(predictions_path, index=False, encoding="utf-8")
     else:
         raise ValueError(f"unsupported task_type:{task_type} expected mcq or answer_generation")
 

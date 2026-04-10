@@ -146,15 +146,13 @@ class Mistral7BMCQHandler:
     def _build_ansgen_text(sample: dict) -> str:
         """
         For answer_generation:
-        Only expose the question.
-        Explicitly ignore all option fields and gold fields.
+        Only expose the question stem (no options).
         """
         question = (sample.get("question") or "").strip()
         if not question:
             return ""
-    
-        # Defensive: never include options even if present
-        return f"QUESTION:\n{question}"
+
+        return question
 
     # -------------------------
     # Core generation
@@ -249,10 +247,12 @@ class Mistral7BMCQHandler:
 
             raw_text = self._generate(system_prompt=system_prompt, user_text=user_text, max_tokens=max_tokens)
 
-            # For task2 we return raw text (no regex)
-            if raw_text:
-                print(f"[Mistral7BMCQ] Answer-gen raw generated (trunc): {repr(raw_text[:300])}")
-            return raw_text.strip()
+            if not raw_text:
+                return ""
+
+            one_line = raw_text.split("\n")[0].strip()
+            print(f"[Mistral7BMCQ] Answer-gen raw (one line): {repr(one_line[:300])}")
+            return one_line
 
         raise ValueError(f"Unsupported task_type={task_type}. Expected 'mcq' or 'answer_generation'.")
 

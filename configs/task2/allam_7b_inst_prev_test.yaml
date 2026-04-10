@@ -1,0 +1,33 @@
+constants:
+  model:
+    type: allam_7b_inst_prev
+    name: humain-ai/ALLaM-7B-Instruct-preview
+    offline: true
+  dataset: test
+  task:
+    name: task2
+    type: answer_generation
+    lang: ar
+
+experiment_name: ${constants.task.name}_${constants.model.type}_${constants.dataset}
+
+model:
+  type: ${constants.model.type}
+  name: ${constants.model.name}
+  cache_dir: /scratch/mk8737/huggingface
+  offline: ${constants.model.offline}
+
+dataset:
+  path: datasets/answer-gen/${constants.dataset}.json
+  instruction_path: prompts/${constants.task.name}.txt
+
+task:
+  type: ${constants.task.type}
+  lang: ${constants.task.lang}
+
+judge:
+  prompt_path: prompts/judge-task2.txt
+
+output:
+  predictions_path: results/predictions/${constants.task.name}/${constants.dataset}/${constants.model.type}.csv
+  metrics_path: results/metrics/${constants.task.name}/${constants.dataset}/${constants.model.type}.json

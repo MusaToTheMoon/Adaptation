@@ -5,7 +5,7 @@ This script implements metrics for mcq and answer_generation evaluation. It prov
 '''
 
 import re
-from typing import List, Optional, Dict, Any, Tuple
+from typing import List, Optional, Dict, Any
 import numpy as np
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 from nltk.tokenize import word_tokenize
@@ -58,96 +58,7 @@ def calculate_accuracy(predictions, ground_truths):
 
     return correct / total if total > 0 else 0.0
 
-##################### Acc via bertscore #########################
-def parse_options_from_input(input_text: str) -> Dict[str, str]:
-    """Parse MCQ options from the input column text (e.g. 'A) option text')."""
-    if not input_text:
-        return {}
-    option_re = re.compile(r"^\s*([A-Fa-f])\s*[\)\.:\-]\s*(.+)$", re.MULTILINE)
-    options: Dict[str, str] = {}
-    for m in option_re.finditer(str(input_text)):
-        letter = m.group(1).upper()
-        text = m.group(2).strip()
-        if text:
-            options[letter] = text
-    return options
 
-
-def calculate_bertscore_option_accuracy(
-    predictions: List[str],
-    ground_truths: List[str],
-    inputs: List[str],
-    lang: str = "en",
-    model_type: Optional[str] = None,
-    device: str = "cpu",
-    rescale_with_baseline: bool = True,
-) -> Optional[float]:
-    """
-    Accuracy via BERTScore semantic option matching.
-    For each sample:
-      1) Parse options A..F from the input text.
-      2) Compute BERTScore F1 between prediction and each option.
-      3) Select the option with highest F1.
-      4) Compare selected letter to ground-truth letter -> 1 or 0.
-    Returns average accuracy across all samples.
-    """
-    if bert_score is None:
-        return None
-
-    n = len(predictions)
-    if n == 0:
-        return 0.0
-
-    # Build flat lists for a single batched BERTScore call
-    flat_hyps: List[str] = []
-    flat_refs: List[str] = []
-    pair_meta: List[Tuple[int, str]] = []  # (sample_index, option_letter)
-
-    for i in range(n):
-        hyp = "" if predictions[i] is None else str(predictions[i]).strip()
-        opts = parse_options_from_input(inputs[i])
-        for letter in sorted(opts):
-            flat_hyps.append(hyp)
-            flat_refs.append(opts[letter])
-            pair_meta.append((i, letter))
-
-    if not flat_hyps:
-        return 0.0
-
-    try:
-        _, _, F1 = bert_score.score(
-            flat_hyps,
-            flat_refs,
-            lang=lang,
-            model_type=model_type,
-            device=device,
-            rescale_with_baseline=rescale_with_baseline,
-            verbose=False,
-        )
-    except Exception:
-        return None
-
-    f1_scores = np.clip(F1.detach().cpu().numpy(), 0.0, 1.0)
-
-    # Pick highest-scoring option per sample
-    best: Dict[int, Tuple[str, float]] = {}  # idx -> (letter, score)
-    for score_val, (idx, letter) in zip(f1_scores.tolist(), pair_meta):
-        prev = best.get(idx)
-        if prev is None or score_val > prev[1]:
-            best[idx] = (letter, score_val)
-
-    correct = 0
-    for i in range(n):
-        chosen = best.get(i)
-        if chosen is None:
-            continue
-        gt_letter = extract_letter(ground_truths[i])
-        if gt_letter and chosen[0] == gt_letter:
-            correct += 1
-
-    return float(correct / n)
-
-#####################################################
 #------------------------------------------Task 2 ----------------------------------------------#
 
 def _safe_tokenize(text: str, lang: str = "en") -> List[str]:
@@ -276,5 +187,116 @@ def calculate_bert_score(
             "bert_recall": float(r.mean()),
             "bert_f1": float(f1.mean()),
         }
+    except Exception:
+        return None
+
+def calculate_bleu_per_example(
+    predictions: List[str],
+    references: List[str],
+    lang: str = "ar",
+) -> List[float]:
+    smoothie = SmoothingFunction().method1
+    scores = []
+
+    for hyp, ref in zip(predictions, references):
+        hyp = "" if hyp is None else str(hyp)
+        ref = "" if ref is None else str(ref)
+
+        if lang.lower().startswith("ar"):
+            hyp = _normalize_arabic(hyp)
+            ref = _normalize_arabic(ref)
+
+        ref_tokens = _safe_tokenize(ref, lang=lang)
+        hyp_tokens = _safe_tokenize(hyp, lang=lang)
+
+        if not ref_tokens and not hyp_tokens:
+            scores.append(1.0)
+            continue
+        if not ref_tokens or not hyp_tokens:
+            scores.append(0.0)
+            continue
+
+        bleu = sentence_bleu([ref_tokens], hyp_tokens, smoothing_function=smoothie)
+        scores.append(float(bleu))
+
+    return scores
+
+
+def calculate_rouge_per_example(
+    predictions: List[str],
+    references: List[str],
+    lang: str = "en",
+) -> List[Dict[str, float]]:
+    use_stemmer = not lang.lower().startswith("ar")
+    scorer = rouge_scorer.RougeScorer(["rouge1", "rouge2", "rougeL"], use_stemmer=use_stemmer)
+
+    rows = []
+
+    for hyp, ref in zip(predictions, references):
+        hyp = "" if hyp is None else str(hyp)
+        ref = "" if ref is None else str(ref)
+
+        if lang.lower().startswith("ar"):
+            hyp = _normalize_arabic(hyp)
+            ref = _normalize_arabic(ref)
+
+        if not hyp and not ref:
+            rows.append({
+                "rouge1": 1.0,
+                "rouge2": 1.0,
+                "rougeL": 1.0,
+            })
+            continue
+
+        scores = scorer.score(ref, hyp)
+        rows.append({
+            "rouge1": float(scores["rouge1"].fmeasure),
+            "rouge2": float(scores["rouge2"].fmeasure),
+            "rougeL": float(scores["rougeL"].fmeasure),
+        })
+
+    return rows
+
+def calculate_bert_score_per_example(
+    predictions: List[str],
+    references: List[str],
+    lang: str = "en",
+    model_type: Optional[str] = None,
+    device: str = "cpu",
+    rescale_with_baseline: bool = True,
+) -> Optional[List[Dict[str, float]]]:
+    if bert_score is None:
+        return None
+
+    hyps = ["" if p is None else str(p) for p in predictions]
+    refs = ["" if r is None else str(r) for r in references]
+
+    if not hyps or not refs:
+        return None
+
+    try:
+        P, R, F1 = bert_score.score(
+            hyps,
+            refs,
+            lang=lang,
+            model_type=model_type,
+            device=device,
+            rescale_with_baseline=rescale_with_baseline,
+            verbose=False,
+        )
+
+        p = np.clip(P.detach().cpu().numpy(), 0.0, 1.0)
+        r = np.clip(R.detach().cpu().numpy(), 0.0, 1.0)
+        f1 = np.clip(F1.detach().cpu().numpy(), 0.0, 1.0)
+
+        rows = []
+        for pi, ri, f1i in zip(p, r, f1):
+            rows.append({
+                "bert_precision": float(pi),
+                "bert_recall": float(ri),
+                "bert_f1": float(f1i),
+            })
+        return rows
+
     except Exception:
         return None

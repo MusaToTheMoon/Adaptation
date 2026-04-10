@@ -14,3 +14,7 @@ Rules:
 - Do NOT repeat the question.
 - Do NOT translate.
 - Do NOT include multiple answers.
+
+Example:
+Question: من أين يفرز الأدرينالين؟
+ANSWER: لب الكظر

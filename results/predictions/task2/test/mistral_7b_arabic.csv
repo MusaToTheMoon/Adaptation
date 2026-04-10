@@ -1,0 +1,26 @@
+id,input,prediction,ground_truth,prediction_clean,ground_truth_clean,bert_precision_example,bert_recall_example,bert_f1_example,judge_label
+4,ما هو العصب الذي ينقل إحساس الذوق من ثلث اللسان الخلفي؟,ANSWER: Nervus glossopharyngeus,التاسع,Nervus glossopharyngeus,التاسع,0.4310841560363769,0.5281234383583069,0.4746952652931213,Fully Correct
+8,ما هي القوس البيضاء عند حدود جسم الظفر مع جذره؟,ANSWER: Radius metatarsal bone,هليل الظفر,Radius metatarsal bone,هليل الظفر,0.6556068062782288,0.6593375205993652,0.6574668884277344,Incorrect
+12,أين يقع الخط الالوي السفلي؟,ANSWER: Retina,السطح الخارجي للحرقفة,Retina,السطح الخارجي للحرقفة,0.6939697265625,0.644049882888794,0.668078601360321,Incorrect
+16,ما هي الحافة من الفرع التي تشكل زاوية الفك السفلي؟,ANSWER: Mandibular angle,الخلفية,Mandibular angle,الخلفية,0.6814870834350586,0.6911667585372925,0.6862927675247192,Incorrect
+17,ما هي البنية التشريحية التي تتعصب بالعصب الشظوي السطحي؟,ANSWER: Cortex cerebralis,العضله الشظويه الطويله,Cortex cerebralis,العضله الشظويه الطويله,0.6938663721084595,0.6379998922348022,0.6647614240646362,Incorrect
+19,أين تشاهد الجسور بين الخلوية؟,ANSWER: Between the ventricles,الطبقة الشائكة من النسيج الظهاري المطبق,Between the ventricles,الطبقة الشائكة من النسيج الظهاري المطبق,0.6855966448783875,0.6545768976211548,0.6697278022766113,Incorrect
+21,ما الذي يحول الثلمتين الاسكيتين إلى ثقبتين؟,ANSWER: Fracture,الرباط العجزي الشوكي العجزي الحدبي,Fracture,الرباط العجزي الشوكي العجزي الحدبي,0.6914504170417786,0.5991262793540955,0.6419860124588013,Incorrect
+28,ما هو الهرمون الذي يفرز PTH؟,ANSWER: Parathyroid hormone (PTH) is secreted by the parathyroid glands.,الغدد جارات الدرق,Parathyroid hormone (PTH) is secreted by the parathyroid glands.,الغدد جارات الدرق,0.614113450050354,0.6484113931655884,0.6307965517044067,Fully Correct
+35,ما الذي يقع بين جسم الفقرة والقوس الفقرية؟,ANSWER: Intervertebral disc,الثقبة الفقرية,Intervertebral disc,الثقبة الفقرية,0.7165770530700684,0.693056583404541,0.7046205997467041,Incorrect
+49,أين تقع المنطقة الشمية؟,ANSWER: Cranial region,سقف الأنف,Cranial region,سقف الأنف,0.7345070242881775,0.7352743744850159,0.7348905205726624,Incorrect
+50,ما الذي يتصل به المدورين بالأمام في الفخذ؟,ANSWER: Kneecap (Patella),الخط بين المدورين,Kneecap (Patella),الخط بين المدورين,0.6567162275314331,0.6503744125366211,0.653529942035675,Incorrect
+51,أين يوجد التلم الكعبري في جسم العضد؟,ANSWER: In the liver,على الوجه الخلفي.,In the liver,على الوجه الخلفي.,0.6609736680984497,0.6302182674407959,0.6452296376228333,Incorrect
+54,ما الذي تتشكل منه ضفيرة راشكوف في لب السن؟,ANSWER: Aneurysm of the aortic root,ألياف حسية.,Aneurysm of the aortic root,ألياف حسية.,0.6195331811904907,0.6950989365577698,0.6551442742347717,Incorrect
+55,أين يقع المستقيم؟,ANSWER: Middle ear,القولون السيني والقناة الشرجية,Middle ear,القولون السيني والقناة الشرجية,0.7009099125862122,0.6418399810791016,0.6700757145881653,Incorrect
+56,ما هي حديبات مونتغومري؟,ANSWER: Montgomery glands are sebaceous glands located on the vermillion border of the upper lip.,دهنية,Montgomery glands are sebaceous glands located on the vermillion border of the upper lip.,دهنية,0.6103826761245728,0.6806389093399048,0.6435991525650024,Incorrect
+64,ما هو العصب المحرك لعضلات اللسان؟,ANSWER: Nerve V (Trigeminal nerve),12,Nerve V (Trigeminal nerve),12,0.5197910666465759,0.5956764817237854,0.5551525354385376,Incorrect
+73,ما هي الضفيرة التي يتفرع منها العصب الحجابي؟,ANSWER: Spinal nerve root,الرقبية,Spinal nerve root,الرقبية,0.6722232699394226,0.6636425256729126,0.667905330657959,Incorrect
+74,من أين يفرز الأدرينالين؟,"ANSWER: Adrenaline is secreted by the adrenal glands, specifically from the medulla (inner part) of the glands.",لب الكظر,"Adrenaline is secreted by the adrenal glands, specifically from the medulla (inner part) of the glands.",لب الكظر,0.5910531282424927,0.6426523327827454,0.6157736778259277,Fully Correct
+75,ما هو الوريد الذي يتشكل منه الوريد الأجوف السفلي؟,ANSWER: Stomach acid,الوريدين الحرقفيين المشتركين الأيمن والأيسر,Stomach acid,الوريدين الحرقفيين المشتركين الأيمن والأيسر,0.6123037934303284,0.5613996982574463,0.5857478976249695,Incorrect
+78,ما هي الطبقة الأكثر تمايزاً وكثافة في الشرايين؟,ANSWER: Stratum basale,المتوسطة,Stratum basale,المتوسطة,0.5828560590744019,0.6189237833023071,0.6003486514091492,Incorrect
+79,مما ينتج هرمون T4؟,ANSWER: Thyroid gland,الدرق,Thyroid gland,الدرق,0.6789250373840332,0.7226953506469727,0.7001267671585083,Fully Correct
+85,ما هي العضلة التي ترتكز بشكل أساسي على العظم الزورقي؟,ANSWER: Spine,الظنبوبي الخلفي,Spine,الظنبوبي الخلفي,0.7284863591194153,0.6646039485931396,0.6950804591178894,Incorrect
+87,أين تقع المنطقة الشمية؟,ANSWER: Cranial region,سقف الأنف,Cranial region,سقف الأنف,0.7345070242881775,0.7352743744850159,0.7348905205726624,Incorrect
+88,ما هو اسم الوسادة من النسيج الدهني فوق الارتفاق العاني؟,ANSWER: Sebaceous gland,جبل العانة,Sebaceous gland,جبل العانة,0.6566963195800781,0.6875777244567871,0.6717823147773743,Incorrect
+98,أين يتوضع الكولون السيني؟,ANSWER: في العظم العقلي الأيمن,الناحية المغبنية اليسرى,في العظم العقلي الأيمن,الناحية المغبنية اليسرى,0.7415695190429688,0.7426841259002686,0.7421264052391052,Incorrect

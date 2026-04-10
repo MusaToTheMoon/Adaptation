@@ -20,9 +20,9 @@ os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
 
 class ALLaM7BInstPrevMCQHandler:
     """
-    MCQ-only handler.
-    - Input is a dict (one sample) with keys: question, opa/opb/opc/opd/(ope/opf optional)
-    - Output is a single letter A–F.
+        Unified handler for:
+            - task_type="mcq"               -> returns a single letter A–F (or None)
+            - task_type="answer_generation" -> returns generated text (or "")
     """
 
     def __init__(
@@ -142,19 +142,40 @@ class ALLaM7BInstPrevMCQHandler:
 
         return stem + "\n\n" + "\n".join(lines)
 
-    def prompt(self, sample: dict, instruction: str, max_tokens: int = 12):
+    @staticmethod
+    def _build_ansgen_text(sample: dict) -> str:
         """
-        MCQ-only interface:
-        - sample is ONE JSON record (dict).
-        - returns: 'A'..'F' or None
+        For answer_generation:
+        Only expose the question stem (no options).
         """
+        question = (sample.get("question") or "").strip()
+        if not question:
+            return ""
 
-        user_text = self._build_mcq_text(sample)
-        if not user_text:
-            print("[ALLaM7BInstPrevMCQ] Empty stem/options; cannot build prompt.")
-            return None
+        return question
 
-        system_prompt = instruction.strip()
+    def prompt(self, sample: dict, instruction: str, max_tokens: int = 12, task_type: str = "mcq"):
+        """
+        task_type:
+          - "mcq": returns A-F or None
+          - "answer_generation": returns generated string (may be empty string)
+        """
+        task_type = (task_type or "mcq").strip().lower()
+
+        if task_type == "mcq":
+            user_text = self._build_mcq_text(sample)
+            if not user_text:
+                print("[ALLaM7BInstPrevMCQ] Empty stem/options; cannot build prompt.")
+                return None
+        elif task_type == "answer_generation":
+            user_text = self._build_ansgen_text(sample)
+            if not user_text:
+                print("[ALLaM7BInstPrevMCQ] Empty question; cannot build answer-generation prompt.")
+                return ""
+        else:
+            raise ValueError(f"Unsupported task_type={task_type}. Expected 'mcq' or 'answer_generation'.")
+
+        system_prompt = (instruction or "").strip()
 
         messages = [
             {"role": "system", "content": system_prompt},
@@ -185,20 +206,25 @@ class ALLaM7BInstPrevMCQHandler:
 
         except Exception as e:
             print("[ALLaM7BInstPrevMCQ] Error during generation:", e)
-            return None
+            return None if task_type == "mcq" else ""
         finally:
             torch.cuda.empty_cache()
 
         if outputs is None or outputs.shape[0] == 0:
             print("[ALLaM7BInstPrevMCQ] Empty generation output.")
-            return None
+            return None if task_type == "mcq" else ""
 
         input_len = inputs["input_ids"].shape[-1]
         gen_ids = outputs[0][input_len:]
         raw_text = self.tokenizer.decode(gen_ids, skip_special_tokens=True).strip()
 
         if not raw_text:
-            return None
+            return None if task_type == "mcq" else ""
+
+        if task_type == "answer_generation":
+            one_line = raw_text.split("\n")[0].strip()
+            print(f"[ALLaM7BInstPrevMCQ] Answer-gen raw (one line): {repr(one_line[:300])}")
+            return one_line
 
         print(f"[ALLaM7BInstPrevMCQ] MCQ raw generated: {repr(raw_text)}")
 
