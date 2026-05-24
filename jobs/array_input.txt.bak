@@ -1,0 +1,34 @@
+# model dataset pairs for jobs/hpc_submit_eval_array.sh
+# format: task_num model dataset
+# 3 llama31_8b_inst moroccan
+# 3 llama31_8b_inst egyptian
+#0 3 mistral_7b moroccan
+#1 3 mistral_small moroccan
+#2 3 gemma3_27b_it moroccan
+#3 3 allam_7b_inst_prev moroccan
+#4 3 aya_expanse_8b moroccan
+3 medgemma moroccan
+3 fanar moroccan
+3 mistral_7b emirati
+3 llama31_8b_inst emirati
+3 mistral_small emirati
+3 gemma3_27b_it emirati
+3 allam_7b_inst_prev emirati
+3 aya_expanse_8b emirati
+3 medgemma emirati
+3 fanar emirati
+3 mistral_7b egyptian
+3 mistral_small egyptian
+3 gemma3_27b_it egyptian
+3 allam_7b_inst_prev egyptian
+3 aya_expanse_8b egyptian
+3 medgemma egyptian
+3 fanar egyptian
+3 mistral_7b jordanian
+3 llama31_8b_inst jordanian
+3 mistral_small jordanian
+3 gemma3_27b_it jordanian
+3 allam_7b_inst_prev jordanian
+3 aya_expanse_8b jordanian
+3 medgemma jordanian
+3 fanar jordanian

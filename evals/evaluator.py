@@ -30,6 +30,13 @@ assert "lang" in str(inspect.signature(calculate_bleu)), (
 
 print(f"[DEBUG evaluator] imported evaluator from: {__file__}")
 
+
+# Task types that use the same free-text BERTScore eval pipeline.
+# Task 3 (dialogue_completion) generates the missing final doctor turn and
+# is scored against the gold turn, exactly like Task 2 free-form answers.
+GENERATIVE_TASK_TYPES = {"answer_generation", "dialogue_completion"}
+
+
 def strip_answer_prefix(text):
     if text is None:
         return ""
@@ -37,10 +44,11 @@ def strip_answer_prefix(text):
     text = re.sub(r"^\s*ANSWER\s*[:=：]\s*", "", text, flags=re.IGNORECASE)
     return text.strip()
 
+
 def split_prediction(prediction, task_type):
     """
     For MCQ: extract letter A-F from model output.
-    For answer_generation: return raw text.
+    For answer_generation / dialogue_completion: return raw text.
     """
     if prediction is None:
         return None, None
@@ -62,11 +70,11 @@ def split_prediction(prediction, task_type):
 
         return None, text
 
-    # For answer generation just return text
+    # For free-text generation tasks, just return text
     return text, text
 
 
-def evaluate(predictions_path: str, metrics_path: str, task_type: str, lang: str = "en"):
+def evaluate(predictions_path: str, metrics_path: str, task_type: str, lang: str = "ar"):
     df = pd.read_csv(predictions_path)
 
     if "prediction" not in df.columns or "ground_truth" not in df.columns:
@@ -84,32 +92,36 @@ def evaluate(predictions_path: str, metrics_path: str, task_type: str, lang: str
             pred_letters.append("" if ltr is None else ltr)
         metrics["accuracy_letter"] = calculate_accuracy(pred_letters, gts)
 
-    elif task_type == "answer_generation":
+    elif task_type in GENERATIVE_TASK_TYPES:
         preds_clean = [strip_answer_prefix(p) for p in preds]
         gts_clean = [strip_answer_prefix(g) for g in gts]
-    
+
         df["prediction_clean"] = preds_clean
         df["ground_truth_clean"] = gts_clean
-    
+
         device = "cuda" if torch.cuda.is_available() else "cpu"
         bs = calculate_bert_score(preds_clean, gts_clean, lang=lang, device=device)
         if bs is not None:
             metrics.update(bs)
-    
+
         bert_rows = calculate_bert_score_per_example(preds_clean, gts_clean, lang=lang, device=device)
         if bert_rows is not None:
             df["bert_precision_example"] = [r["bert_precision"] for r in bert_rows]
             df["bert_recall_example"]    = [r["bert_recall"]    for r in bert_rows]
             df["bert_f1_example"]        = [r["bert_f1"]        for r in bert_rows]
-    
+
         df.to_csv(predictions_path, index=False, encoding="utf-8")
     else:
-        raise ValueError(f"unsupported task_type:{task_type} expected mcq or answer_generation")
+        raise ValueError(
+            f"unsupported task_type:{task_type} "
+            f"expected mcq, answer_generation, or dialogue_completion"
+        )
 
     with open(metrics_path, "w", encoding="utf-8") as f:
         json.dump(metrics, f, indent=4, ensure_ascii=False)
 
     return metrics
+
 
 if __name__ == "__main__":
     if len(sys.argv) not in {4, 5}:

@@ -1,11 +1,11 @@
 #!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=4
+#SBATCH --cpus-per-task=8
 #SBATCH --gres=gpu:1
 #SBATCH -p nvidia
-#SBATCH --mem=32G
-#SBATCH -t 3-23:59:59
+#SBATCH --mem=64G
+#SBATCH -t 1-23:59:59
 #SBATCH -o /scratch/mk8737/farah/Adaptation/tmp_logs/job_%A_%a.out
 #SBATCH -e /scratch/mk8737/farah/Adaptation/tmp_logs/job_%A_%a.err
 
@@ -108,8 +108,25 @@ echo "DATASET=${DATASET}"
 
 echo "Running config: configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
 cd "$PROJECT_ROOT"
-source .env
+if [[ -f ".env" ]]; then
+  set -a
+  source .env
+  set +a
+fi
+export HF_HUB_ENABLE_HF_TRANSFER=1
+echo "CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-<unset>}"
+nvidia-smi -L || true
+
 python scripts/run_evaluation.py "configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
+
+# # Task 2/3 additional step: run judge LLM on the generated predictions
+# if [[ "$TASK_NUM" == "2" || "$TASK_NUM" == "3" ]]; then
+#   if [[ -z "${OPENAI_API_KEY:-}" ]]; then
+#     echo "Error: OPENAI_API_KEY is not set. Add it to .env or export it before sbatch."
+#     exit 1
+#   fi
+#   python scripts/run_judge.py "configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
+# fi
 
 mv "${PROJECT_ROOT}/tmp_logs/job_${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}.out" "$LOGS_DIR/job_${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}.out"
 mv "${PROJECT_ROOT}/tmp_logs/job_${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}.err" "$LOGS_DIR/job_${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}.err"

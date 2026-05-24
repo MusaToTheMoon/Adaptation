@@ -1,0 +1,22 @@
+experiment_name: task3_fanar_egyptian
+
+model:
+  type: fanar
+  name: QCRI/Fanar-1-9B
+  cache_dir: /scratch/mk8737/huggingface
+  offline: true
+
+dataset:
+  path: datasets/task3/egyptian.json
+  instruction_path: prompts/task3-egyptian.txt
+
+task:
+  type: dialogue_completion
+  max_tokens: 256
+
+judge:
+  prompt_path: prompts/judge-task3.txt
+
+output:
+  predictions_path: results/predictions/task3/egyptian/fanar.csv
+  metrics_path: results/metrics/task3/egyptian/fanar.json

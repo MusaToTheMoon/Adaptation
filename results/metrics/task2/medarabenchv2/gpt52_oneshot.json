@@ -1,0 +1,16 @@
+{
+    "bert_precision": 0.6383809447288513,
+    "bert_recall": 0.6440306305885315,
+    "bert_f1": 0.6389759182929993,
+    "judge_model": "gpt-5.2",
+    "judge_total": 940,
+    "judge_valid": 940,
+    "judge_empty": 0,
+    "judge_correct": 589,
+    "judge_incorrect": 351,
+    "incorrect_pct": 37.34,
+    "correct_pct": 62.66,
+    "bert_model": "aubmindlab/bert-large-arabertv02",
+    "bert_num_layers": 18,
+    "bert_rescaled": false
+}

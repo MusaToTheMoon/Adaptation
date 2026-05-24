@@ -1,0 +1,22 @@
+experiment_name: task3_allam_7b_inst_prev_emirati
+
+model:
+  type: allam_7b_inst_prev
+  name: humain-ai/ALLaM-7B-Instruct-preview
+  cache_dir: /scratch/mk8737/huggingface
+  offline: true
+
+dataset:
+  path: datasets/task3/emirati.json
+  instruction_path: prompts/task3-emirati.txt
+
+task:
+  type: dialogue_completion
+  max_tokens: 256
+
+judge:
+  prompt_path: prompts/judge-task3.txt
+
+output:
+  predictions_path: results/predictions/task3/emirati/allam_7b_inst_prev.csv
+  metrics_path: results/metrics/task3/emirati/allam_7b_inst_prev.json

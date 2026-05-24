@@ -4,6 +4,7 @@ This script implements metrics for mcq and answer_generation evaluation. It prov
 
 '''
 
+import os
 import re
 from typing import List, Optional, Dict, Any
 import numpy as np
@@ -20,6 +21,45 @@ try:
     from bleurt import score as bleurt_score
 except Exception:
     bleurt_score = None
+
+
+''' Default BERTScore backbone. Arabic-specific encoders (AraBERT, ARBERTv2, MARBERT) give more discriminative embeddings for Arabic medical text than
+# multilingual encoders like mBERT or XLM-R  which produce smoother, topically-clustered embeddings that inflate scores for clinically-wrong
+# but topically-similar answers. Picking AraBERT-large-v02 as default: MSA-focused (appropriate for medical  exam content), segmentation-aware, bert-large architecture (24 layers).
+#   aubmindlab/bert-large-arabertv02      num_layers=18   (default; MSA, largest)
+#   aubmindlab/bert-base-arabertv02       num_layers=9    (MSA, ~5x faster)
+#   UBC-NLP/ARBERTv2                      num_layers=9    (MSA, newer)
+#   UBC-NLP/MARBERT                       num_layers=9    (MSA + dialect + tweets)
+#   CAMeL-Lab/bert-base-arabic-camelbert-msa  num_layers=9   (MSA-only)
+#
+# !!!!!! None of these have baselines shipped with bert-score, SO rescale_with_baseline MUST be False -- otherwise you get a warning and
+'''
+
+
+
+DEFAULT_BERT_MODEL = "aubmindlab/bert-large-arabertv02"
+DEFAULT_BERT_NUM_LAYERS = 18
+
+
+def check_bertscore_baselines() -> None:
+    """Print all (lang, model) baseline files shipped by your bert-score install.
+
+    Run this once to confirm whether xlm-roberta-large + ar is available for
+    rescale_with_baseline=True. If not, either accept raw scores or switch
+    rescale_with_baseline to False explicitly.
+    """
+    if bert_score is None:
+        print("[bert_score] not installed")
+        return
+    base = os.path.join(os.path.dirname(bert_score.__file__), "rescale_baseline")
+    if not os.path.isdir(base):
+        print(f"[bert_score] no rescale_baseline directory at {base}")
+        return
+    for lang in sorted(os.listdir(base)):
+        p = os.path.join(base, lang)
+        if os.path.isdir(p):
+            print(f"  {lang}: {sorted(os.listdir(p))}")
+
 
 #------------------------------------------Task 1 ----------------------------------------------#
 
@@ -150,16 +190,27 @@ def calculate_rouge(predictions: List[str], references: List[str], lang: str = "
 def calculate_bert_score(
     predictions: List[str],
     references: List[str],
-    lang: str = "en",
-    model_type: Optional[str] = None,
+    lang: str = "ar",
+    model_type: Optional[str] = DEFAULT_BERT_MODEL,
+    num_layers: Optional[int] = DEFAULT_BERT_NUM_LAYERS,
     device: str = "cpu",
-    rescale_with_baseline: bool = True,
+    rescale_with_baseline: bool = False,
 ) -> Optional[Dict[str, float]]:
+    # Default: AraBERT-large-v02, layer 18, raw (unrescaled) scores.
+    # See the module-level comment for alternatives and their recommended
+    # num_layers. rescale_with_baseline defaults to False because no Arabic
+    # baselines exist for these encoders.
     if bert_score is None:
         return None
 
     hyps = ["" if p is None else str(p) for p in predictions]
     refs = ["" if r is None else str(r) for r in references]
+
+    # Apply the same Arabic normalization we use for BLEU/ROUGE so alef/yaa/
+    # taa-marbuta variants don't penalize semantically-equivalent outputs.
+    if lang.lower().startswith("ar"):
+        hyps = [_normalize_arabic(h) for h in hyps]
+        refs = [_normalize_arabic(r) for r in refs]
 
     if not hyps or not refs:
         return None
@@ -170,25 +221,31 @@ def calculate_bert_score(
             refs,
             lang=lang,
             model_type=model_type,
+            num_layers=num_layers,
             device=device,
             rescale_with_baseline=rescale_with_baseline,
             verbose=False,
         )
-        f1 = F1.detach().cpu().numpy()
+        # IMPORTANT: do NOT clip to [0, 1]. With rescale_with_baseline=True
+        # the scores are designed to sit near 0 for random pairs and can be
+        # legitimately negative; clipping floors those to 0 and destroys
+        # signal. Trust the raw values.
         p = P.detach().cpu().numpy()
         r = R.detach().cpu().numpy()
-
-        f1 = np.clip(f1, 0.0, 1.0)
-        p = np.clip(p, 0.0, 1.0)
-        r = np.clip(r, 0.0, 1.0)
+        f1 = F1.detach().cpu().numpy()
 
         return {
             "bert_precision": float(p.mean()),
             "bert_recall": float(r.mean()),
             "bert_f1": float(f1.mean()),
+            "bert_model": model_type,
+            "bert_num_layers": num_layers,
+            "bert_rescaled": bool(rescale_with_baseline),
         }
-    except Exception:
+    except Exception as e:
+        print(f"[bert_score] failed: {type(e).__name__}: {e}")
         return None
+
 
 def calculate_bleu_per_example(
     predictions: List[str],
@@ -257,19 +314,25 @@ def calculate_rouge_per_example(
 
     return rows
 
+
 def calculate_bert_score_per_example(
     predictions: List[str],
     references: List[str],
-    lang: str = "en",
-    model_type: Optional[str] = None,
+    lang: str = "ar",
+    model_type: Optional[str] = DEFAULT_BERT_MODEL,
+    num_layers: Optional[int] = DEFAULT_BERT_NUM_LAYERS,
     device: str = "cpu",
-    rescale_with_baseline: bool = True,
+    rescale_with_baseline: bool = False,
 ) -> Optional[List[Dict[str, float]]]:
     if bert_score is None:
         return None
 
     hyps = ["" if p is None else str(p) for p in predictions]
     refs = ["" if r is None else str(r) for r in references]
+
+    if lang.lower().startswith("ar"):
+        hyps = [_normalize_arabic(h) for h in hyps]
+        refs = [_normalize_arabic(r) for r in refs]
 
     if not hyps or not refs:
         return None
@@ -280,14 +343,16 @@ def calculate_bert_score_per_example(
             refs,
             lang=lang,
             model_type=model_type,
+            num_layers=num_layers,
             device=device,
             rescale_with_baseline=rescale_with_baseline,
             verbose=False,
         )
 
-        p = np.clip(P.detach().cpu().numpy(), 0.0, 1.0)
-        r = np.clip(R.detach().cpu().numpy(), 0.0, 1.0)
-        f1 = np.clip(F1.detach().cpu().numpy(), 0.0, 1.0)
+        # No clipping — see note in calculate_bert_score.
+        p = P.detach().cpu().numpy()
+        r = R.detach().cpu().numpy()
+        f1 = F1.detach().cpu().numpy()
 
         rows = []
         for pi, ri, f1i in zip(p, r, f1):
@@ -298,5 +363,6 @@ def calculate_bert_score_per_example(
             })
         return rows
 
-    except Exception:
+    except Exception as e:
+        print(f"[bert_score] failed: {type(e).__name__}: {e}")
         return None

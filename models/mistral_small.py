@@ -22,9 +22,10 @@ os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
 
 class MistralSmallMCQHandler:
     """
-    MCQ-only handler.
-    - Input is a dict (one sample) with keys: question, opa/opb/opc/opd/(ope/opf optional)
-    - Output is a single letter A–F.
+    Unified handler.
+    - task_type="mcq": returns a single letter A-F (or None)
+    - task_type="answer_generation": returns generated text (or "")
+    - task_type="dialogue_completion": returns generated text (one line, "ANSWER:" stripped)
     """
 
     def __init__(
@@ -137,6 +138,40 @@ class MistralSmallMCQHandler:
 
         return stem + "\n\n" + "\n".join(lines)
 
+    @staticmethod
+    def _build_ansgen_text(sample: dict) -> str:
+        question = (sample.get("question") or "").strip()
+        if not question:
+            return ""
+        return question
+
+    @staticmethod
+    def _build_dialogue_text(sample: dict) -> str:
+        """
+        Task 3 input: the doctor-patient dialogue with the final doctor turn
+        removed. Accepts PascalCase "Dialogue" or snake_case fallbacks.
+        """
+        for key in ("Dialogue", "dialogue", "conversation", "context"):
+            v = sample.get(key)
+            if v:
+                if isinstance(v, str):
+                    return v.strip()
+                if isinstance(v, list):
+                    lines = []
+                    for t in v:
+                        if isinstance(t, dict):
+                            role = str(t.get("role") or t.get("speaker") or "").strip()
+                            text = str(t.get("text") or t.get("content") or "").strip()
+                            if not text:
+                                continue
+                            lines.append(f"{role}: {text}" if role else text)
+                        else:
+                            s = str(t).strip()
+                            if s:
+                                lines.append(s)
+                    return "\n".join(lines)
+        return ""
+
     def prompt(
         self,
         sample: dict,
@@ -146,15 +181,34 @@ class MistralSmallMCQHandler:
         **kwargs,
     ):
         """
-        MCQ-only interface:
-        - sample is ONE JSON record (dict).
-        - returns: 'A'..'F' or None
+        Unified interface:
+        - task_type="mcq": returns 'A'..'F' or None
+        - task_type="answer_generation": returns generated one-line text or ""
+        - task_type="dialogue_completion": returns generated one-line text or ""
         """
-
-        user_text = self._build_mcq_text(sample)
-        if not user_text:
-            print("[MistralSmallMCQ] Empty stem/options; cannot build prompt.")
-            return None
+        task_type = (task_type or "mcq").strip().lower()
+        if task_type == "mcq":
+            user_text = self._build_mcq_text(sample)
+            if not user_text:
+                print("[MistralSmallMCQ] Empty stem/options; cannot build prompt.")
+                return None
+            default_value = None
+        elif task_type == "answer_generation":
+            user_text = self._build_ansgen_text(sample)
+            if not user_text:
+                print("[MistralSmallMCQ] Empty question; cannot build answer-generation prompt.")
+                return ""
+            default_value = ""
+        elif task_type == "dialogue_completion":
+            user_text = self._build_dialogue_text(sample)
+            if not user_text:
+                print("[MistralSmallMCQ] Empty dialogue; cannot build dialogue-completion prompt.")
+                return ""
+            default_value = ""
+        else:
+            raise ValueError(
+                f"Unsupported task_type={task_type}. Expected 'mcq', 'answer_generation', or 'dialogue_completion'."
+            )
 
         system_prompt = instruction.strip()
 
@@ -190,20 +244,33 @@ class MistralSmallMCQHandler:
 
         except Exception as e:
             print("[MistralSmallMCQ] Error during generation:", e)
-            return None
+            return default_value
         finally:
             torch.cuda.empty_cache()
 
         if outputs is None or outputs.shape[0] == 0:
             print("[MistralSmallMCQ] Empty generation output.")
-            return None
+            return default_value
 
         input_len = len(tokenized.tokens)
         gen_ids = outputs[0][input_len:]
         raw_text = self.tokenizer.decode(gen_ids).strip()
 
         if not raw_text:
-            return None
+            return default_value
+
+        if task_type == "answer_generation":
+            one_line = raw_text.split("\n")[0].strip()
+            print(f"[MistralSmallMCQ] Answer-gen raw (one line): {repr(one_line[:200])}")
+            return one_line
+
+        if task_type == "dialogue_completion":
+            one_line = raw_text.split("\n")[0].strip()
+            m = re.match(r"^\s*ANSWER\s*[:=]\s*(.*)$", one_line, flags=re.IGNORECASE)
+            if m:
+                one_line = m.group(1).strip()
+            print(f"[MistralSmallMCQ] Dialogue-completion raw (one line): {repr(one_line[:200])}")
+            return one_line
 
         print(f"[MistralSmallMCQ] MCQ raw generated: {repr(raw_text)}")
 
@@ -222,3 +289,22 @@ class MistralSmallMCQHandler:
 
         print("[MistralSmallMCQ] Could not extract a clean letter.")
         return None
+
+    def prompt_batch(
+        self,
+        samples,
+        instruction: str,
+        max_tokens: int = 12,
+        task_type: str = "mcq",
+        **kwargs,
+    ):
+        return [
+            self.prompt(
+                s,
+                instruction=instruction,
+                max_tokens=max_tokens,
+                task_type=task_type,
+                **kwargs,
+            )
+            for s in samples
+        ]

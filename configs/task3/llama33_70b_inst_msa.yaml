@@ -1,0 +1,23 @@
+experiment_name: task3_llama33_70b_inst_MSA
+
+model:
+  type: llama33_70b_inst
+  name: meta-llama/Llama-3.3-70B-Instruct
+  cache_dir: /scratch/mk8737/huggingface
+  offline: true
+  load_in_4bit: true
+
+dataset:
+  path: datasets/task3/msa.json
+  instruction_path: prompts/task3-MSA.txt
+
+task:
+  type: dialogue_completion
+  max_tokens: 256
+
+judge:
+  prompt_path: prompts/judge-task3.txt
+
+output:
+  predictions_path: results/predictions/task3/msa/llama33_70b_inst.csv
+  metrics_path: results/metrics/task3/msa/llama33_70b_inst.json

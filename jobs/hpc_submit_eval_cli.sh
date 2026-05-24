@@ -2,16 +2,18 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
-#SBATCH --gres=gpu:a100:1
-#SBATCH -p nvidia
-#SBATCH --mem=64G
-#SBATCH -t 3-23:59:59
+#SBATCH --mem=16G
+#SBATCH -t 1-0:59:59
 #SBATCH -o /scratch/mk8737/farah/Adaptation/tmp_logs/job_%j.out
 #SBATCH -e /scratch/mk8737/farah/Adaptation/tmp_logs/job_%j.err
 
 # make sure '/scratch/mk8737/farah/Adaptation/tmp_logs/' already exists before running this script; slurm won't create it automatically
 
 set -euo pipefail
+
+#SBATCH -p nvidia
+#SBATCH --gres=gpu:1
+#SBATCH --constrain=80g
 
 START_TS=$(date +%s)
 echo "START: $(date -Is)"
@@ -73,14 +75,18 @@ if [[ -f ".env" ]]; then
   set +a
 fi
 export HF_HUB_ENABLE_HF_TRANSFER=1
-python scripts/run_evaluation.py "configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
+echo "CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-<unset>}"
+nvidia-smi -L || true
 
-# Task 2 additional step: run judge LLM on the generated predictions
-if [[ "$TASK_NUM" == "2" ]]; then
+# python scripts/run_evaluation.py "configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
+
+# Task 2/3 additional step: run judge LLM on the generated predictions
+if [[ "$TASK_NUM" == "2" || "$TASK_NUM" == "3" ]]; then
   if [[ -z "${OPENAI_API_KEY:-}" ]]; then
     echo "Error: OPENAI_API_KEY is not set. Add it to .env or export it before sbatch."
     exit 1
   fi
+  echo "MAMA"
   python scripts/run_judge.py "configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
 fi
 

@@ -33,3 +33,13 @@ fi
 # fi
 
 python scripts/run_evaluation_old.py "configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
+
+# Task 2 additional step: run judge LLM on the generated predictions
+if [[ "$TASK_NUM" == "2" ]]; then
+  if [[ -z "${OPENAI_API_KEY:-}" ]]; then
+    echo "Error: OPENAI_API_KEY is not set. Add it to .env or export it before sbatch."
+    exit 1
+  fi
+  echo "MAMA"
+  python scripts/run_judge.py "configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
+fi

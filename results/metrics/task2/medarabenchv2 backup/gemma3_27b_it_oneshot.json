@@ -1,0 +1,13 @@
+{
+    "bert_precision": 0.7547662258148193,
+    "bert_recall": 0.7612718939781189,
+    "bert_f1": 0.7574165463447571,
+    "judge_model": "gpt-5.2",
+    "judge_total": 940,
+    "judge_valid": 940,
+    "judge_empty": 0,
+    "judge_correct": 307,
+    "judge_incorrect": 633,
+    "incorrect_pct": 67.34,
+    "correct_pct": 32.66
+}

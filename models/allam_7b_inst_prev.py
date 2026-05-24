@@ -23,6 +23,7 @@ class ALLaM7BInstPrevMCQHandler:
         Unified handler for:
             - task_type="mcq"               -> returns a single letter A–F (or None)
             - task_type="answer_generation" -> returns generated text (or "")
+            - task_type="dialogue_completion" -> returns generated text (one line, "ANSWER:" stripped)
     """
 
     def __init__(
@@ -154,11 +155,39 @@ class ALLaM7BInstPrevMCQHandler:
 
         return question
 
+    @staticmethod
+    def _build_dialogue_text(sample: dict) -> str:
+        """
+        Task 3 input: the doctor-patient dialogue with the final doctor turn
+        removed. Accepts PascalCase "Dialogue" or snake_case fallbacks.
+        """
+        for key in ("Dialogue", "dialogue", "conversation", "context"):
+            v = sample.get(key)
+            if v:
+                if isinstance(v, str):
+                    return v.strip()
+                if isinstance(v, list):
+                    lines = []
+                    for t in v:
+                        if isinstance(t, dict):
+                            role = str(t.get("role") or t.get("speaker") or "").strip()
+                            text = str(t.get("text") or t.get("content") or "").strip()
+                            if not text:
+                                continue
+                            lines.append(f"{role}: {text}" if role else text)
+                        else:
+                            s = str(t).strip()
+                            if s:
+                                lines.append(s)
+                    return "\n".join(lines)
+        return ""
+
     def prompt(self, sample: dict, instruction: str, max_tokens: int = 12, task_type: str = "mcq"):
         """
         task_type:
           - "mcq": returns A-F or None
-          - "answer_generation": returns generated string (may be empty string)
+                    - "answer_generation": returns generated string (may be empty string)
+                    - "dialogue_completion": returns generated string (may be empty string)
         """
         task_type = (task_type or "mcq").strip().lower()
 
@@ -172,8 +201,15 @@ class ALLaM7BInstPrevMCQHandler:
             if not user_text:
                 print("[ALLaM7BInstPrevMCQ] Empty question; cannot build answer-generation prompt.")
                 return ""
+        elif task_type == "dialogue_completion":
+            user_text = self._build_dialogue_text(sample)
+            if not user_text:
+                print("[ALLaM7BInstPrevMCQ] Empty dialogue; cannot build dialogue-completion prompt.")
+                return ""
         else:
-            raise ValueError(f"Unsupported task_type={task_type}. Expected 'mcq' or 'answer_generation'.")
+            raise ValueError(
+                f"Unsupported task_type={task_type}. Expected 'mcq', 'answer_generation', or 'dialogue_completion'."
+            )
 
         system_prompt = (instruction or "").strip()
 
@@ -224,6 +260,14 @@ class ALLaM7BInstPrevMCQHandler:
         if task_type == "answer_generation":
             one_line = raw_text.split("\n")[0].strip()
             print(f"[ALLaM7BInstPrevMCQ] Answer-gen raw (one line): {repr(one_line[:300])}")
+            return one_line
+
+        if task_type == "dialogue_completion":
+            one_line = raw_text.split("\n")[0].strip()
+            m = re.match(r"^\s*ANSWER\s*[:=]\s*(.*)$", one_line, flags=re.IGNORECASE)
+            if m:
+                one_line = m.group(1).strip()
+            print(f"[ALLaM7BInstPrevMCQ] Dialogue-completion raw (one line): {repr(one_line[:300])}")
             return one_line
 
         print(f"[ALLaM7BInstPrevMCQ] MCQ raw generated: {repr(raw_text)}")

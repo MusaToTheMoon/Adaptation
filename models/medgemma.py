@@ -14,9 +14,12 @@ os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
 
 class MedGemma27BMCQHandler:
     """
-    MCQ-only handler.
-    - Input is a dict (one sample) with keys: question, opa/opb/opc/opd/(ope/opf optional)
-    - Output is a single letter A–F.
+        Multi-task handler.
+            - task_type="mcq"                  -> single letter A..F
+            - task_type="answer_generation"    -> single-line free-form answer
+            - task_type="dialogue_completion"  -> single-line generation of the
+                                                                                        missing final doctor turn,
+                                                                                        with any leading "ANSWER:" stripped
     """
 
     def __init__(
@@ -136,6 +139,34 @@ class MedGemma27BMCQHandler:
             return ""
         return q  # IMPORTANT: no options
 
+    @staticmethod
+    def _build_dialogue_text(sample: dict) -> str:
+        """
+        Task 3 input: the doctor-patient dialogue with the final doctor turn
+        already removed. Accepts the dialogue under either the dataset's
+        PascalCase "Dialogue" key or a snake_case fallback.
+        """
+        for key in ("Dialogue", "dialogue", "conversation", "context"):
+            v = sample.get(key)
+            if v:
+                if isinstance(v, str):
+                    return v.strip()
+                if isinstance(v, list):
+                    lines = []
+                    for t in v:
+                        if isinstance(t, dict):
+                            role = str(t.get("role") or t.get("speaker") or "").strip()
+                            text = str(t.get("text") or t.get("content") or "").strip()
+                            if not text:
+                                continue
+                            lines.append(f"{role}: {text}" if role else text)
+                        else:
+                            s = str(t).strip()
+                            if s:
+                                lines.append(s)
+                    return "\n".join(lines)
+        return ""
+
     def prompt(
         self,
         sample: dict,
@@ -146,7 +177,9 @@ class MedGemma27BMCQHandler:
         """
         Unified interface:
           - task_type="mcq": returns 'A'..'F' or None
-          - task_type="answer_generation": returns generated text (one line) or ""
+                    - task_type="answer_generation": returns generated text (one line) or ""
+                    - task_type="dialogue_completion": returns generated doctor turn (one
+                                                                                         line, "ANSWER:" stripped) or ""
         """
         task_type = (task_type or "mcq").strip().lower()
     
@@ -256,8 +289,62 @@ class MedGemma27BMCQHandler:
             one_line = raw_text.split("\n")[0].strip()
             print(f"[MedGemma] Answer-gen raw (one line): {repr(one_line[:200])}")
             return one_line
+
+        if task_type == "dialogue_completion":
+            user_text = self._build_dialogue_text(sample)
+            if not user_text:
+                print("[MedGemma] Empty dialogue; cannot build dialogue-completion prompt.")
+                return ""
+
+            system_prompt = (instruction or "").strip()
+            messages = [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_text},
+            ]
+
+            try:
+                torch.cuda.empty_cache()
+
+                inputs = self.tokenizer.apply_chat_template(
+                    messages,
+                    add_generation_prompt=True,
+                    tokenize=True,
+                    return_dict=True,
+                    return_tensors="pt",
+                )
+                inputs = {k: v.to(self.model.device) for k, v in inputs.items()}
+                input_len = inputs["input_ids"].shape[-1]
+
+                with torch.inference_mode():
+                    generation = self.model.generate(
+                        **inputs,
+                        max_new_tokens=max_tokens,
+                        do_sample=False,
+                    )
+
+                gen_ids = generation[0][input_len:]
+                raw_text = self.tokenizer.decode(gen_ids, skip_special_tokens=True).strip()
+
+            except Exception as e:
+                print("[MedGemma] Error during dialogue-completion:", e)
+                return ""
+            finally:
+                torch.cuda.empty_cache()
+
+            if not raw_text:
+                return ""
+
+            one_line = raw_text.split("\n")[0].strip()
+            m = re.match(r"^\s*ANSWER\s*[:=]\s*(.*)$", one_line, flags=re.IGNORECASE)
+            if m:
+                one_line = m.group(1).strip()
+
+            print(f"[MedGemma] Dialogue-completion raw (one line): {repr(one_line[:200])}")
+            return one_line
     
-        raise ValueError(f"Unsupported task_type={task_type}. Expected 'mcq' or 'answer_generation'.")
+        raise ValueError(
+            f"Unsupported task_type={task_type}. Expected 'mcq', 'answer_generation', or 'dialogue_completion'."
+        )
 
     def prompt_batch(
         self,

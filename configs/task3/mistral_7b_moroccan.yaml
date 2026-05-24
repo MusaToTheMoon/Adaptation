@@ -1,0 +1,22 @@
+experiment_name: task3_mistral_7b_moroccan
+
+model:
+  type: mistral_7b
+  name: mistralai/Mistral-7B-Instruct-v0.3
+  cache_dir: /scratch/mk8737/huggingface
+  offline: true
+
+dataset:
+  path: datasets/task3/moroccan.json
+  instruction_path: prompts/task3-moroccan.txt
+
+task:
+  type: dialogue_completion
+  max_tokens: 256
+
+judge:
+  prompt_path: prompts/judge-task3.txt
+
+output:
+  predictions_path: results/predictions/task3/moroccan/mistral_7b.csv
+  metrics_path: results/metrics/task3/moroccan/mistral_7b.json

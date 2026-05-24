@@ -1,0 +1,22 @@
+experiment_name: task3_aya_expanse_8b_emirati
+
+model:
+  type: aya_expanse_8b
+  name: CohereLabs/aya-expanse-8b
+  cache_dir: /scratch/mk8737/huggingface
+  offline: true
+
+dataset:
+  path: datasets/task3/emirati.json
+  instruction_path: prompts/task3-emirati.txt
+
+task:
+  type: dialogue_completion
+  max_tokens: 256
+
+judge:
+  prompt_path: prompts/judge-task3.txt
+
+output:
+  predictions_path: results/predictions/task3/emirati/aya_expanse_8b.csv
+  metrics_path: results/metrics/task3/emirati/aya_expanse_8b.json

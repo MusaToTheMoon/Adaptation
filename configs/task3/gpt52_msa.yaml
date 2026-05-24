@@ -1,0 +1,22 @@
+experiment_name: task3_gpt52_MSA
+
+model:
+  type: gpt52
+  name: gpt-5.2
+  max_tokens: 256
+  # api_key: sk-...  # optional; if omitted, OPENAI_API_KEY env var is used
+
+dataset:
+  path: datasets/task3/msa.json
+  instruction_path: prompts/task3-MSA.txt
+
+task:
+  type: dialogue_completion
+  max_tokens: 256
+
+judge:
+  prompt_path: prompts/judge-task3.txt
+
+output:
+  predictions_path: results/predictions/task3/msa/gpt52.csv
+  metrics_path: results/metrics/task3/msa/gpt52.json

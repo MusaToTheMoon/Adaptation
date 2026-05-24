@@ -1,7 +1,0 @@
-# model dataset pairs for jobs/hpc_submit_eval_array.sh
-# format: model dataset
-
-1 mistral_small_chaimae_fewshot arastem
-1 mistral_small_chaimae_fewshot medarabench
-1 mistral_small_chaimae_fewshot mmlu-arabic
-1 mistral_small_chaimae_fewshot medarabiq

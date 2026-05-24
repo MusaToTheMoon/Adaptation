@@ -1,0 +1,22 @@
+experiment_name: task3_fanar_test
+
+model:
+  type: fanar
+  name: QCRI/Fanar-1-9B
+  cache_dir: /scratch/mk8737/huggingface
+  offline: true
+
+dataset:
+  path: datasets/task3/test.json
+  instruction_path: prompts/task3-MSA.txt
+
+task:
+  type: dialogue_completion
+  max_tokens: 256
+
+judge:
+  prompt_path: prompts/judge-task3.txt
+
+output:
+  predictions_path: results/predictions/task3/test/fanar.csv
+  metrics_path: results/metrics/task3/test/fanar.json

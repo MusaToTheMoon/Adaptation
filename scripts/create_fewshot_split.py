@@ -47,7 +47,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-root",
         default="datasets/qa/fewshot",
-        help="Root directory for generated splits (default: datasets/qa/fewshot/task1).",
+        help="Root directory for generated splits (default: datasets/qa/fewshot).",
     )
     parser.add_argument(
         "--name",

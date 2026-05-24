@@ -1,0 +1,22 @@
+experiment_name: task3_mistral_small_fewshot_MSA
+
+model:
+  type: mistral_small
+  name: mistralai/Mistral-Small-3.2-24B-Instruct-2506
+  cache_dir: /scratch/mk8737/huggingface
+  offline: true
+
+dataset:
+  path: datasets/task3/msa.json
+  instruction_path: prompts/task3-MSA-fewshot.txt
+
+task:
+  type: dialogue_completion
+  max_tokens: 256
+
+judge:
+  prompt_path: prompts/judge-task3.txt
+
+output:
+  predictions_path: results/predictions/task3/msa/mistral_small_fewshot.csv
+  metrics_path: results/metrics/task3/msa/mistral_small_fewshot.json

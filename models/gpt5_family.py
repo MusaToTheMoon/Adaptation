@@ -23,9 +23,14 @@ def extract_letter_from_text_en(text: str):
 
 class GPT5FamilyMCQHandler:
     """
-    GPT-5 family handler for MCQ tasks (e.g., gpt-5, gpt-5.2).
-    - Input is a dict (one sample) with keys: question, opa/opb/opc/opd/(ope/opf optional)
-    - Output is a single letter A–F.
+        Unified GPT-5 family handler for:
+            - task_type="mcq"               -> returns a single letter A-F (or None)
+            - task_type="answer_generation" -> returns generated text (or "")
+            - task_type="dialogue_completion" -> returns generated text (one line, "ANSWER:" stripped)
+
+        Input sample (dict):
+            - For MCQ: question + opa/opb/opc/opd (+ optional ope/opf)
+            - For answer generation: question
     """
 
     def __init__(self, api_key: str, model: str = "gpt-5"):
@@ -79,6 +84,35 @@ class GPT5FamilyMCQHandler:
             lines.append(f"{letter}) {txt}")
 
         return stem + "\n\n" + "\n".join(lines)
+
+    @staticmethod
+    def _build_ansgen_text(sample: dict) -> str:
+        """Build answer-generation input from the question stem only."""
+        return (sample.get("question") or "").strip()
+
+    @staticmethod
+    def _build_dialogue_text(sample: dict) -> str:
+        """Build Task 3 dialogue input from PascalCase or snake_case fields."""
+        for key in ("Dialogue", "dialogue", "conversation", "context"):
+            v = sample.get(key)
+            if v:
+                if isinstance(v, str):
+                    return v.strip()
+                if isinstance(v, list):
+                    lines = []
+                    for t in v:
+                        if isinstance(t, dict):
+                            role = str(t.get("role") or t.get("speaker") or "").strip()
+                            text = str(t.get("text") or t.get("content") or "").strip()
+                            if not text:
+                                continue
+                            lines.append(f"{role}: {text}" if role else text)
+                        else:
+                            s = str(t).strip()
+                            if s:
+                                lines.append(s)
+                    return "\n".join(lines)
+        return ""
 
     @staticmethod
     def _parse_responses_text(resp) -> str:
@@ -155,50 +189,90 @@ class GPT5FamilyMCQHandler:
             raise last_error
         raise RuntimeError("Responses API call failed with reasoning fallback.")
 
-    def prompt(self, sample: dict, instruction: str, max_tokens: int = 16, **kwargs):
+    def prompt(
+        self,
+        sample: dict,
+        instruction: str,
+        max_tokens: int = 16,
+        task_type: str = "mcq",
+        **kwargs,
+    ):
         """
-        MCQ-only interface:
-        - sample is ONE JSON record (dict).
-        - returns: 'A'..'F' or None
+        Unified interface:
+        - sample is one JSON record (dict).
+        - task_type="mcq": returns 'A'..'F' or None
+        - task_type="answer_generation": returns generated text or ""
+        - task_type="dialogue_completion": returns generated text or ""
         """
-        user_text = self._build_mcq_text(sample)
-        if not user_text:
-            print(f"[{self.log_tag}] Empty stem/options; cannot build prompt.")
-            return None
+        task_type = (task_type or "mcq").strip().lower()
+
+        if task_type == "mcq":
+            user_text = self._build_mcq_text(sample)
+            if not user_text:
+                print(f"[{self.log_tag}] Empty stem/options; cannot build prompt.")
+                return None
+        elif task_type == "answer_generation":
+            user_text = self._build_ansgen_text(sample)
+            if not user_text:
+                print(f"[{self.log_tag}] Empty question; cannot build answer-generation prompt.")
+                return ""
+        elif task_type == "dialogue_completion":
+            user_text = self._build_dialogue_text(sample)
+            if not user_text:
+                print(f"[{self.log_tag}] Empty dialogue; cannot build dialogue-completion prompt.")
+                return ""
+        else:
+            raise ValueError(
+                f"Unsupported task_type={task_type}. Expected 'mcq', 'answer_generation', or 'dialogue_completion'."
+            )
 
         system_prompt = (instruction or "Follow instructions strictly.").strip()
-        safe_max_tokens = max(128, int(max_tokens or 16))
+        if task_type == "mcq":
+            safe_max_tokens = max(128, int(max_tokens or 16))
+        else:
+            safe_max_tokens = max(64, int(max_tokens or 256))
+
+        print(f"[{self.log_tag}] TASK TYPE:", task_type)
         print(f"[{self.log_tag}] MAX TOKENS:", safe_max_tokens)
 
         raw = ""
         try:
-            payload = dict(
-                model=self.model,
-                instructions=system_prompt,
-                input=(
-                    f"{user_text}\n\n"
-                    "Please output only the final answer letter (A, B, C, D, E, or F)."
-                ),
-                text={
-                    "format": {
-                        "type": "json_schema",
-                        "name": "mcq_answer",
-                        "schema": {
-                            "type": "object",
-                            "properties": {
-                                "answer": {
-                                    "type": "string",
-                                    "enum": ["A", "B", "C", "D", "E", "F"],
-                                }
+            if task_type == "mcq":
+                payload = dict(
+                    model=self.model,
+                    instructions=system_prompt,
+                    input=(
+                        f"{user_text}\n\n"
+                        "Please output only the final answer letter (A, B, C, D, E, or F)."
+                    ),
+                    text={
+                        "format": {
+                            "type": "json_schema",
+                            "name": "mcq_answer",
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "answer": {
+                                        "type": "string",
+                                        "enum": ["A", "B", "C", "D", "E", "F"],
+                                    }
+                                },
+                                "required": ["answer"],
+                                "additionalProperties": False,
                             },
-                            "required": ["answer"],
-                            "additionalProperties": False,
-                        },
-                        "strict": True,
-                    }
-                },
-                max_output_tokens=safe_max_tokens,
-            )
+                            "strict": True,
+                        }
+                    },
+                    max_output_tokens=safe_max_tokens,
+                )
+            else:
+                payload = dict(
+                    model=self.model,
+                    instructions=system_prompt,
+                    input=user_text,
+                    text={"format": {"type": "text"}},
+                    max_output_tokens=safe_max_tokens,
+                )
 
             resp = self._create_with_reasoning_fallback(payload)
             raw = self._parse_responses_text(resp)
@@ -208,9 +282,23 @@ class GPT5FamilyMCQHandler:
 
             if not raw:
                 retry_payload = dict(payload)
-                retry_payload["text"] = {"format": {"type": "text"}}
-                retry_payload["input"] += "\n\nFinal answer (single letter A–F) only. Do not include any other text."
-                retry_payload["max_output_tokens"] = max(256, safe_max_tokens * 2) if incomplete_reason == "max_output_tokens" else max(128, safe_max_tokens)
+                if task_type == "mcq":
+                    retry_payload["text"] = {"format": {"type": "text"}}
+                    retry_payload["input"] += (
+                        "\n\nFinal answer (single letter A-F) only. "
+                        "Do not include any other text."
+                    )
+                    retry_payload["max_output_tokens"] = (
+                        max(256, safe_max_tokens * 2)
+                        if incomplete_reason == "max_output_tokens"
+                        else max(128, safe_max_tokens)
+                    )
+                else:
+                    retry_payload["max_output_tokens"] = (
+                        max(512, safe_max_tokens * 2)
+                        if incomplete_reason == "max_output_tokens"
+                        else max(64, safe_max_tokens)
+                    )
                 resp = self._create_with_reasoning_fallback(retry_payload)
                 raw = self._parse_responses_text(resp)
 
@@ -226,11 +314,24 @@ class GPT5FamilyMCQHandler:
 
         except Exception as e:
             print(f"[{self.log_tag}] Error during generation:", e)
-            return None
+            return None if task_type == "mcq" else ""
 
         if not raw:
             print(f"[{self.log_tag}] Empty generation output.")
-            return None
+            return None if task_type == "mcq" else ""
+
+        if task_type == "answer_generation":
+            one_line = raw.split("\n")[0].strip()
+            print(f"[{self.log_tag}] Answer-gen raw (one line): {repr(one_line[:300])}")
+            return one_line
+
+        if task_type == "dialogue_completion":
+            one_line = raw.split("\n")[0].strip()
+            m = re.match(r"^\s*ANSWER\s*[:=]\s*(.*)$", one_line, flags=re.IGNORECASE)
+            if m:
+                one_line = m.group(1).strip()
+            print(f"[{self.log_tag}] Dialogue-completion raw (one line): {repr(one_line[:300])}")
+            return one_line
 
         print(f"[{self.log_tag}] MCQ raw generated: {repr(raw)}")
 
@@ -240,3 +341,35 @@ class GPT5FamilyMCQHandler:
 
         print(f"[{self.log_tag}] Could not extract a clean letter.")
         return None
+
+    def prompt_batch(
+        self,
+        samples,
+        instruction: str,
+        max_tokens: int = 16,
+        task_type: str = "mcq",
+        **kwargs,
+    ):
+        """
+        Batched interface for compatibility with the evaluation pipeline.
+        Uses per-sample Responses API calls to preserve behavior and output format.
+        """
+        if samples is None:
+            return []
+
+        results = []
+        total = len(samples)
+        print(f"[{self.log_tag}] prompt_batch size={total} task_type={task_type}")
+
+        for idx, sample in enumerate(samples, start=1):
+            print(f"[{self.log_tag}] prompt_batch item={idx}/{total}")
+            result = self.prompt(
+                sample,
+                instruction=instruction,
+                max_tokens=max_tokens,
+                task_type=task_type,
+                **kwargs,
+            )
+            results.append(result)
+
+        return results

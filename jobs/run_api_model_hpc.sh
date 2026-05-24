@@ -69,6 +69,16 @@ mkdir -p "$LOGS_DIR"
 
 python scripts/run_evaluation.py "configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
 
+# Task 2 additional step: run judge LLM on the generated predictions
+if [[ "$TASK_NUM" == "2" || "$TASK_NUM" == "3" ]]; then
+  if [[ -z "${OPENAI_API_KEY:-}" ]]; then
+    echo "Error: OPENAI_API_KEY is not set. Add it to .env or export it before sbatch."
+    exit 1
+  fi
+  echo "MAMA"
+  python scripts/run_judge.py "configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
+fi
+
 # Cleanup: Move logs to the designated directory
 mv "${PROJECT_ROOT}/tmp_logs/job_${SLURM_JOB_ID}.out" "$LOGS_DIR/job_${SLURM_JOB_ID}.out"
 mv "${PROJECT_ROOT}/tmp_logs/job_${SLURM_JOB_ID}.err" "$LOGS_DIR/job_${SLURM_JOB_ID}.err"

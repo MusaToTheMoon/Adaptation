@@ -1,0 +1,22 @@
+experiment_name: task3_llama31_8b_inst_egyptian
+
+model:
+  type: llama31_8b_inst
+  name: meta-llama/Llama-3.1-8B-Instruct
+  cache_dir: /scratch/mk8737/huggingface
+  offline: true
+
+dataset:
+  path: datasets/task3/egyptian.json
+  instruction_path: prompts/task3-egyptian.txt
+
+task:
+  type: dialogue_completion
+  max_tokens: 256
+
+judge:
+  prompt_path: prompts/judge-task3.txt
+
+output:
+  predictions_path: results/predictions/task3/egyptian/llama31_8b_inst.csv
+  metrics_path: results/metrics/task3/egyptian/llama31_8b_inst.json

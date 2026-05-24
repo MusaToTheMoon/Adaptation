@@ -1,0 +1,22 @@
+experiment_name: task3_mistral_small_jordanian
+
+model:
+  type: mistral_small
+  name: mistralai/Mistral-Small-3.2-24B-Instruct-2506
+  cache_dir: /scratch/mk8737/huggingface
+  offline: true
+
+dataset:
+  path: datasets/task3/jordanian.json
+  instruction_path: prompts/task3-jordanian.txt
+
+task:
+  type: dialogue_completion
+  max_tokens: 256
+
+judge:
+  prompt_path: prompts/judge-task3.txt
+
+output:
+  predictions_path: results/predictions/task3/jordanian/mistral_small.csv
+  metrics_path: results/metrics/task3/jordanian/mistral_small.json

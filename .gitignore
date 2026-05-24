@@ -1,6 +1,8 @@
 # specific files
 foo.sh
 configs/task1/test.yaml
+ztrash/
+datasets/
 
 # Python
 __pycache__/

@@ -6,8 +6,9 @@ Output format:
 ANSWER: <short answer>
 
 Rules:
-- Output exactly ONE line starting with "ANSWER: ".
+- Output exactly ONE line starting with “ANSWER: “.
 - The answer must be a concise medical term or phrase, typically 1-4 words, rarely more than 10 words.
+- All answers must be in Arabic.
 - Do NOT write a full sentence or explanation.
 - Do NOT explain your reasoning.
 - Do NOT add extra commentary.
@@ -16,5 +17,5 @@ Rules:
 - Do NOT include multiple answers.
 
 Example:
-Question: من أين يفرز الأدرينالين؟
-ANSWER: لب الكظر
+Question: أين تتوضع الثقبة العوراء في اللسان؟
+ANSWER: خلف الكلم الإنتهائي

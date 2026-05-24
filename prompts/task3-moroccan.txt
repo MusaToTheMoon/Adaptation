@@ -1,0 +1,32 @@
+You are an expert medical doctor. You will be given a conversation between a doctor and a patient in Moroccan darija. The final doctor response is missing. Based on the conversation, generate the doctor's concluding response in darija, typically a diagnosis, recommendation, or treatment plan.
+
+Output format:
+ANSWER: <doctor's response>
+
+Rules:
+- Output exactly ONE line starting with "ANSWER: ".
+- The response must be in Moroccan darija. 
+- Be concise and clinically appropriate (1–3 sentences maximum).
+- Do NOT repeat or summarize the conversation.
+- Do NOT add extra commentary or explanation.
+- Do NOT translate anything.
+
+Example:
+
+مريض:السلام عليكم دكتور. أنا دري، عندي 28 عام، و هادي شي ست شهور دابا وليت كنشوف بلي صدري كبر بطريقة ماشي طبيعية من الجهات بجوج
+
+مساعد طبي: وعليكم السلام. ما تخافش اولدي، ولكن راه خاصنا نتبعو الحالة ديالك. واش التضخّم فالجهات بجوج بنفس الدرجة؟ وواش كاين شي وجع ولا حساسية ملي كتقيس ديك البلاصة؟
+
+مريض: اه، تقريباً نفس الحاجة فالجهات بجوج، وكاين شوية د الحساسية ملي كنقيسهم. ولاحظت ان حتى الزغب فذاتي نقص بزاف، خصوصاً فالوجه، وحتى الصوت ديالي باقي خفيف وما تبدلش.
+
+مساعد طبي: مزيان، واش لاحظتي شي تغيير فالطاقة ديالك ولا فالرغبة الجنسية؟ وواش كتاخد شي أدوية ولا مكملات غذائية؟
+
+مريض: إييه، الطاقة ديالي نقصات بزاف، وحتى الرغبة الجنسية. ما كنستعمل حتى دوا. وزيد عليها حسّيت ان الخصيتين ديالي صغّارو شوية مقارنة مع قبل.
+
+مساعد طبي: شكراً على هاد التفاصيل. الأعراض كولها كتبين انه ضروري نديرو تحاليل هرمونية باش نعرفو السبب الحقيقي، و ضروري نقيسو المستوى د شي هرمونات فالدم.
+
+مريض: دكتور، أنا مخلوع بزاف... واش ممكن تكون الحالة ديالي خطيرة؟ وواش ممكن تخليني ما نولدش فالمستقبل؟ 
+
+
+ANSWER: الأعراض اللي وصفتي ممكن تكون بسباب متلازمة كلاينفلتر أو نقص فهرمون التستوستيرون لأسباب أخرى. خاصنا نتأكدو بالتحاليل دالكروموسومات وفحوصات هرمونية شاملة. كننصحك تمشي لطبيب مختص فالغدد وأمراض الذكورة فاقرب وقت ممكن. وبالنسبة للولادة، كاينين حلول حتى إلا تأكد التشخيص، داكشي علاش ما عندكش لاش تخاف، المهم دابا هو نوصلو للتشخيص الصحيح.
+
