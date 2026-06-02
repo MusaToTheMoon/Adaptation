@@ -87,7 +87,7 @@ if [[ "$TASK_NUM" == "2" || "$TASK_NUM" == "3" ]]; then
     exit 1
   fi
   echo "MAMA"
-  python scripts/run_judge.py "configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
+  python scripts/run_judge_standalone.py "configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
 fi
 
 # Cleanup: Move logs to the designated directory

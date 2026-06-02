@@ -41,8 +41,17 @@
     "judge_communication__score": 0.565,
     "judge_communication__score_raw": 1.13,
     "judge_communication__score_n": 100,
-    "judge_composite_mean": 0.585,
+    "judge_composite_mean": 0.47,
     "judge_composite_n_complete": 100,
     "judge_composite_n_partial": 0,
-    "judge_composite_formula": "(reasoning_match + safety + communication) / 6, each axis 0-2 (Hit/Safe/Good=2, Partial/Acceptable=1, Miss/Unsafe/Poor=0)"
+    "judge_composite_formula": "fraction labeled 'Correct' (final response vs. ground truth)",
+    "judge_label__valid": 100,
+    "judge_label__empty": 0,
+    "judge_label__correct": 47,
+    "judge_label__correct_pct": 47.0,
+    "judge_label__incorrect": 53,
+    "judge_label__incorrect_pct": 53.0,
+    "judge_label__score": 0.47,
+    "judge_label__score_raw": 0.47,
+    "judge_label__score_n": 100
 }

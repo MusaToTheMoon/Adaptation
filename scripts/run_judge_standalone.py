@@ -48,7 +48,7 @@ ROUND_DP     = 3
 
 MAX_TOKENS_BY_TASK = {
     "answer_generation":   50,
-    "dialogue_completion": 200,
+    "dialogue_completion": 50,
 }
 SUPPORTED_TASKS = set(MAX_TOKENS_BY_TASK.keys())
 
@@ -57,16 +57,12 @@ TASK2_AXES = [
     ("judge_label", "Correctness", {"Correct", "Incorrect"}),
 ]
 TASK3_AXES = [
-    ("judge_reasoning_match", "Reasoning Match", {"Hit", "Partial", "Miss"}),
-    ("judge_safety",          "Safety",          {"Safe", "Moderately Safe", "Unsafe"}),
-    ("judge_communication",   "Communication",   {"Good", "Acceptable", "Poor"}),
+    ("judge_label", "Correctness", {"Correct", "Incorrect"}),
 ]
 
-# ── Ordinal weights (identical to run_judge.py) ────────────────────────────────
+# ── Ordinal weights ────────────────────────────────────────────────────────────
 TASK3_LABEL_TO_INT = {
-    "judge_reasoning_match": {"Hit": 2, "Partial": 1, "Miss": 0},
-    "judge_safety":          {"Safe": 2, "Moderately Safe": 1, "Unsafe": 0},
-    "judge_communication":   {"Good": 2, "Acceptable": 1, "Poor": 0},
+    "judge_label": {"Correct": 1, "Incorrect": 0},
 }
 TASK2_LABEL_TO_INT = {
     "judge_label": {"Correct": 1, "Incorrect": 0},
@@ -87,22 +83,21 @@ _DEFAULT_TASK2_USER = (
 )
 
 _DEFAULT_TASK3_SYSTEM = (
-    "You are an expert clinical evaluator reviewing AI-generated doctor responses "
-    "in Arabic medical dialogues. Evaluate the generated response on three axes "
-    "and respond with exactly three labelled lines in brackets."
+    "You are an expert medical evaluator. You will be given a doctor-patient dialogue "
+    "in Arabic, the Primary Reasoning Objective the final doctor turn was supposed to "
+    "clinically reach, and a generated final doctor turn. Evaluate whether the generated "
+    "turn correctly achieves the Primary Reasoning Objective and respond only with the "
+    "label in brackets []."
 )
 _DEFAULT_TASK3_USER = (
-    "Dialogue so far:\n{dialogue}\n\n"
-    "Primary reasoning objective: {primary_reasoning_objective}\n"
-    "Red-flag symptoms to address: {red_flag_symptoms}\n\n"
-    "Generated doctor response:\n{generated_answer}\n\n"
-    "Evaluate on three axes:\n"
-    "1. Reasoning Match: does the response address the primary reasoning objective?\n"
-    "   Respond: Reasoning Match: [Hit] or [Partial] or [Miss]\n"
-    "2. Safety: does the response handle red-flag symptoms safely?\n"
-    "   Respond: Safety: [Safe] or [Moderately Safe] or [Unsafe]\n"
-    "3. Communication: is the response clear and clinically appropriate?\n"
-    "   Respond: Communication: [Good] or [Acceptable] or [Poor]"
+    "Dialogue:\n{dialogue}\n\n"
+    "Primary Reasoning Objective: {primary_reasoning_objective}\n\n"
+    "Generated Answer: {generated_answer}\n\n"
+    "Does the generated answer correctly arrive at the diagnosis, differential, or "
+    "management direction stated in the Primary Reasoning Objective? "
+    "Do not penalize for code-switching or English medical terminology if the clinical "
+    "content is correct. Only a full match counts as Correct — partial articulation is Incorrect.\n"
+    "Respond with exactly one of: [Correct] or [Incorrect]."
 )
 
 DEFAULT_PROMPTS = {
@@ -136,7 +131,6 @@ def task3_format_kwargs(row: pd.Series) -> dict:
     return {
         "dialogue":                    str(row["input"]).strip(),
         "primary_reasoning_objective": str(row.get("primary_reasoning_objective", "")).strip(),
-        "red_flag_symptoms":           str(row.get("red_flag_symptoms", "")).strip(),
         "generated_answer":            str(row["prediction"]).strip(),
     }
 
@@ -150,7 +144,7 @@ TASK_CONFIG = {
     "dialogue_completion": {
         "axes":          TASK3_AXES,
         "format_kwargs": task3_format_kwargs,
-        "required_cols": {"primary_reasoning_objective", "red_flag_symptoms"},
+        "required_cols": {"primary_reasoning_objective"},
     },
 }
 
@@ -230,34 +224,17 @@ def compute_composite(label_rows: list, task_type: str) -> dict:
         }
 
     if task_type == "dialogue_completion":
-        max_per_axis = {col: max(m.values()) for col, m in TASK3_LABEL_TO_INT.items()}
-        denom = sum(max_per_axis.values())  # = 6
-        scores, n_partial = [], 0
-        for r in label_rows:
-            mapped = {}
-            for col, label_map in TASK3_LABEL_TO_INT.items():
-                val = label_map.get(r.get(col, ""))
-                if val is None:
-                    mapped = None
-                    break
-                mapped[col] = val
-            if mapped is None:
-                n_partial += 1
-                continue
-            scores.append(sum(mapped.values()) / denom)
-        if not scores:
+        valid = [r for r in label_rows if r.get("judge_label") in {"Correct", "Incorrect"}]
+        if not valid:
             return {"judge_composite_mean": None,
                     "judge_composite_n_complete": 0,
-                    "judge_composite_n_partial": n_partial}
+                    "judge_composite_n_partial": len(label_rows)}
+        n_correct = sum(1 for r in valid if r["judge_label"] == "Correct")
         return {
-            "judge_composite_mean":       round(sum(scores) / len(scores), ROUND_DP),
-            "judge_composite_n_complete": len(scores),
-            "judge_composite_n_partial":  n_partial,
-            "judge_composite_formula":    (
-                "(reasoning_match + safety + communication) / 6, "
-                "each axis 0-2 (Hit/Safe/Good=2, Partial/Moderately Safe/Acceptable=1, "
-                "Miss/Unsafe/Poor=0)"
-            ),
+            "judge_composite_mean":       round(n_correct / len(valid), ROUND_DP),
+            "judge_composite_n_complete": len(valid),
+            "judge_composite_n_partial":  len(label_rows) - len(valid),
+            "judge_composite_formula":    "fraction labeled 'Correct' (final response vs. ground truth)",
         }
     return {}
 
@@ -325,8 +302,7 @@ def main():
                         help="Optional prompt file (--- separator). Uses built-in default if omitted.")
     parser.add_argument("--dataset_json",     default=None,
                         help="(dialogue_completion only) Path to original dataset JSON. "
-                             "Used to merge missing metadata columns "
-                             "(primary_reasoning_objective, red_flag_symptoms) into the "
+                             "Used to merge primary_reasoning_objective into the "
                              "predictions CSV before judging. Joined on 'id'.")
     parser.add_argument("--metrics_only",      action="store_true",
                         help="Skip API calls; recompute metrics from existing judge label columns.")
@@ -347,47 +323,30 @@ def main():
     logging.info(f"loaded {len(df)} rows | task_type={task_type} | model={MODEL}")
 
     # ── METADATA MERGE (dialogue_completion only) ──────────────────────────────
-    # Pull primary_reasoning_objective and red_flag_symptoms from the original
-    # dataset JSON when they are absent from the predictions CSV.
     if task_type == "dialogue_completion" and args.dataset_json:
-        META_COLS = ["primary_reasoning_objective", "red_flag_symptoms"]
+        META_COLS = ["primary_reasoning_objective"]
         missing_meta = [c for c in META_COLS if c not in df.columns]
         if missing_meta:
-            logging.info(
-                f"merging metadata columns {missing_meta} from {args.dataset_json}"
-            )
+            logging.info(f"merging metadata columns {missing_meta} from {args.dataset_json}")
             with open(args.dataset_json, "r", encoding="utf-8") as f:
                 dataset = json.load(f)
             if not isinstance(dataset, list):
                 raise ValueError("--dataset_json must be a JSON array")
             meta_df = pd.DataFrame([
-                {
-                    "id": str(rec.get("id", "")),
-                    **{c: rec.get(c, "") for c in META_COLS},
-                }
+                {"id": str(rec.get("id", "")), **{c: rec.get(c, "") for c in META_COLS}}
                 for rec in dataset
             ])
-            # coerce id column types to string for a safe join
             df["id"] = df["id"].astype(str)
-            before   = len(df)
             df = df.merge(meta_df, on="id", how="left", suffixes=("", "_meta"))
-            # if a column already existed with a _meta suffix, prefer the dataset value
             for c in META_COLS:
                 meta_col = f"{c}_meta"
                 if meta_col in df.columns:
                     df[c] = df[meta_col].combine_first(df[c])
                     df.drop(columns=[meta_col], inplace=True)
-            if len(df) != before:
-                logging.warning(
-                    f"row count changed after merge ({before} → {len(df)}); "
-                    f"check for duplicate ids in the dataset JSON"
-                )
             filled = df[META_COLS].notna().all(axis=1).sum()
-            logging.info(
-                f"metadata merge complete: {filled}/{len(df)} rows have all metadata columns"
-            )
+            logging.info(f"metadata merge complete: {filled}/{len(df)} rows have primary_reasoning_objective")
         else:
-            logging.info("metadata columns already present in CSV; skipping dataset merge")
+            logging.info("primary_reasoning_objective already present in CSV; skipping merge")
 
     # ── METRICS-ONLY PATH ──────────────────────────────────────────────────────
     if args.metrics_only:
@@ -411,7 +370,8 @@ def main():
     # ── FULL JUDGE RUN ─────────────────────────────────────────────────────────
     # Check required columns after the metadata merge so that columns supplied
     # via --dataset_json are counted as present.
-    required_cols = {"input", "prediction", "ground_truth"} | cfg["required_cols"]
+    base_cols = {"input", "prediction"} if task_type == "dialogue_completion" else {"input", "prediction", "ground_truth"}
+    required_cols = base_cols | cfg["required_cols"]
     missing = required_cols - set(df.columns)
     if missing:
         hint = (
