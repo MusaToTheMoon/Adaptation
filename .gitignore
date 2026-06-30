@@ -3,6 +3,8 @@ foo.sh
 configs/task1/test.yaml
 ztrash/
 datasets/
+outputs/
+adaptation-env.yml
 
 # Python
 __pycache__/

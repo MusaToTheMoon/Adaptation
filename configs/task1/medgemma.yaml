@@ -4,7 +4,7 @@ model:
   type: medgemma           #model handler type as written in models/__init__.py
   name: google/medgemma-27b-text-it  # just as it appears in huggingface
 
-cache_dir: /scratch/ca2627/huggingface #modify to your own cache directory
+cache_dir: /scratch/mk8737/huggingface #modify to your own cache directory
 
 dataset:
   path: datasets/qa/arastem.json   #path to dataset JSON file
@@ -16,4 +16,3 @@ task:
 output:
   predictions_path: results/predictions/task1/medgemma_arastem.csv #specify output pred file
   metrics_path: results/metrics/task1/medgemma_arastem.json  #specift output pred file
-

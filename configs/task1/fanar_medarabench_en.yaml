@@ -1,0 +1,19 @@
+experiment_name: task1_fanar_medarabench_en
+
+model:
+  type: fanar
+  name: QCRI/Fanar-1-9B
+  cache_dir: /scratch/mk8737/huggingface
+  offline: true
+
+dataset:
+  path: datasets/diagnosis/medarabench-translated.json
+  instruction_path: prompts/task1.txt
+
+task:
+  type: mcq
+  lang: en
+
+output:
+  predictions_path: results/predictions/task1/medarabench_en/fanar.csv
+  metrics_path: results/metrics/task1/medarabench_en/fanar.json

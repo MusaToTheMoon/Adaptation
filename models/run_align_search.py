@@ -132,6 +132,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--val_file",   default=None)
     p.add_argument("--search_dir", default=None)
     p.add_argument("--model_name", default="mistralai/Mistral-Small-3.2-24B-Instruct-2506")
+    p.add_argument("--train_script", default=None,
+                   help="Training script to launch. Defaults to models/train_lora_align.py.")
 
     # Align-specific args (passed through to train_lora_align.py)
     p.add_argument("--layer_start",   type=int,   default=0)
@@ -182,7 +184,7 @@ def main():
     rng = random.Random(args.seed)
     lrs = [sample_log_uniform(args.lr_lo, args.lr_hi, rng) for _ in range(args.n_trials)]
 
-    train_script = str(Path(__file__).parent / "train_lora_align.py")
+    train_script = args.train_script or str(Path(__file__).parent / "train_lora_align.py")
 
     if args.resume and os.path.exists(manifest_path):
         with open(manifest_path) as f:

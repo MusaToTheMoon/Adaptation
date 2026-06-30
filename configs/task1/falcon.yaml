@@ -4,7 +4,7 @@ model:
   type: falcon            #model handler type as written in models/__init__.py
   name: tiiuae/Falcon-H1-7B-Instruct  # just as it appears in huggingface
 
-cache_dir: /scratch/ca2627/huggingface #modify to your own cache directory
+cache_dir: /scratch/mk8737/huggingface #modify to your own cache directory
 
 dataset:
   path: datasets/qa/medarabench.json   #path to dataset JSON file

@@ -2,7 +2,9 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
-#SBATCH --mem=16G
+#SBATCH -p nvidia
+#SBATCH --gres=gpu:1
+#SBATCH --mem=64G
 #SBATCH -t 1-0:59:59
 #SBATCH -o /scratch/mk8737/farah/Adaptation/tmp_logs/job_%j.out
 #SBATCH -e /scratch/mk8737/farah/Adaptation/tmp_logs/job_%j.err
@@ -11,8 +13,6 @@
 
 set -euo pipefail
 
-#SBATCH -p nvidia
-#SBATCH --gres=gpu:1
 #SBATCH --constrain=80g
 
 START_TS=$(date +%s)

@@ -1,0 +1,28 @@
+constants:
+  model:
+    type: gemma3_27b_it
+    name: google/gemma-3-27b-it
+    offline: true
+  task:
+    name: task1
+    type: mcq
+
+experiment_name: task1_${constants.model.type}_medarabench_en
+
+model:
+  type: ${constants.model.type}
+  name: ${constants.model.name}
+  cache_dir: /scratch/mk8737/huggingface
+  offline: ${constants.model.offline}
+
+dataset:
+  path: datasets/diagnosis/medarabench-translated.json
+  instruction_path: prompts/${constants.task.name}.txt
+
+task:
+  type: ${constants.task.type}
+  lang: en
+
+output:
+  predictions_path: results/predictions/task1/medarabench_en/${constants.model.type}.csv
+  metrics_path: results/metrics/task1/medarabench_en/${constants.model.type}.json

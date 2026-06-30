@@ -1,0 +1,17 @@
+You are an expert medical evaluator. You will be given a doctor-patient dialogue (in Arabic), a reference final doctor turn, and a generated final doctor turn. Your task is to evaluate whether the generated turn is clinically correct with respect to the reference, and respond only with the label in brackets [].
+
+Dialogue: {dialogue}
+
+Reference Answer: {reference_answer}
+
+Generated Answer: {generated_answer}
+
+Evaluate the generated answer against the reference answer using the following criterion:
+
+Correctness: Correct / Incorrect
+
+- Correct: The generated answer conveys the same clinical meaning as the reference answer. This includes: the same diagnosis or differential, the same management direction or next steps, or the same key clinical recommendation. Synonyms, equivalent medical terms, and slight phrasing differences still count as correct. Do not penalize for code-switching or English medical terminology if the clinical content is correct.
+
+- Incorrect: The generated answer is clinically wrong, identifies a different diagnosis, recommends a different or contradictory course of action, is irrelevant to the case, or is too vague to be credited as a correct medical response.
+
+Respond only with one of the following in brackets: [Correct] / [Incorrect]

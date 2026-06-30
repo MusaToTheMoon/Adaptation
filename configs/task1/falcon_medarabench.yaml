@@ -1,0 +1,18 @@
+experiment_name: task1_falcon_medarabench
+
+model:
+  type: falcon
+  name: tiiuae/Falcon-H1-7B-Instruct
+  cache_dir: /scratch/mk8737/huggingface
+  offline: true
+
+dataset:
+  path: datasets/qa/medarabench.json
+  instruction_path: prompts/task1.txt
+
+task:
+  type: mcq
+
+output:
+  predictions_path: results/predictions/task1/medarabench/falcon.csv
+  metrics_path: results/metrics/task1/medarabench/falcon.json
