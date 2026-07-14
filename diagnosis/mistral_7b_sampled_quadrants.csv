@@ -1,0 +1,4544 @@
+id,model,quadrant,en_correct,ar_correct,ground_truth,prediction_english,prediction_arabic,input_english,input_arabic,Level
+3828,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"The internal environment is everything except
+
+A) Intracellular fluid
+B) Extracellular fluid
+C) Blood
+D) Aqueous humor","العامل ٣ مع ca يؤدي الى :
+
+A) تلقيم راجع سلبي للثرومبين.
+B) تلقيم راجع إيجابي للثرومبين.
+C) تنشيط العامل ال ٦.
+D) تثبيط سبل التخثر.",
+1423,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"All of the following statements about niacin deficiency are true except
+
+A) Diarrhea is a symptom.
+B) It is seen in populations whose diets are based on corn.
+C) It usually does not require treatment.
+D) It occurs in people with Hartnup disease.","واحد فقط مما يلي هو بروتين:
+
+A) الأنسولين
+B) الميوغلوبين
+C) الجلوكاجون
+D) الكيروسين",
+1106,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"Cells that originate in the bone marrow and play a role in skin immune responses
+
+A) Langerhans cells.
+B) Merkel cells.
+C) Melanocytes.
+D) a+b cells.","يروي المساريقي العلوي:
+
+A) الأمعاء الدقيقة
+B) المعدة
+C) المرئ
+D) البريتوان",
+4274,Mistral-7B-Instruct-v0.3,both_correct,1,1,B,B,B,"It is considered part of innate immunity as it is found on mucous membranes
+
+A) IgE
+B) IgA
+C) IgM
+D) IgG","الحالة التي يمكن أن تؤدي إلى تركيب الطاقة بواسطة مضخة الصوديوم بوتاسيوم هي:
+
+A) نقص كمية الـ ATP داخل الخلية
+B) زيادة مدروج تركيز كل من شوارد الصوديوم و البوتاسيوم عبر الغشاء الخلوي
+C) انخفاض تركيز الكاليسيوم داخل الخلية
+D) زيادة نفوذية قنوات الشوارد في الغشاء الخلوي",
+2103,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"In the tryptophan cell, the presence of tryptophan leads to
+
+A) Inhibition of gene transcription
+B) Stimulation of gene transcription
+C) Constituting a transcription enhancer
+D) All false","تحدث التلاسيميا بيتا نتيجة:
+
+A) خلة جسدية سائدة.
+B) خلة جسدية متنحية.
+C) خلة مكتسبة سائدة.
+D) خلة مكتسبة متنحية.",
+1985,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"Gene expression is an event through which
+
+A) From genotype to phenotype.
+B) From phenotype to genotype.
+C) From genotype to mRNA.
+D) All of the above are incorrect.","تتميز شجرة النسب الحاوية على حالة وراثة متعلقة بالمتقدرات وإلام فقط فيها مصابة:
+
+A) الذكور دون الإناث مصابون.
+B) الإناث دون الذكور مصابات.
+C) الاولاد كلهم مصابون.
+D) الأولاد كلهم سليمين.",
+1860,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"Estimating the percentage of phenotypic variation in a trait due to genetic differences indicates
+
+A) Heritability
+B) Experimental risk
+C) Prevalence rate
+D) Incidence rate","تدعى جزيئات الرنا الي يتم اصطناعها في النوية
+
+A) mRNA
+B) tRNA
+C) rRNA
+D) miRNA",
+152,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"Anterior cruciate ligament: (2017 First)
+
+A) Extends from the medial condyle of the femur
+B) Inserts onto the tibial tuberosity
+C) Prevents anterior displacement of the leg
+D) Prevents anterior displacement of the femur","الرباط المتصالب الأمامي: (2017 أولى(
+
+A) يمتد من اللقمة الأنسية للفخذ
+B) يرتكز على الحدبة الظنبوبية
+C) يمنع انزياح الساق للأمام
+D) يمنع انزياح الفخذ للأمام",
+4257,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"All of the following are components of the heart's vascular tissue except
+
+A) Sinoatrial node.
+B) Atrioventricular node.
+C) Coronary node.
+D) Bulge of His.","كل العبارات التالية صحيحة بالنسبة لليزر الشلال الكمومي ما عدا:
+
+A) إن عملية إلكترون واحد يسبب إصدار العديد من الفوتونات لدى عبوره بنية QCLS تعطي اسم الشلال.
+B) عملية الشلال تجعل المردود يزيد على الوحدة مما يؤدي إلى استطاعات خرج أعلى منها في حالة الليزرات الشائعة.
+C) تغطي أطوال موجة الإصدار مجال الأطوال الموجية الذي يمتد من 250 نانومتر – 2.75 ميكرومتر ويصل إلى 355 ميكرومتر.
+D) إن كلا من انخفاض خرج الاستطاعة الضوئية ومجال توليفه وتشغيلها في درجة حرارة الغرفة يجعلها معينة في تطبيقات المطيافية.",
+1364,Mistral-7B-Instruct-v0.3,both_correct,1,1,D,D,D,"Genetically modified organisms (GMOs) include the following techniques
+
+A) Gene knockout
+B) Gene knockin
+C) Combining gene knockout and gene knockin
+D) All of the above","تساهم في المحافظة على ثباتية البنية الثالثية:
+
+A) الروابط الهيدروجينية.
+B) الروابط ثنائية الكبريت.
+C) التفاعلات الكارهة للماء.
+D) كل ما سبق صحيح.",
+4010,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"All of the following are examples of multipolar neurons except
+
+A) Spinal motor neurons
+B) Purkinje cells in the cerebellum
+C) Retinal cells
+D) Pyramid cells in the brain","غازات في الكولون مسؤولة عن رائحة براز :
+
+A) الاندول و السكاتول
+B) المركبتان
+C) كبريت الهيدروجين
+D) كل ما سبق صحيح",
+974,Mistral-7B-Instruct-v0.3,both_correct,1,1,B,B,B,"The line – M – in the sarcomere represents
+
+A) The region where the actin filaments of two adjacent sarcomeres converge.
+B) A band of connections between myosin filaments.
+C) Actin filaments.
+D) Myosin filaments.
+
+E) The protein titin.","كل ما يلي عن المعي الدقيق صحيح عدا :
+
+A) يمتد من فتحة البواب إلى بداية المعي الغليظ
+B) يتألف من ثلاثة أقسام العفج ، الصائم واللفائفي
+C) يكون القسم الأكبر من العفج متحركا
+D) يتحرك الصائم واللفائفي بحرية",
+509,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"From the heart to the pylorus, the left border of the stomach
+
+A) Lesser curvature
+B) Lesser omentum
+C) Greater curvature
+D) Body",". الاجابة الصحيحة المتعلقة بالعرف الوتدي
+
+A) يتمفصل مع الصفيحة العمودية للعظم الغربالي
+B) يسهم في تشكيل سقف الانف
+C) يشكل مسكن الغدة النخامية
+D) يقع على جانبيه ثقينا النفق البصري",
+3357,Mistral-7B-Instruct-v0.3,both_correct,1,1,D,D,D,"Cryptococcus in humans is located in
+
+A) the duodenum
+B) the small intestine
+C) the large intestine
+D) the small and large intestines
+E) especially the rectum","كل ما يلي حول داء اللايشمانيات الجلدي صحيح ماعدا:
+
+A) الليشتيا الكبرى هي العامل المسبب للشكل الريفي
+B) الليشمانيا المدارية هي العامل المسبب للشكل الحاد
+C) تعتبر القوارض المستودع الرئيسي للشكل الرطب
+D) العامل الناقل للشكل الرطب هو P. papatasi
+E) نادراً ما تكون الآفة متعددة في الشكل المدني",
+1321,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"In the citric acid cycle, it works with the following cofactor enzymes except
+
+A) Phosphorylase
+B) FAD
+C) NAD
+D) CoA","اختر الاجابة الصحيحة:
+
+A) ينتمي كل من الأدنين والسيتوزين الى البورينات
+B) ينتمي كل من التيمين والسيتوزين الى البيريميدينات
+C) ينتمي كل من الغوانين والتيمين الى البيريميدينات
+D) ينتمي كل من الغوانين والسيتوزين الى البورينات",
+3611,Mistral-7B-Instruct-v0.3,both_correct,1,1,D,D,D,"Changes in eye function in retrobulbar neuritis include: Choose the correct answer
+
+A) Decreased visual acuity
+B) Central opacity
+C) Narrowing of the peripheral visual field, especially red and green vision
+D) All of the above are correct","الورم الكاذب للحجاج ما عدا: امراض العصب البصري
+
+A) يحدث بين ال 20-50 سنة من العمر
+B) غالباً ثنائي الجانب عند الكبار
+C) غالباً ثنائي الجانب عند الاطفال
+D) قد تسبب إصابات في حدة البصر وتليف في أنسجة الحجاج",
+2789,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"In the following equilibrium, the rate of the forward reaction increases: H₂ + I₂
+
+A) as the concentration of H₂ increases
+B) as the concentration of I₂ decreases
+C) as the concentration of HI increases
+D) A change in the concentration of either component does not affect the rate of the forward reaction","وفقا للنظرية ……………تتناسب درجة حرارة عنصر صغير من المادة مع الطاقة ....... للجزيئات التي يتكون منها :
+
+A) الحرارية - الحركية
+B) الحركية - الحركية
+C) الحرارية - الحرارية
+D) الحركية - الحرارية",
+1124,Mistral-7B-Instruct-v0.3,both_correct,1,1,B,B,B,"Which of the following types of peripheral nerves are NOT
+
+A) Motor
+B) Muscle
+C) Sensory
+D) Peripheral","في حال حدوث كسر في جدل عظم العضد بين الثلث المتوسط والقاصي فإن أكثر الأعصاب تعرضًا للأذية:
+
+A) العصب الزندي
+B) العصب العضلي الجلدي musculocutaneous
+C) العصب الكعبري
+D) العصب الناصف
+E) العصب الإبطي",
+1118,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"Cells that synthesize antibodies in response to antigens
+
+A) Plasma cells
+B) Macrophages
+C) Neutrophils
+D) Basophils
+E) All of the above are incorrect.","من محتويات الناحية السرية إجابة واحدة صحيحة :
+
+A) الفص الأيسر للكبد والمعدة
+B) الطحال
+C) القولون الصاعد والكلية اليمني
+D) العرى المعوية",
+1336,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"All of the following statements about the half-life of proteins are true except
+
+A) Collagen – 200 hours.
+B) Insulin – 6.5–9 minutes.
+C) Muscle proteins – 1800 days.
+D) Transport proteins – a few seconds.","من الاختلاطات المتأخرة لداء السكري:
+
+A) اعتلال الأعصاب السكري
+B) إصابة شبكية العين
+C) القدم السكرية
+D) كل ما سبق صحيح",
+1832,Mistral-7B-Instruct-v0.3,both_correct,1,1,D,D,D,"All of the following are methods used to verify multifactorial traits except
+
+A) Heritability.
+B) Large-genome linkage studies.
+C) Experimental risk.
+D) Criticism and expression.","الناعور A:
+
+A) عوز في العامل الثامن لتخر الدم
+B) قصور قشرة الكظر
+C) عوز الفوسفات
+D) عوز إنزيم HGPRT",
+1919,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"The transcription bubble is generated by
+
+A) DNA polymerase
+B) Helicase enzyme
+C) DNA-binding proteins
+D) RNA polymerase","الحويصلات المسؤولة عن النقل المنظم والاساسي للمواد الإفرازية خلال الإيماس :
+
+A) حويصلات مغطاة بالكلاثرين .
+B) حويصلات مغطاة بالكوب ١ .
+C) حويصلات مغطاة بالكوب ٢ .
+D) حويصلات مغطاة بالكوب ٣ .",
+3112,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"All of the following stimulate gastric secretion except
+
+A) Secretin.
+B) Hypoglycemia.
+C) Histamine.
+D) Parasympathetic stimulation.","يفرز كل ما يلي من مخاطية الأنبوب الهضمي عدا:
+
+A) الغاسترين.
+B) السيكريتين.
+C) الكوليسيستوكينين.
+D) الكيموتريسين.",
+3687,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"Causes of craniocytosis (the presence of white blood cells without bacteria) include
+
+A) Leptospira infection
+B) Diabetes mellitus
+C) Urine contamination
+D) Typhoid fever","فقر الدم بعوز الحديد:
+
+A) نادر الحدوث
+B) من علاماته الضخمة الكبد
+C) من مسبباته الداء الزلاقي
+D) كل ما سبق خطأ",
+111,Mistral-7B-Instruct-v0.3,both_correct,1,1,B,B,B,"The following statements about elastic arteries are incorrect
+
+A) They help stabilize blood flow.
+B) They are yellowish in color due to cholesterol buildup.
+C) They have an inner elastic lamina.
+D) All of the above are incorrect.","العبارة الخاطئة عن الشرايين المرنة هي :
+
+A) تساعد على استقرار ضخ الدم.
+B) لونها مائل للأصفر بسبب تراكم الكولسترول.
+C) الصفيحة المرنة الداخلية موجودة.
+D) كل ما سبق خاطئ.",
+3411,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"The following are examples of the ingenious symmetry of the following: (Choose the correct answer)
+
+A) The sexual life cycle occurs in rodents.
+B) The infectious form is the oocyst found in cat feces.
+C) The oocyst needs a period of time to become infectious.
+D) The animal reservoir is livestock.
+E) Transmission occurs via the respiratory route.","بطور ربوي .
+
+A) بفترة حياة قد تصل ل ٣٠ سنة
+B) بعدوى ذاتية داخلية وخارجية
+C) تتمايز الفتاكة الامريكية عن الملقوة العفجية بكل ما يلي عدا:
+D) اقصر طولا
+E) بيبوض اصغر حجما",
+1736,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"Second-degree relatives share
+
+A) All of the genetic material.
+B) Half of the genetic material.
+C) One-quarter of the genetic material.
+D) One-eighth of the genetic material.","ينظم تجمع الخلايا في كل تجمع خلوي بوساطة
+
+A) ضبط معدل الانقسام الخلوي
+B) ضبط معدل الموت الخلوي
+C) كل ما سبق صح
+D) كل ما سبق غلط",
+4157,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"What is responsible for depolarization?
+
+A) Inflow of sodium ions
+B) Exodus of sodium ions
+C) Inflow of potassium ions
+D) Exodus of potassium ions","يسبب التنبيه اللاودي على القلب:
+
+A) زيادة القوة الانقباضية للعضلة القلبية.
+B) تباطؤ ضربات القلب.
+C) تسريع التوصيل.
+D) تسرع ضربات القلب.",
+3855,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"Most of the filtered water is reabsorbed at the level of
+
+A) Proximal tubules
+B) Loop of Hanley
+C) Distal tubules
+D) Collecting tubules","تحّرض العوامل التالية إفراز عصارة بنكرياسية غنّية بالإنزيمات:
+
+A) الأستيل كولين والكوليسيستوكينين
+B) الأستيل كولين والسكرتين
+C) السكرتين والكوليسيستوكينين
+D) السكرتين والغاسترين",
+4085,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"All of the following are true about intestinal enzymes EXCEPT
+
+A) Enterokinase converts trypsinogen to trypsin
+B) Aminopeptidase converts polypeptides into amino acids and di- and tripeptides
+C) Isomaltase breaks down sucrose
+D) Lactase breaks down lactose","في إصدار تحت الأحمر المتوسط توجد ليزرات:
+
+A) سيلينيد الرصاص
+B) الشلال الكمومي
+C) الديود الليزري
+D) كل ما سبق صحيح",
+838,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"The region between the two vocal folds
+
+A) vestibule
+B) ventricle
+C) glottis fissure
+D) subglottic cavity","أي الاتي حول epiglottis صحيح:
+
+A) سطحها الحنجري مغطى بظهارة مطبقة كاذبة اسطوانية.
+B) يوجد في الصفيحة المخصوصة غدد مصلية فقط
+C) تبرز من الطرف السفلي للحنجرة.
+D) سطحها اللساني يغطى بظهارة مطبقة كاذبة مسطحة.",
+2770,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"The force of viscosity
+
+A) Opposes the flow of the fluid
+B) Helps the flow of the fluid
+C) Is unrelated to the flow of the fluid
+D) All of the above are true","بقدر إمتصاص الطاقة في الهواء المقابل لتعرض قدره 1R بنحو :
+
+A) 8.69×103 J
+B) 8.69 J
+C) 8.69×103 J/g
+D) 8.69x103 J/kg",
+1844,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"Examples of chromosomally linked genetic disorders include
+
+A) Alport syndrome.
+B) Huntington's disease.
+C) Cystic fibrosis.
+D) Diabetes mellitus.","الصفيحة النووية تتألف من:
+
+A) اللامين.
+B) LBR و اللامين .
+C) LBRو اللامين و الامبرين .
+D) ریبوزومات .",
+2936,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"In Rutherford's experiment, when an alpha particle approaches the nucleus to its closest possible distance, at this distance
+
+A) Kinetic energy is converted into gravitational potential energy
+B) Potential energy is converted into kinetic energy
+C) Kinetic energy is converted into Coulomb energy
+D) Potential energy is converted into thermal energy","عامل shear هو
+
+A) عامل المرونة الحجمي
+B) عامل القص وبعبر عن قساوة النسيج
+C) عامل مرونة المادة
+D) الكتلة الخطبة .",
+361,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"The internal muscles of the hand
+
+A) are all innervated by the ulna
+B) flex the interphalangeal joints
+C) Four of them do not originate from bone
+D) Their tendons insert on the margins of the phalanx bases","التلفيف خلف المركزي يحوي باحة :
+
+A) الحس الجسدي الأولية
+B) الحركة الأولية
+C) الحس الثانوي
+D) السمع",
+2108,Mistral-7B-Instruct-v0.3,both_correct,1,1,B,B,B,"Choose the incorrect answer
+
+A) Genes are a sequence of nucleotide pairs
+B) One gene locus has only one allele
+C) Nucleotides code for the information that gives a gene, which is a protein in most cases
+D) Human genes are given by capital letters in italics according to LSGN:","البيولوجيا الجزيئية:
+
+A) بغية معرفة الآلية التي تسبب فيها التغيرات في هذه الجزيئات الكبيرة تعطيلا للعمليات الحيوية
+B) تهدف إلي فهم آليات العمليات الحيوية ضمن الخلية علي المستوي الجزيئي
+C) تقاطع لعلوم الوراثة والكيمياء الحيوية
+D) كل ما سبق صحيح",
+4555,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"(3.49) Φ equals
+
+A) -0.9998
+B) -0.7998
+C) -0.8998
+D) -0.0998","معامل الارتباط الخطي R:
+
+A) نصف معامل التحديد
+B) ربع معامل التحديد
+C) الجذر التربيعي لمعامل التحديد مضروب بإشارة a
+D) كل ما سبق خطأ",
+4802,Mistral-7B-Instruct-v0.3,both_correct,1,1,B,B,B,"The advantages of in-depth interviews, except
+
+A) They provide rich and in-depth data
+B) They require significant effort and resources
+C) They allow for clarification of issues
+D) They elicit useful responses","المخطط الذي يساعد بدراسة العلاقة بين متغيرين وطبيعتها:
+
+A) مخطط الفطيرة
+B) مخطط الصندوق
+C) مخطط الساق والورقة
+D) مخطط الانتشار",
+1028,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"The soleus line: (2016)
+
+A) Origin of the soleus muscle.
+B) Above it, the posterior tibia originates.
+C) Below it, the plantar fascia originates.
+D) It lies in the middle of the posterior surface of the tibia.","الغضروف المرتبط مع الحلقة الرغامية الأولى:
+
+A) الحلقي
+B) الطرجهالي
+C) الدرقي
+D) القريني",
+4354,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"Cells that respond to neurons after the parasympathetic ganglia
+
+A) Acetylcholine
+B) Norepinephrine
+C) Adrenaline
+D) Norepinephrine or Acetylcholine","يُمتص الإشعاع في المجال فوق البنفسجي والمرئي من الطيف بشكل رئيسي عن طريق:
+
+A) البروتينات
+B) الأصبغة
+C) جزيئات الماء
+D) A, B",
+4547,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"The relationship ( ) is used to
+
+A) Estimate the population mean
+B) Estimate the population variance
+C) Estimate the variance of the mean
+D) Estimate the standard deviation","يجب أن يكون حجم العينة صغيرا في حال:
+
+A) المجتمع غير متجانس
+B) الميزانية صغيرة
+C) دقة الدراسة غير مهمة
+D) كل ما سبق",
+16,Mistral-7B-Instruct-v0.3,both_correct,1,1,B,B,B,"The ridge of the branch that forms the angle of the mandible
+
+A) Anterior
+B) Posterior
+C) Superior
+D) Distal","الحافة من الفرع التي تشكل زاوية الفك السفلي:
+
+A) الأمامية
+B) الخلفية
+C) العلوية
+D) الوحشية",
+4066,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"The mechanisms of ventricular fibrillation include
+
+A) Prolonged pathway of the impulse, as in dilation of the heart chambers.
+B) Increased impulse speed.
+C) Increased refractory period.
+D) Stimulation of a point in the myocardium that propagates in one direction.","يزداد إنتاج الإريثروبيوتين في حالات نقص الأكلر التالية:
+
+A) داء مونغ.
+B) تخرب نقي العظم.
+C) قصور القلب.
+D) كل ماسبق صحيح.",
+802,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"The renal vein empties into
+
+A) the single vein
+B) the semi-singular vein
+C) the inferior vena cava
+D) the superior vena cava",". يقع في عمق التلم الوحشي
+
+A) فص الجزيرة
+B) الفص الجبهي
+C) الفص الجداري
+D) الفص القذالي",
+2346,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"Radioactive transmission occurs in
+
+A) Air
+B) Vacuum
+C) A, B
+D) All of the above are incorrect","مجموع الكتل الذرية النسبية في مركب أيوني هي:
+
+A) الكتلة الجزيئية النسبية
+B) الكتلة الصيغية النسبية
+C) الكتلة الأيونية النسبية
+D) الكتلة الذرية النسبية",
+633,Mistral-7B-Instruct-v0.3,both_correct,1,1,D,D,D,"Each liver segment contains
+
+A) a branch of the hepatic artery
+B) a branch of the portal vein
+C) a bile duct
+D) all of the above","تحوي الظهارة الشمية على:
+
+A) خلايا قاعدية –عصبونات شمية – خلايا داعمة
+B) خلايا قاعدية –خلايا كولشيسكي –عصبونات شمية
+C) خلايا كأسية – خلايا قاعدية – عصبونات شمية
+D) خلايا كأسية – عصبونات شمية – خلايا داعمة",
+1593,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"A haploid sperm fertilizes an egg containing 21 chromosomes, resulting in a zygote containing
+
+A) 46
+B) 45
+C) 47
+D) 69","حالة المهق Albinism:
+
+A) سبيها عوز إنزيم (تيروزيناز).
+B) قد يحدث لدى المريض رهاب ضوئي.
+C) يكون شعر المريض أبيض اللون.
+D) كل ما سبق صحيح.",
+1822,Mistral-7B-Instruct-v0.3,both_correct,1,1,D,D,D,"A recessive gene tree in which both parents are affected is characterized by
+
+A) Only males are affected.
+B) Only females are affected.
+C) All offspring are unaffected.
+D) All offspring are affected.","الجزيئة الأم للستيرونيدات
+
+A) الماء
+B) الكوليسترول
+C) الكوريتزول
+D) لا شيء مما سبق",
+4369,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"A rightward shift in the hemoglobin oxygen dissociation curve leads to
+
+A) a decrease in the percentage of hemoglobin oxygen saturation
+B) a decrease in the amount of oxygen released to the tissues
+C) an increase in the percentage of hemoglobin oxygen saturation
+D) a decrease in the amount of carbon dioxide bound to hemoglobin","عامل تفرزه الكلية ويؤثر في تشكيل الكريات الحمر:
+
+A) الاريثروبويتين
+B) الانترولوكين
+C) التروميو موديولين
+D) الترومبوبويتين",
+2338,Mistral-7B-Instruct-v0.3,both_correct,1,1,B,B,B,"The source of gamma rays that provides another source of potentially useful X-rays, with energies close to those of the original gamma rays, is
+
+A) External transformation
+B) Internal transformation
+C) Fluorescence
+D) Positron emission","عندما يكون عمر الحالة المثارة طويلا تدعى القوى :
+
+A) مستقرة
+B) غير مستقرة
+C) شبه مستقرة
+D) B,C",
+919,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"Partoid gland innervation by nerve
+
+A) Glossopharyngeal nerve
+B) Facial nerve
+C) Hypoglossal nerve
+D) Glossal nerve","يشغل الجزء العلوي من قبة القحف
+
+A) العظم الجداري
+B) العظم الجبهي
+C) العظم القذالي
+D) العظم الوتدي",
+760,Mistral-7B-Instruct-v0.3,both_correct,1,1,B,B,B,"Intramuscular injections can be administered into the upper part of
+
+A) Biceps brachii
+B) Deltoid
+C) Coracobrachialis
+D) Trochanterus minor","-ينفتح على القرين الانفي العلوي :
+
+A) الجيب الوتدي
+B) الجيب الفكي
+C) الجيب الغربالي
+D) الجيب الجبهي",
+2606,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"All of the following are uses of terahertz except
+
+A) Medical imaging and diagnosis
+B) Security scanning
+C) Treatment of skin conditions such as psoriasis and vitiligo
+D) Quality control in semiconductor industries","أيا من الطرائق سمح برؤية كل من برنشيم الكبد والطحال والكبد والبنكرياس او الكليتين :
+
+A) التصوير المقطعي
+B) التصوير بالأشعة السينية
+C) التصوير المقطعي المحوسب
+D) التصوير بالصدى",
+1346,Mistral-7B-Instruct-v0.3,both_correct,1,1,D,D,D,"Vitamin A functions in all of the following except
+
+A) Vision
+B) Growth
+C) Epithelial formation
+D) Blood clotting","كل مما يلي من صفات بروتين الكولاجين ما عدا:
+
+A) يكثر في بيئته وجود الأرجنتين.
+B) يتحمل قوة شد كبيرة جدا.
+C) ذو بنية حلزونية ثلاثية تشبه الحبل.
+D) يشكل حوالي ثلث كتلة البروتين الإجمالية في الجسم.",
+2436,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"Alkane halogens undergo a reaction with alkalis.........
+
+A) Nucleophilic substitution
+B) Electrophilic substitution
+C) Addition
+D) None of the above","لا تنتمي طريقة التصوير التالية الى طرائق التصوير التشخيصي في الطب النووي:
+
+A) التصوير الومضاني scintigraphy .
+B) SPECT .
+C) PET.
+D) التجاوب المغناطيسي النووي .",
+4738,Mistral-7B-Instruct-v0.3,both_correct,1,1,D,D,D,"Which of the following data collection steps is NOT
+
+A) Problem identification
+B) Method selection
+C) Source selection
+D) Lack of agreement on the unit of measurement","من العوامل الاجتماعية الاقتصادية التي تؤثر في الخصوبة هي:
+
+A) تعليم الفتاة.
+B) التحضر .
+C) العمل.
+D) كل ما ذكر صحيح .",
+2381,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"When a beam of electrons and a beam of protons pass near a negatively charged plate, the electron beam is deflected away from the plate, and the proton beam is deflected towards the plate
+
+A) The magnitude of the electron beam's deflection is similar to the magnitude of the proton beam's deflection.
+B) The magnitude of the proton beam's deflection is slightly greater than the magnitude of the proton beam's deflection.
+C) The magnitude of the electron beam's deflection is much greater than the magnitude of the proton beam's deflection.
+D) The magnitude of the deflection depends on the number of protons and the number of electrons in each beam.","– التواتر والطول الموجي هي من مميزات :
+
+A) الموجة
+B) الجسيم
+C) الموجة والجسيم
+D) ليس أيا مما سبق",
+3689,Mistral-7B-Instruct-v0.3,both_correct,1,1,D,D,D,"Functions of calcium
+
+A) Transmission of nerve impulses
+B) Inhibition of neuromuscular excitability
+C) Activation of enzymes
+D) All of the above are correct","من أسباب البيلة القحفية (وجود كريات بيض بدون بكتيريا) :
+
+A) الإصابة بالجراثيم من نوع البريميات
+B) الداء السكري
+C) تلوث عينة البول
+D) الإصابة بالحمى التيفية",
+2046,Mistral-7B-Instruct-v0.3,both_correct,1,1,D,D,D,"At the end of meiosis, due to crossing over, each pair of duplicated chromosomes results in
+
+A) Four recombinant chromosomes.
+B) Four non-recombinant chromosomes.
+C) Three recombinant chromosomes and one non-recombinant chromosome.
+D) Two recombinant chromosomes and two non-recombinant chromosomes, which are distributed independently among the four gametes.","كل ما يلي صحيح لكشف وجود الطفرات عن طريق تحليل منحنى الانصهار ما عدا:
+
+A) تعطي الصبغات المفلورة فلورة فقط عند ارتباطها بنواتج الـPCR ثنائية الطاق
+B) نعرضّ نواتج الـPCR إلى درجات حرارة متزايدة للكشف اللحظي عن انفضال طاقي الدنا وتحوله إلى أحادي الطاق فتنخفض شدة الفلورة بشدة
+C) تعرف نقطة الانصهار بدرجة الحرارة التي تكون عندها جزيئة الدنا كلها أحادية الطاق
+D) يمكن بواسطة هذه التقنية الكشف عن وجود الطفرة والتمييز بين النمطين المتماثل أو المتخالف للأليل الطافر",
+455,Mistral-7B-Instruct-v0.3,both_correct,1,1,B,B,B,"The following are true about platelets EXCEPT
+
+A) They play a role in blood clotting
+B) They are larger than red blood cells
+C) An excess of platelets causes blood clots
+D) A deficiency of platelets causes bleeding","يوجد في لنهايه العلويه لعظم الفخذي :
+
+A) المدور الكبير.
+B) المدور الصغير.
+C) العرف بين المدورين.
+D) كل ما سبق صحيح.",
+1162,Mistral-7B-Instruct-v0.3,both_correct,1,1,B,B,B,"The upper urinary tract consists of three layers. Choose the incorrect answer
+
+A) The outermost layer
+B) Followed by the subserosal layer
+C) Then the muscular layer
+D) Then the mucous layer","الشرايين التي تسير بين الفصوص بإتجاه القشرة على كل جانب من جانبي الهرم الكلوي :
+
+A) الشرايين الفصية
+B) الشرايين بين الفصوص
+C) الشرايين المقوسة
+D) الشرايين بين الفصيصات",
+4220,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"The ion with the highest concentration within a neuron
+
+A) Calcium
+B) Sodium
+C) Potassium
+D) Chloride","كل مما يأتي يؤدي لتوسيع المعصرات قبل الشعرية:
+
+A) زيادة معدل الاستقلاب
+B) زيادة الأوكسجين
+C) تاثير حمض اللين وال CO2
+D) تأثير الأدينوزين والبوتاسيوم",
+2959,Mistral-7B-Instruct-v0.3,both_correct,1,1,D,D,D,"All of the following are true about terahertz waves EXCEPT
+
+A) Scanning a skin surface area of approximately 4 cm² takes about one minute.
+B) By analyzing the pulses reflected from the skin, an almost three-dimensional image can be constructed extending to a small depth of skin.
+C) Terahertz imaging can reveal that the contrast in the images likely reflects the water content of tissues.
+D) Spleen diseases can be detected.","وظيفة الكاشف هي :
+
+A) قياس شدة الاشعة النافذة
+B) قياس طول الموجي النافذة
+C) قياس توتر الاشعة
+D) كل ما سبق خاطئ",
+3285,Mistral-7B-Instruct-v0.3,both_correct,1,1,B,B,B,"The most appropriate diagnosis for chorioretinitis following ingestion of raw meat infected with
+
+A) Contaminated with Toxoplasma gondii
+B) Toxoplasma gondii
+C) Trichinella spiralis
+D) Bowmaniasis
+E) Trypanosoma cruzi","من افضل وسائل الوقاية المتبعة لمنع انتشار المتورقة الكبدية
+
+A) عدم اطعام الحيوانات النباتات الملوثة
+B) غسل النباتات المائية أو عليها قبل تناولها
+C) القضاء على العائل المتوسط
+D) ارتداء احذية واقية اثناء العمل بالارض
+E) عدم تلويث المياه بالمخلفات البشرية او الحيوانية",
+1457,Mistral-7B-Instruct-v0.3,both_correct,1,1,B,B,B,"All of the following genetic codes are stop codons except
+
+A) UAG
+B) AUC
+C) UGA
+D) UAA",". كل ما يلي حول استقصاءات التهاب الكبد بالنمط A صحيح ما عدا :
+
+A) تقاس الأضداد فقط (Anti HAV) ولا تقاس المستضدات.
+B) قد تبقى الأضداد في المصل مدداً قد تتراوح بين عدة أشهر إلى سنة.
+C) وجود IgG فقط يدل على إصابة حديثة.
+D) لا توجد سلبية كاذبة، ولكن قد توجد أحياناً إيجابية كاذبة.",
+2601,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"The teclons within the atomic nucleus are subject to three types of forces
+
+A) Electromagnetic repulsion, strong short-range attraction, and weak short-range attraction (0.5 fm).
+B) Electromagnetic attraction, strong short-range attraction, and weak short-range attraction (0.5 fm).
+C) Electromagnetic repulsion, strong short-range attraction, and weak short-range attraction (>1 fm).
+D) A, C","الأمواج التي تستخدم في تفتيت الحصى هي :
+
+A) الأمواج فوق الصوتية
+B) الأمواج الصوتية
+C) الأمواج تحت الصوتية
+D) كل ما سبق خاطئ",
+1296,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"The following amino acid is H-CH-COO with a positive NH3 subunit
+
+A) Glycine
+B) Proline
+C) Serine
+D) Cysteine","الببسين يفكك:
+
+A) الدسم
+B) البروتين
+C) السكريات
+D) الغليسرين",
+337,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"The uterus is attached to the lateral walls of the pelvis by the following ligaments
+
+A) Inguinal
+B) Round
+C) Broad
+D) Venous","الطبقي المحوري من ضمن:
+
+A) التشريح الشعاعي
+B) التشريح السريري
+C) التشريح الجهازي
+D) التشريح الفيزيولوجي",
+2141,Mistral-7B-Instruct-v0.3,both_correct,1,1,D,D,D,"Sugar, fat, and pigment deposits
+
+A) Cytosol
+B) Cell membrane
+C) Cytoskeleton
+D) Inclusions","كل ما يلي صحيح عن آليات حدوث الشذوذات الصبغية البنيوية ما عدا:
+
+A) أثناء عملية التعابر
+B) تعرّض لمكسرات للدنا
+C) إعادة ترتيب غير طبيعي للجينات
+D) تعابر متساوي",
+4693,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"We toss a coin until it lands on heads H for the first time. The random variable that represents the number of tosses is
+
+A) Discrete (value of natural numbers)
+B) Continuous (value of natural numbers)
+C) Discrete (value of real numbers)
+D) Continuous (value of real numbers)","ان معدل اطوال الأبناء تنحدر من معامل المجتمع فتسمى الظاهرة:
+
+A) الانحدار نحو المعدل
+B) ارتباط
+C) تحديد
+D) كل ما سبق صحيح",
+3800,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"All of the following H1 antagonists are non-CNS depressant except
+
+A) Limemazine
+B) Loratadine
+C) Triphenadine
+D) Fexofenadine","أحد المركبات التالية من الأضداد المؤشبة وحدة النسيلية المستخدم في تدبير سرطانة الثدي
+
+A) ایتانیرسبت
+B) الفكيلسيماب
+C) ريتوكسيماب
+D) او ماليزوماب
+E) تراستوزوماب",
+3760,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"All of the following are propionate derivatives except
+
+A) Piroxicam
+B) Ibuprofen
+C) Naproxen
+D) Profenic acid
+
+E) Ketoprofen","أحد الأمراض التالية يمكن معالجته بواسطة الجينات:
+
+A) الربو.
+B) الحل العضلي.
+C) احتشاء العضلة القلبية.
+D) توسع القصبات.
+E) التهاب المفاضل التنكسي.",
+2480,Mistral-7B-Instruct-v0.3,both_correct,1,1,B,B,B,"When the pointed end of the probe is scanned across the metal surface in an STM microscope, its height is controlled to maintain
+
+A) Dimensional stability
+B) Tunneling current stability
+C) A.B
+D) All of the above are false","الطريق الهندسي الذي يمكن للضوء أن يقطعه في الخلاء مضروبا بقرينة انكسار الوسط هو:
+
+A) المسار الهندسي
+B) المسار الضوئي
+C) مربع المسار الهندسي
+D) مربع المسار الضوئي",
+351,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"The largest bone in the foot skeleton is
+
+A) Calcaneum
+B) Navicular
+C) Talus
+D) Cuboid","كل ما يلي صحيح فيما يتعلق بحدود الغدة النكفية عدا :
+
+A) في الأمام الثاني الخشائي
+B) في الخلف الخشاء
+C) في الخلف العضلة القترانية
+D) في الأمام فرع العظم الفكي السفلي",
+173,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"Which of the following activities is the medulla oblongata involved in?
+
+A) Cough reflex
+B) Balance
+C) Pupil reflex
+D) Taste","يؤدي تفعيل الجملة الودية لما يلي عدا:
+
+A) نقص المفرزات
+B) توسع الأوعية المحيطة وارتفاع الضغط
+C) تثبيط حركية السبيل الهضمي
+D) تسرع تنفس",
+41,Mistral-7B-Instruct-v0.3,both_correct,1,1,D,D,D,"All of the following are true about the respiratory epithelium
+
+A) Basophils are mitotically active stem cells
+B) Goblet cells are more abundant than ciliated cells
+C) Granulocytes are neuroendocrine
+D) A+C
+E) All of the above are true","كل ما يلي صحيح عن الظهارة التنفسية:
+
+A) الخلايا القاعدية هي خلايا جذعية نشطة انقسامياً
+B) الخلايا الكأسية أكثر وفرة من الخلايا مهدبة
+C) الخلايا الحبيبة تعتبرعصبية صماوية
+D) A+C
+E) كل ما سبق صحيح",
+1279,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"A patient with a penetrating eye injury should avoid
+
+A) Propofol
+B) Thiopental
+C) Succinylcholine
+D) Halothane
+E) Midozolam","عندما يكون المريض عل جهاز التنفس ولديه نقص الضغط غاز الاوكسجين في الدم الشرياني كل الإجراءات التالية صحيحة ما عدا:
+
+A) A. رفع نسبة الأوكسجين
+B) B. زيادة PEEP
+C) C. زيادة التهدئة
+D) D. إعطاء الإرخاء
+E) E. كل ما سبق صح",
+1173,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"A region in the retina containing small blood vessels that branch within the nerve fiber layer to nourish retinal cells
+
+A) fovea centralis
+B) eyelids
+C) blind spot
+D) apparatus","كل ما يلي من الخلايا الأقل شيوعا من الظهارية في البشرة ما عدا :
+
+A) Melanocytes
+B) Langerhans cells
+C) Meckel's cells
+D) Stem cells",
+3900,Mistral-7B-Instruct-v0.3,both_correct,1,1,D,D,D,"The gates that control the permeability of channels to ions that contribute to the formation of the action potential are
+
+A) Ligament-bound channels
+B) Protein channels
+C) Lipid channels
+D) Voltage-bound channels","إن مصطلح DCT يعني:
+
+A) التصوير المقطعي للترابط الضوئي
+B) التصوير الصدى الصوتي
+C) A,B
+D) كل ما سبق خاطئ",
+1874,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"The structure of the hairpin is a structure that is
+
+A) secondary to DNA
+B) primary to DNA
+C) secondary to RNA
+D) primary to RNA","تضم البروتينات المطرسية كل ما يلي ما عدا
+
+A) الأكتين.
+B) التيناسين C .
+C) الاستيوبونتين .
+D) الترمبوسبودين .",
+4410,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"Electrolytes are absorbed and exchanged in the intestine under the influence of
+
+A) Concentration gradient difference
+B) Growth pressure
+C) Water volume
+D) All of the above","عندما يصبح ضغط الدم 100 ممز فان معدل الترشيح الكبيبي:
+
+A) يزداد
+B) ينقص
+C) يبقي ثابتا
+D) يزداد ثم ينقص",
+2138,Mistral-7B-Instruct-v0.3,both_correct,1,1,D,D,D,"Fetal DNA analysis is used to prenatally diagnose the following disorders
+
+A) Cystic filbrosis
+B) Fragile X syndrome
+C) Duchenne muscular dystrophy
+D) All of the above","إذا كان انتشار مرض التالاسيميا في مجتمع (0000)، يكون معدل الحاملين في ذلك المجتمع:
+
+A) 1000M
+B) 2000M
+C) 50M
+D) 500M",
+4762,Mistral-7B-Instruct-v0.3,both_correct,1,1,B,B,B,"The region consisting of the test function values that are unlikely when Ho is true is
+
+A) Acceptance region
+B) Rejection region
+C) Certain region
+D) Action region","تأتي أهمية مرحلة جمع البيانات من كون الأخطاء فيها تؤدي الى:
+
+A) لا يؤدي الى خطا
+B) خطأ في مرحلة جمع البيانات
+C) أخطاء ليس لها أثر
+D) . لا شيء مما سبق",
+740,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"Its superficial (lateral) surface is adjacent to the sublingual gland.
+
+A) Genioglossal
+B) Orthoglossal
+C) Lymphoglossal
+D) Genioglossal
+E) Biventricular","فيما يخص مفصل الركبة كل مما يلي صحيح ماعدا:
+
+A) هو تمفصل الفخذ مع الرضفة والشظية والظنبوب
+B) يوجد ضمن الركبة رباط متصالب أمامي وخلفي
+C) إن وتر المأبضية داخل المفصل
+D) تعتمد ثباتية المفصل على الأربطة الخارجية والداخلية
+E) الغضروف الهلالي الأنسي يرتبط مع الرباط الجانبي الأنسي",
+135,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"Choose the incorrect answer regarding the renal corpuscle
+
+A) The diameter of the renal corpuscle is 200 micrometers
+B) The urinary space is the space between the inner and outer layers and is the filtration space
+C) The cells of the staphylosal layer are the cells of the outer layer
+D) The thickness of the filtration barrier is 0.1 micrometers","اختر الإجابة الخاطئة في الجسيمة الكلوية:
+
+A) قطر الجسيمة الكلوية 200 ميكرون
+B) الحيز البولي هو الفاصل بين الطبقة الداخلية والخارجية وهو حيز الرشح
+C) خلايا الطبقة الرجلاء هي خلايا الطبقة الخارجية
+D) تبلغ سماكة حاجز الرشح 0.1ميكرون",
+4872,Mistral-7B-Instruct-v0.3,both_correct,1,1,D,D,D,"A 60-year-old patient presented with abdominal pain, jaundice, fever, and chills. What is the possible diagnosis?
+
+A) Pyuria (suppurative cholecystitis).
+B) Acute cholecystitis.
+C) Myxocalacia (cholecystitis).
+D) Ascending cholangitis.
+
+E) Gastroparesis due to gallstones.","راجعت مريضة تبلغ من العمر 30 سنة بقصة ألم مستمر في الربع العلوي الأيمن من البطن مع إقياء وارتفاع حرارة وإيجابية علامة مورفي ما هو التشخيص المحتمل؟
+
+A) تقيح مرارة.
+B) التهاب مرارة حاد.
+C) قيلة مخاطية في المرارة.
+D) التهاب بريتوان تالي لانثقاب مرارة.
+E) خزل معوي بسبب حصاة مرارية.",
+524,Mistral-7B-Instruct-v0.3,both_correct,1,1,B,B,B,"Which of the following are wrist bones except
+
+A) navicular
+B) cervical
+C) carpal
+D) cervical","من عظام القدم ( اختر الخاطئة ) :
+
+A) عظام رسغ القدم
+B) مشط القدم
+C) سلاميات الأصابع
+D) القعب",
+2954,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"If the illumination condition is met, then it will be met for
+
+A) a specific wavelength
+B) a specific film thickness
+C) A, b
+D) all of the above are false","أي من الآتي إلكترونه الأخير يقع في الطبقة الثانوية 17CL- , 13AI P
+
+A) كلاهما يقعان
+B) ولا أي منهما
+C) 17CL-
+D) 13AI",
+3812,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"A doctor can perform gastric lavage before toxic substances are absorbed
+
+A) On an empty stomach
+B) Due to the small size of the stomach
+C) Because these substances lose their toxicity due to the action of gastric acid
+D) All of the above are true","عند فرط التهوية الرئوية يتفعل :
+
+A) مركز الشهيق.
+B) مركز الزفير القسري.
+C) مركز الشهيق القسري.
+D) المركز الناهي.",
+2481,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"The rate of radiation from a surface to an equal rate of radiation from an ideally radiant surface at the same temperature is
+
+A) Emission
+B) Transmittance
+C) Absorption
+D) Reflectivity","تمتلك الذرة وفق للنظرية الكمومية :
+
+A) حدودا واضحة
+B) عمامة إلكترونية مختلفة الكثافة
+C) A+B
+D) كل ما سبق خاطئ",
+1613,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"HDL lipoprotein
+
+A) Contains a high percentage of triglycerides.
+B) Contains apolipoprotein 100-apoB.
+C) Formed in the liver and intestines.
+D) Contains a low percentage of protein.","الأنسجة المسيطرة على عملية استقلاب الوقود في الجسم تتواصل مع بعضها عبر:
+
+A) الجملة العصبية
+B) توافر الركائز في الدوران
+C) التبدلات في مستويات الهرمونات في البلازما
+D) كل ما سبق صحيح",
+2518,Mistral-7B-Instruct-v0.3,both_correct,1,1,A,A,A,"Estemann-Boloman's Law
+
+A) The overall intensity of the radiant flux is directly proportional to the fourth power of the temperature, T.
+B) The overall intensity of the radiant flux is inversely proportional to the fourth power of the temperature, T.
+C) The overall intensity of the radiant flux is inversely proportional to the third power of the temperature, T.
+D) The overall intensity of the radiant flux is directly proportional to the third power of the temperature, T.","إن انتقال الإلكترون من مدار إلى آخر أكثر بعدا عن النواة يترافق مع تزايد الطاقة الخارجية للذرة :
+
+A) الطاقة الخارجية للجزيئات
+B) الطاقة الداخلية للذرة
+C) الطاقة الداخلية للحزينات
+D) الطاقة الخارجية للذرة",
+2426,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"The fastest nucleophilic substitution in the following reaction occurs when X is: CH3CH2 X + OH- → CH3CH2 OH + X-
+
+A) Bromine atom Br
+B) Chlorine atom Cl
+C) Iodine atom I
+D) Fluorine atom F","إن وسط الربح في ليزر معين هو مادة يمكن التحكم بها بـ
+
+A) نقاوتها
+B) أبعادها وشكلها
+C) تركيزها
+D) كل ماسبق صحيح",
+1798,Mistral-7B-Instruct-v0.3,both_correct,1,1,D,D,D,"Autism
+
+A) Intellectual disability in 75% of those affected
+B) Conformity rate in identical twins: 40-90%
+C) Risk of autism recurrence among siblings: less than 0.13%
+D) Percentage of individuals with autism who also have epilepsy: 30%","تتميز عملية الترجمة في حقيقيات النوى بكل ما يلي ماعدا :
+
+A) تتم في هيولى عند حقيقيات النوى
+B) يرتبط الرنا المرسال مع الريباسة من النهاية 3` للرنا المرسال
+C) يرتبط أولًا مع الوحيدة الصغيرة للريباسة
+D) الحمض الأميني الأول هو الميثيونين",
+3943,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"The amount of hemoglobin increases in normal physiological conditions such as
+
+A) Hereditary heart disease
+B) Lung disease
+C) Smokers and people living at high altitudes
+D) All of the above are true","المشابك التي تتحكم بكمية الناقل العصبي الذي تحرره النهايات المحوارية استجابة للإشارات التي نتلقاها من عصبون آخر هي:
+
+A) Axo- dendritic
+B) Axo- somatic
+C) Axo- Axonic
+D) Dendro- dendritic",
+2053,Mistral-7B-Instruct-v0.3,both_correct,1,1,C,C,C,"In autosomal recessive inheritance, genetic replacement occurs
+
+A) Only in male offspring
+B) Only in female offspring
+C) In both male and female offspring
+D) Never in offspring due to *","من اهم ما يميز الجينات الورمية:
+
+A) طفراتها من النمط السائد.
+B) تكون دائما متماثلة ألالائل.
+C) مثبطة لتكاثر الخلايا.
+D) تحرض على الاستموات.",
+682,Mistral-7B-Instruct-v0.3,both_correct,1,1,B,B,B,"Fat cells are capable of synthesizing fatty acids from glucose, a process accelerated by the influence of
+
+A) Glucagon
+B) Insulin
+C) Parathyroid hormone
+D) Thyroxine
+E) 3 and 4.","الفقرات الرقبية اختر الإجابة الخاطئة:
+
+A) الفقرة الرقبية الأولى لها قوس خلفية تفصل مع سن المحور.
+B) الثقبة الفقرية مثلثية الشكل.
+C) النواتئ الشوكية قصيرة ومتشعبة فى نهايتها.
+D) جسم الفقرة صغير.",
+402,Mistral-7B-Instruct-v0.3,both_correct,1,1,B,B,B,"The primary motor cortex is located
+
+A) In front of the lateral gyrus.
+B) In the precentral gyrus.
+C) Behind the Rolando fissure.
+D) In the insula.","يتكون الزنار الحضي:
+
+A) من العظمين الوركيين و العجز.
+B) من العظمين الوركيين والعظمين الفخذيين.
+C) من العجز و العظمين الفخذيين.
+D) من العظمين الوركيين.",
+3852,Mistral-7B-Instruct-v0.3,both_correct,1,1,B,B,B,"The following are all characteristics of negative feedback except
+
+A) It occurs by opposing and correcting the initial variable.
+B) It is monitored by positive feedback.
+C) It helps maintain homeostasis.
+D) Regulating blood glucose levels is an example of negative feedback.","عندما يصل التيروكسين الى المستوى الدوراني المطلوب:
+
+A) تتحرض الغدة النخامية لافراز THS
+B) ترسل الخلايا المتأثرة به إشارات تلقيم ايجابي
+C) تتوقف الغدة النخامية عن افراز THS
+D) كل ما سبق صحيح",
+1285,Mistral-7B-Instruct-v0.3,both_correct,1,1,D,D,D,"The most influential regulatory mechanisms in an organism's phenotype are primarily at the level of
+
+A) RNA processing.
+B) RNA recognition.
+C) Translation.
+D) All of the above are incorrect.","الدور الحيوي للتمائم (FMN) و (FAD) هو:
+
+A) حامل عابر للزهرة الأسباية.
+B) حامل عابر الزمرة أمينية.
+C) حامل عابر الزهرة الكربوكسيل.
+D) كل ما سبق خطأ.",
+4706,Mistral-7B-Instruct-v0.3,access_gap,1,0,D,D,C,"Information that can be used to estimate population parameters when studying a sample includes
+
+A) Mean or sum
+B) A proportion of the population
+C) Confidence intervals for these parameters using statistics
+D) All of the above","في بيان احصائي معطى بجدول تكراري, اذا كان التكرار النسبي للفئة الرابعة هو 20% فإن زاوية قطاع الفئة الرابعة تكون:
+
+A) A100 درجة
+B) B60 درجة
+C) C72درجة
+D) D70 درجة",
+4825,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,B,"For a sample of 50 patients, if the mean number of days to recovery is 4 days and a standard deviation of 0.5 days, then the appropriate body size for estimating P with 95% confidence is
+
+A) 400
+B) 380
+C) Approximately 385
+D) 500","اذا قبل المريض في يوم وتخرج في اليوم نفسه فيحتسب يوم .
+
+A) دخول .
+B) خروج .
+C) مدة استشفاء .
+D) A+B",
+2068,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,B,"Cell self-sacrifice and spontaneous death
+
+A) Apoptosis
+B) Differentiation
+C) Ordering
+D) Evolution","بنى سيتويلازمية مغلفة بغشاء واحد على الأقل
+
+A) الريبوزومات
+B) العضبيات
+C) الهيكل الخلوي
+D) الجسيمات الحالة للبروتينات",
+4322,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,D,"The correct information about the modern immune mechanism
+
+A) The cytokine IL-2 is secreted by monocytes.
+B) IL-1 and IL-2 aid in proliferation and differentiation of monocytes.
+C) Monocytes are transformed into dendritic cells by IL-456.
+D) All of the above are incorrect.","يتآزر القسمين الودّي ونظير الودّي للجهاز العصبي المستقل في:
+
+A) عمل القلب
+B) تحرير الشحوم من مخازنها
+C) تنظيم إفراز اللعاب
+D) مستوى غلوكوز الدم",
+941,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,A,"The dorsal tubercle (Lester's tubercle) is located on
+
+A) the scaphoid bone
+B) the dorsal surface of the distal end of the radius
+C) the base of the styloid process of the radius
+D) the base of the second and third metatarsal bones
+E) the great bone","في نقي العظم:
+
+A) الصفيحات هي اجزاء سيتوبلاسمية غير حاوية على نواة الخلية النواة اكبر من الخلية ارومة الخلية النواة
+B) طلائع الصفيحات هي استطالات متفرغة من ارومة الخلية النواة
+C) الاجابتان A+B
+D) كل ماسبق خطأ",
+2577,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,A,"The elements are now arranged in the periodic table according to
+
+A) their atomic mass
+B) their atomic number
+C) their charge
+D) their chemical structure","تتولد الاشعة السينية عندما :
+
+A) تسرع الفوتونات في أنبوب مقرع ويسمح لها بالسقوط على سطح داخل الانبوب.
+B) تسرع الفوتونات بكمون مرتفع ويسمح لها بالسقوط على سطح زجاجي او معدني.
+C) تسرع الالكترونات بكمون مرتفع في أنبوب الفراغ ويسمح لها بالسقوط على سطح داخل الانبوب .
+D) تسرع الالكترونات بكمون مرتفع في أنبوب زجاجي ويسمح لها بالسقوط على سطح داخل الانبوب.",
+2020,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,C,"The bond in the secondary structure of DNA is
+
+A) Esteric
+B) Hydrogenated
+C) Sugar
+D) Peptide","إن دلالة ولد مصاب في الوراثة الجسدية المتنحية تعني أن:
+
+A) الولدان مصابان بالمرض
+B) الولدان حاملان للمرض
+C) أحد الوالدين مصاب بالمرض
+D) كل ما سبق خطأ",
+3886,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,B,"Key hypotheses for primary hypertension include
+
+A) Decreased cardiac output.
+B) Low-salt diet.
+C) Water and salt retention.
+D) Decreased vascular resistance.","من المناعة المكتسبة :
+
+A) الليزوزيم
+B) اللمفاويات المفعلة
+C) الاضداد
+D) الاجابتين b+c",
+338,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,C,"Color of the adrenal medulla
+
+A) Dark brown
+B) White
+C) Yellowish
+D) Gray","يربط الرحم بجدران الحوض الجانبية الرباط:
+
+A) الاربي
+B) المدور
+C) العريض
+D) الوريدي",
+2734,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,D,"In the case of monochromatic radiation, the intensity is
+
+A) proportional to the number of electrons
+B) proportional to the wavelength
+C) proportional to the number of photons
+D) proportional to the frequency","يمثل الاضطراب الحالة :
+
+A) المتقدمة الجريان المستقر
+B) الحدية للجريان المستقر
+C) الحدية للجريان غير المستقر
+D) المتقدمة للجريان غير المستقر",
+4861,Mistral-7B-Instruct-v0.3,access_gap,1,0,D,D,C,"A 12-year-old child presents with a thyroid nodule and regional lymphadenopathy. What is the possible diagnosis?
+
+A) Medullary carcinoma.
+B) Follicular carcinoma.
+C) Lymphoma.
+D) Papillary carcinoma.
+
+E) Non-metastatic carcinoma.","بالنسبة للمريضة السابقة ما هي الوسيلة المناسبة لوضع التشخيص الأكيد؟
+
+A) اجراء ايكو للثدي.
+B) اجراء FNA.
+C) إجراء Core biopsy
+D) اجراء ماموغرام.
+E) اجراء خزعة جراحية.",
+679,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,C,"PTH is secreted by
+
+A) The parathyroid glands.
+B) The pituitary gland.
+C) The adrenal glands.
+D) The thyroid gland.","اختر الاجابة الخاطئة :
+
+A) نقص الانزيمات الحالة للسكريات عند الإنسان يسبب اضطرابات هضمية.
+B) هذا النقص يكون احيانا ذو منشأ وراثي.
+C) متلازمة سوء الامتصاص تحدث نتيجة ضمور مخاطية المعدة.
+D) كل ماسبق صحيح.",
+4469,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,D,"Which diagram is a box with two horns extending parallel to the vertical axis along which the measurements are distributed?
+
+A) Box diagram
+B) Circle diagram
+C) Stem-leaf diagram
+D) Scatter diagram","مريض بعمر 15 سنة لديه ارتفاع توتر شرياني، السبب الأقل احتمالًا هو
+
+A) تضيق الشريان الكلوي
+B) التهاب الكبب والكلية
+C) أسباب وراثية
+D) كوشينغ
+E) تضيق برزخ الأبهر",
+2403,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,B,"In Rutherford's experiment, when an alpha particle approaches the nucleus to its closest possible distance, at this distance
+
+A) Kinetic energy is converted into gravitational potential energy
+B) Potential energy is converted into kinetic energy
+C) Kinetic energy is converted into Coulomb energy
+D) Potential energy is converted into thermal energy","في الـ NMR طبقت تغير السن في الحام معين سيعود هذا السين بد انتهاء المنصة إلى النحافة الأول بمعمل يعد نشره مع البنات المجاورة بعبر
+
+A) ثابت استرخاء ثان
+B) ثابت استرخاء أول
+C) معتل النبض
+D) السرعة الزاوية",
+666,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,A,"The chambers that control motor functions and balance are
+
+A) Medulla oblongata
+B) Pons
+C) Cerebellum
+D) Cerebellum","الببتيد الطارح للصوديوم:
+
+A) موسع وعائي يزيد تروية الكبب
+B) تنتجه الخلايا الأذينية في القلب
+C) تقع مستقبلاته فيmesangial cell
+D) كل ماسبق صحيح",
+305,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,D,"The styloid process is located
+
+A) Lateral to the carotid tunnel
+B) Medial to the carotid tunnel
+C) Lateral to the jugular fossa
+D) Medial to the jugular fossa","من صفات غشاء الأمعاء الغليظة المخاطي :
+
+A) لا توجد فيه زغابات معوية إطلاقا
+B) الغدد المعوية طويلة ومتكدسة.
+C) الخلايا الكأسية والماصة غزيرة جدا
+D) كل ما سبق صحيح.",
+1347,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,D,"All of the following statements about the half-life of proteins are true except
+
+A) Collagen -- 200 hours.
+B) Insulin -- 6.5 to 9 minutes.
+C) Muscle proteins -- 1800 days.
+D) Transport proteins -- a few seconds.","وظائف فيتامين A كل ما يلي عدا:
+
+A) البصر
+B) النمو
+C) بناء الظهاريات
+D) تخثر الدم",
+2465,Mistral-7B-Instruct-v0.3,access_gap,1,0,D,D,B,"The body can be explored using the waves or rays it emits in: (Incorrect)
+
+A) Nuclear medicine.
+B) Muscle imaging.
+C) Thermography.
+D) Radiography.","بالنسبة للدورات الصباغية ايا من العبارات التالية خاطئة
+
+A) تستخدم صناعا عضويا كوسط ربح على شكل محلول سائل عادة
+B) يسمح اتساع طيف ربح الأصبغة المتوافرة لهذه الليزرات بان تكون قابلة للتوليف على نطاق واسع أو أن تولد نبضات قصيرة جدا
+C) اتساع عرض عصابتها مناسبة بشكل خاص الليزرات قابلة للتوليف وليزرات نبضة
+D) يمكن استبدال الصباغ بنوع اخر لتوليد مختلف الأطوال الموجبة لليزر اخر",
+1207,Mistral-7B-Instruct-v0.3,access_gap,1,0,E,E,A,"Everything about local anesthetics is true except
+
+A) Adding norepinephrine prolongs the duration of action.
+B) Hepatic impairment increases the risk of systemic lidocaine toxicity.
+C) Neurological symptoms are among the earliest manifestations of local anesthetic toxicity.
+D) Lidocaine can be used intravenously at low concentrations to treat some local anesthetic conditions.
+E) Amide-type local anesthetics are metabolized by pseudocholinesterase.","تستعمل البنزوديابينات في كل ما يلي عدا:
+
+A) A. احداث التهدئة وازالة القلق قبل العمل الجراحي
+B) B. مباشرة التخدير العام
+C) C. ضبط الاختلاجات الصرعية
+D) D. معاكسة التثبيط التنفسي المحدث بالباربيتوات
+E) E. تخفيف التأثيرات المقلدة للذهان للكيتامين",
+2991,Mistral-7B-Instruct-v0.3,access_gap,1,0,D,D,A,"The mechanisms of adaptation between the body and its environment are mediated by blood vessels
+
+A) Their diameters dilate or constrict.
+B) In summer, the pituitary gland sends signals to the sweat glands, allowing evaporation.
+C) Evaporation, and thus heat loss.
+D) All of the above are correct.","يؤدي تطبيق حزمة مركزة بتواتر 95GH لمدة ثانيتين إلى تسخين الجلد الى الدرجة
+
+A) 129°F
+B) 55°F
+C) 54°F
+D) A,C",
+3530,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,B,"All of the following are causes of corneal transparency EXCEPT
+
+A) Parallelism of its own tissue fibers
+B) Regularity of its own tissue fibers
+C) Thinness of its blood vessels
+D) Hydration
+E) Absence of vessels","في علاج التهاب الهلل الجرثومي ما عدا:
+
+A) حالة إسعافيه تتطلب استشفاء
+B) قد يحدث التهاب سحايا ودماغ والتهاب في الجيب الكهفي
+C) يجب تقييم حالة العصب البصري كل 4 ساعات
+D) حاجة للجراحة في حالات انخفاض حدة البصر أو الخراجات",
+2725,Mistral-7B-Instruct-v0.3,access_gap,1,0,D,D,B,"All of the following are true about digital infrared imaging EXCEPT
+
+A) It is a safe, painless, and non-invasive diagnostic auxiliary procedure.
+B) It uses mid-infrared radiation to record thermal patterns and temperature changes on the body surface.
+C) It reveals tissue dysfunction or abnormalities, or both.
+D) It is used because thermal changes are not visible.","تكون طاقة الروابط ............(1-5ev)
+
+A) الأيونية
+B) الهيدروجينية
+C) التشاركية
+D) A,C",
+1380,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,A,"All of the following statements about hepatitis A testing are true except
+
+A) Only antibodies (Anti-HAV) are measured, not antigens.
+B) The presence of IgG alone indicates a recent infection.
+C) Antibodies may persist in serum for several months to a year.
+D) False negatives do not occur, but false positives can sometimes happen.","دور الأللولاكتوز في مشغل اللاكتوز:
+
+A) Repressor.
+B) Co-Repressor.
+C) Inducer.
+D) Activator.",
+2356,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,C,"Which of the following compounds is the most acidic?
+
+A) Water
+B) Phenol
+C) Enantol
+D) Methanol","يمكن تعقب الجزيئات الموسومة في أثناء :
+
+A) حركتها في العضوية
+B) عندما تخضع لتفاعلات كيميائية
+C) A,C
+D) كل ما سبق صحيح",
+451,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,C,"Choose the incorrect answer regarding the testicle
+
+A) The testicular appendage is located on the lower pole
+B) It is surrounded by a fibrous capsule
+C) It is composed of lobules containing seminiferous tubules
+D) It is called the testes","تشاهد دسامات كيركرينغ في
+
+A) الصائم
+B) العفج
+C) الدقاق.
+D) كل ما سبق صحيح",
+872,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,C,"Ovulation occurs due to a surge of which hormone
+
+A) LH
+B) FSH
+C) TSH
+D) GRUH
+E) The first and second","العصب القحفي الذي يعبر الثقبة البيضية:
+
+A) البصري
+B) العيني
+C) الفكي السفلي
+D) الفكي العلوي",
+299,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,D,"The most numerous cells located in the center are
+
+A) Alpha cells.
+B) Beta cells.
+C) Sigma cells.
+D) PP cells.","العظم الفكي السفلي (الخاطئة):
+
+A) تقع ثلمة الفك السفلي أسفل وأمام الحافة العلوية للرأد .
+B) يتمادى الخط المائل في الخلف بالحافة الأمامية للرأد.
+C) تقع الحفرة تحت اللسانية أعلى الخط الضرسي اللامي.
+D) تشكل الثقبة الذقنية الفوهة الأمامية للنفق الفكي السفلي.",
+2362,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,B,"A bond in tissue cells can be broken by
+
+A) A radio frequency photon.
+B) A radio frequency photon + a terahertz photon.
+C) An X-ray photon.
+D) A terahertz photon.","العدسة التي تكون ثخانتها صغيرة مقارنة بنصفي قطري إنحنائها :
+
+A) عدسىة جسمية
+B) عدسة رقيقة
+C) عدسة إسقاط
+D) عدسة كهر ضغطية",
+4945,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,B,"3. A patient with asthma and frequent exacerbations has gradually developed hirsutism, trunk obesity, and bruising. What is the likely diagnosis?
+
+A) 1. Cushing's syndrome.
+B) 2. Cushing's disease.
+C) 3. Conn's syndrome.
+D) 4. Vomerulonephritis.","4. راجع مريض يبلغ من العمر 60 سنة بقصة ألم بطني ويرقان وحرارة مع عروءات، ماهو التشخيص المحتمل؟
+
+A) 1. تقيح مرارة.
+B) 2. التهاب مرارة حاد.
+C) 3. قيلة مخاطية في المرارة.
+D) 4. التهاب طرق صفراوية صاعد.
+E) 5. خزل معوي بسبب حصاة مرارية.",
+4099,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,B,"Norepinephrine is converted to epinephrine by a process called
+
+A) Hydroxylation
+B) Decarboxylation
+C) Methylation
+D) Oxygenation","تكثر في الانتانات الطفيلية :
+
+A) Neutrophils
+B) Eosinophils
+C) Basophils
+D) Monocytes",
+3508,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,D,"In blistering conjunctivitis and keratitis, all of the following are true except
+
+A) A gelatinous nodule forms in the center of the cornea
+B) E) The lesion may be allergic to staphylococcal toxin
+C) The lesion is surrounded by cellular infiltration and congestion
+D) The lesion may be allergic to tuberculosis (T","يبلغ طول العصب البصري وسطيا:
+
+A) 45 mm
+B) 25 mm
+C) 35 mm
+D) 30 mm
+E) كل ما سبق خاطئ",
+4878,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,A,"During an abdominal ultrasound of a 30-year-old pregnant woman, a 1 cm calcified mass was found in the epigastric region. A murmur was heard in the epigastric area, and she had no symptoms. What is the possible diagnosis?
+
+A) Splenic rupture.
+B) Splenic infarction.
+C) Splenic artery aneurysm.
+D) Somatic thrombocytopenic purpura.
+
+E) Hereditary spherocytosis.","راجع مريض عمره 48 سنة باضطراب رئوي وصداع وارتفاع ضغط ما هو التشخيص المحتمل؟
+
+A) متلازمة كوشينغ.
+B) داء كوشينغ.
+C) متلازمة كون.
+D) متلازمة نيلسون.",
+3859,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,D,"The first heart sound is caused by
+
+A) Closure of the sinoatrial valves
+B) Ventricular contraction
+C) Closure of the atrioventricular valves
+D) Atrial contraction","يؤدي تنبيه مستقبلات بيتا إلى ما يلي عدا:
+
+A) تسّرع القلب
+B) تقلص العضلات التنفسية
+C) إرخاء الأمعاء
+D) تحلل الشحوم",
+1843,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,C,"Vesicles transported from the ER to the Golgi inlet are coated with
+
+A) Clathrin protein
+B) COP2 protein
+C) COP1 protein
+D) None of the above","يعطي النسج قوة وصلابة
+
+A) الكولاجين الصفائحي .
+B) الكولاجين الليفي .
+C) كل من A + B .
+D) كل ما سبق خاطئ .",
+2704,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,B,"The equation that relates pressure, flow velocity, and height at two points in a blood vessel is
+
+A) Bernoulli's equation
+B) Continuity equation
+C) Ebenstein's equation
+D) All of the above","تستخدم الأفران المكروية المنزلية أمواج مكروية تساعد على:
+
+A) رؤية الطعام أثناء عملية الطهو .
+B) تسخين الطعام بفعل الحرارة التي تنشرها حول صحن الطعام .
+C) تسخين الطعام بفعل الحركات الدورانية لجزيئات الماء فيه .
+D) رؤية الطعام أثناء عملية الطهو .",
+1812,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,A,"The integration of genetic data with physiological and biochemical information is called
+
+A) Personalized Medicine
+B) Precision Medicine
+C) Regenerative Medicine
+D) Genomic Personalized Medicine","تحوي المنهيات المستقلة عن العامل Rho في لدينا تسلسلات غنية ب :
+
+A) الأدنين و الغوانين
+B) الأدنين و التيامين
+C) التيامين والسيتوزين
+D) الغوانين والسيتوزين",
+2598,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,C,"Which represents the value of the relative volume change?
+
+A) The body's resistance to internal plane movement
+B) The body's resistance to a change in volume
+C) The body's resistance to a load
+D) All of the above are correct","الـ Voxels هي :
+
+A) تكون على شكل مكعبات
+B) تدعى العناصر الحجمية
+C) B , A
+D) كل ما سبق خاطئ",
+4481,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,B,"In quantitative studies, all of the following are used except
+
+A) In-depth interviews
+B) Medical records
+C) Questionnaires and checklists
+D) Closed-ended questions","قيمة الصفر تكون نسبية وليست مطلقة في:
+
+A) المقياس الفتروي
+B) المقياس النسبي
+C) المقياس الرتبي
+D) المقياس الاسمي",
+4357,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,A,"The force of heart contractions increases with
+
+A) Prolonged fever.
+B) Increased potassium.
+C) Increased calcium.
+D) All of the above.","كل مايلي صحيح عن البلاعم السنخية عدا:
+
+A) مصدرها الوحيدات.
+B) توجد في الجلد.
+C) توجد في الرئة.
+D) تدخل في تشكيل الجهاز الشبكي البطاني.",
+2697,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,A,"One of the drawbacks of using traditional X-ray imaging methods is that the resulting images include
+
+A) a very large amount of radiation
+B) projections of the various tissues through which it passes
+C) a very small amount of radiation
+D) A,B","يمكن تصوير الأعضاء الأكثر عمقا شروط في كل ما يأتي ما عدا
+
+A) منابع سينية استطاعتها كبيرة
+B) منابع صوتية استطاعتها كبيرة
+C) منابع صوتية ملائمة
+D) حساسية من",
+4581,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,C,"The sample mean X is estimated to be
+
+A) Unbiased to the population mean μ
+B) Biased to the population mean μ
+C) Unbiased to the population skewness σ
+D) Unbiased to the population variance σ²","إذا كانت عينة عشوائية من التوزيع الطبيعي وكان ، فإن مجال الثقة 95% حول المتوسط الحقيقي μ يكون:
+
+A) [24 , 25.98]
+B) [25 , 25.96]
+C) [24.02, 25.98]
+D) [23.04, 26.96]",
+3690,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,D,"Calcium
+
+A) 99% of it is in bones
+B) 1% of it is in bones
+C) Unstable in children
+D) Daily requirement varies by gender","من الأسباب التي تؤدي الى حدوث هذه الحالة:
+
+A) قصور القلب
+B) النزف الهضمي
+C) وجود حصيات بولية
+D) التهاب الكلية والحويضة المزمن",
+4579,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,D,"If a random sample is of normal distribution and , then the 95% confidence interval around the true mean μ is
+
+A) [24, 25.98]
+B) [25, 25.96]
+C) [24.02, 25.98]
+D) [23.04, 26.96]","في الدراسات الكمية يتم اللجوء الى كل ما يأتي عدا:
+
+A) المقابلات العميقة
+B) الأسئلة المفتوحة
+C) المجموعات البؤرية
+D) الأسئلة المغلقة",
+3522,Mistral-7B-Instruct-v0.3,access_gap,1,0,E,E,A,"In toxoplasmosis uveitis
+
+A) It can be associated with involvement of any tissue in the body
+B) It affects the retina and choroid
+C) It is transmitted from mother to fetus via the placenta
+D) Bilateral eye lesions
+E) All of the above are true","إذا ترافق بتفتق تقطع الأنسجة المتفتقة:
+
+A) جروح الجسم البلوري.
+B) جروح الصلبة.
+C) جروح القرنية.
+D) جروح الملتحمة.
+E) لا شيء مما سبق.",
+3258,Mistral-7B-Instruct-v0.3,access_gap,1,0,D,D,A,"Diaphragm muscle - Incorrect answer - 2012-2013/2013-2014 session
+
+A) A muscular-tendonal plate that separates the thoracic cavity from the abdominal cavity.
+B) The sternal portion originates from the posterior surface of the xiphoid process.
+C) The costal portion originates from the deep surfaces of the ribs and the lower six cartilages.
+D) The right dome is lower than the left.
+
+E) The medial portion of the vertebral origin is called the pedicles of the diaphragm.","يمكن تمييز الصائم عن اللفائفي بالمميزات التالية ماعدا:
+
+A) يتوضع اللفائفي في القسم السفلي من جوف الصفاق في الحوض.
+B) قطر الصائم أكبر وجدارة أثخن وأكثر احمرارا من اللفائفي.
+C) يحوي الصائم لطاخات باير
+D) تشكل الأوعية المساريقية الصائمية قوسا واحدا أو اثنين فقط مع فروع طويلة تصل بين القوس وجدار المعي",
+181,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,D,"The ovary secretes all of the following except
+
+A) Relaxin
+B) Progesterone
+C) Inhibin
+D) Estrogen","طبقة من السحايا تغطي الجيوب الوريدية
+
+A) الام الجافية
+B) الغشاء العنكبوتي
+C) الام الحنون
+D) كل ماسبق خطأ",
+4161,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,D,"The sympathetic nervous system does not
+
+A) work in cases of stress, fear, and hypoglycemia
+B) reduce metabolic rates
+C) enhance the effectiveness of vascular systems
+D) increase blood flow to skeletal muscles during exercise","فيما يخص الهرمونات موضعية التأثير:
+
+A) تؤثر في منطقة قريبة من منطقة افرازها
+B) تنتج و تحرر و ينتهي تأثيرها بسرعة
+C) أحد أمثلتها الأستيل كولين
+D) كل ما سبق صحيح",
+4068,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,A,"The right coronary artery supplies all of the following except
+
+A) The anterior portion of the right ventricle.
+B) The anterior portion of the left ventricle.
+C) The posterior portion of the right ventricle.
+D) The posterior portion of the left ventricle.","من آليات حدوث الرجفان البطيني
+
+A) مرور التنبيه في طريق طويل كما في توسع اجواف القلب.
+B) زيادة سرعة مرور التنبيه.
+C) زيادة فترة العصيان.
+D) عند تنبيه نقطة في العضل القلبي تنتشر في اتجاه واحد.",
+1532,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,D,"Pathological increases in this epithelium are observed in acute tubular necrosis
+
+A) Scaling epithelium
+B) Transitional epithelium
+C) Renal tubular epithelium
+D) Collecting tubular epithelium","في عملية انهاء الانتساخ المعتمدة على بروتين الانهاء :RHO
+
+A) يحتاج إلى منهي Terminator.
+B) يشبه بروتين الانهاء RHO انزيم الـ Helicase.
+C) يحتاج إلى طاقة ATP.
+D) يعتمد على وجود بروتين الانهاء RHO.
+E) يقطع البروتين الانهاء الروابط الهيدروجينية.",
+1299,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,D,"Phosphodiester bonds
+
+A) They form between complementary nucleotides on the DNA strand.
+B) They form as a result of the phosphate group at the 5' end of the following nucleotide pairing with the hydroxyl group at the 3' end of the first nucleotide.
+C) They form as a result of the hydroxyl group at the 5' end of the first nucleotide pairing with the phosphate group at the 3' end of the following nucleotide.
+D) They form mainly between the nitrogenous bases of nucleotides.","من التظاهرات السريرية لالتهاب السحايا لدى حديثي الولادة:
+
+A) سوء تغذية ونقص شهية.
+B) بكاء مستمر عالي النبرة.
+C) ارتفاع الحرارة.
+D) كل ما سبق صحيح.",
+1640,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,B,"A 72-year-old patient presented with the following symptoms: jaundice (yellowing of the skin and corneas) and dark, tea-colored urine. His laboratory results showed elevated AP, elevated ALT, and elevated conjugated bilirubin. His hemoglobin levels were normal. The possible diagnoses for the patient are
+
+A) Hemolytic jaundice
+B) Hepatocellular jaundice
+C) Obstructive jaundice
+D) Kernicterus","طفل عمره ١٢ سنة لديه الأعراض إرهاق وتعب عام بعد تناول وجبة الغذاء للون أصفر في قرنية العين مع تلون البول بالأصفر الداكن ونتائج الفحوصات المخبرية لديه نقص عند الكريات الحمر مع انخفاض في الخصاب وارتفاع الشبكيات (ALT,AST,AP) قيم طبيعية ل وبإجراء الرحلان الكهربائي للخضاب أظهر موجودات طبيعية فالتشخيص المحتمل للطفل هو:
+
+A) فقر دم منجلي
+B) التهاب كبد فيروسي
+C) داء الفوال
+D) سرطان رأس البنكرياس",
+1928,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,D,"The term Tuberous sclerosis refers to
+
+A) Polycystic kidney disease
+B) Tuberous sclerosis
+C) Retinitis pigmentosa
+D) Muscular dystrophy","إذا تزاوج الفرد 4-lll من ذكر سليم فإن الاحتمال التالي وارد عند الأولاد:
+
+A) مصابون.
+B) حاملين للمرض.
+C) سليمون.
+D) غير معروفين.",
+4798,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,B,"A type 1 error is
+
+A) Rejecting hypothesis H₀ even though it is true
+B) Accepting hypothesis H₀ even though it is false
+C) Rejecting hypothesis H₀ even though it is true
+D) Rejecting hypothesis H₁ even though it is false","من مميزاتها تصلنا الإجابات خلال وقت قصير وتمتاز ببساطتها وقلة تكاليفها وسرعتها:
+
+A) البريد
+B) استخدام الانترنيت والمواقع الاجتماعية
+C) المواجهة الشخصية
+D) الاتصالات الهاتفية",
+1980,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,A,"Pericentric inversion is characterized by the following
+
+A) It results in the loss of the chromosome.
+B) It involves the entire centromere.
+C) It does not cause any damage.
+D) The resulting gametes are intact.","كل ما يلي صحيح عن المجين المتقدري ماعدا:
+
+A) جزيء حلقي مفرد.
+B) يحوي طاق خفيف غني بالسيتوزين.
+C) يحوي طاق ثقيل غني بالأدنين.
+D) له منشأ تضاعف واحد هو loop-D/CR region.",
+642,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,D,"The mandibular nerve passes through
+
+A) the round foramen
+B) the superior phrenic fissure
+C) the foramen ovale
+D) the spinous foramen",". التنبيه نظير الودي يؤدي الى كل مايلي عدا
+
+A) تضيق القصبات
+B) تنشيط حركات السبيل الهضمي
+C) تسطح العدسة
+D) تضيق الحدقة",
+366,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,D,"The smallest and most numerous taste papillae are
+
+A) filiform
+B) fungal
+C) folioid
+D) encapsulated","وظائف الميلاتونين ما عدا:
+
+A) ينظم الإيقاعات اليومية
+B) ينظم درجة الحرارة والتناسل
+C) يزيد الاستقلاب
+D) ينظم الوظيفة القلبية",
+4635,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,A,"The appropriate sample size for estimating with 95% confidence, error not exceeding (1), and a variance of (2500), given that Z = 1.96 = 0.975, is
+
+A) n > 9500
+B) n > 9604
+C) n > 98
+D) n > 100","لتكن x₁, x₂, ..., xₙ عينة عشوائية من مجتمع طبيعي وسيطه μ معلوم والانحراف المعياري σ مجهول، أي من الدوال التالية لا تمثل إحصاء:
+
+A) X̄
+B) Σⁿᵢ₌₁ Xᵢ
+C) Σⁿᵢ₌₁ (Xᵢ – μ)
+D) Σⁿᵢ₌₁ Xᵢ / σ",
+1374,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,D,"Lactose intolerance
+
+A) May cause intellectual disability in the affected individual
+B) One of its causes is severe diarrhea
+C) It is caused by a deficiency of the enzyme galactose-1-phosphate uridyltransferase
+D) It occurs only in infants","فيتامين البيوتين:
+
+A) يعتبر حامل عابر لزوج من ذرات الهيدروجين
+B) يصنع من قبل الجراثيم المعوية
+C) له دور أساسي في تفاعلات تحلل السكر
+D) سبب عوز هو تناول السمك النئ",
+3420,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,A,"When a woman is infected with Toxoplasma gondii for the first time during pregnancy, all of the following occur except
+
+A) Miscarriage
+B) Stillbirth (often)
+C) Hydrocephalus
+D) Intracerebral calcifications
+E) Retinitis chorioretinitis","داخل العائل الناقل تشاهد أطوار المتصورات التالية عدا:
+
+A) المنقسمة
+B) اللاقحة المتحركة
+C) الكيسة البيضية
+D) الحيوانات البوغية
+E) اللاقحة",
+3391,Mistral-7B-Instruct-v0.3,access_gap,1,0,D,D,A,"The main animal reservoirs of the Bosque muttura are
+
+A) Cattle
+B) Sheep
+C) Fish
+D) Pigs
+E) Cats","فقر دم عرطل ممكن مشاهدته عند الإصابة ب:
+
+A) المتحول النسيجي
+B) الزقية القولونية
+C) خفيات الأبواغ
+D) الجيارديا اللمبلية
+E) خطأ كل ما ورد",
+463,Mistral-7B-Instruct-v0.3,access_gap,1,0,D,D,B,"Characteristics of endothelial cells in the blood-air barrier
+
+A) They are very thin.
+B) They are of the continuous type.
+C) Their cytoplasm in flattened sections is characterized by the presence of numerous stromal vesicles.
+D) All of the above are true.",") تتواجد continuous capillaries في كل من النسج التالية ما عدا :
+
+A) Muscular Tissue
+B) Connective Tissue
+C) Endocrine Glands
+D) Nervous Tissue",
+3914,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,A,"Transferrin transports
+
+A) Copper
+B) Ferrous
+C) Chlorine
+D) Oxygen","تحررها نهايات المحاوير العصبية في المشابك والموصلات المشبكية :
+
+A) النواقل عصبية
+B) الهرمونات
+C) الهرمونات العصبية الصماوية
+D) السيتوكينات",
+429,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,C,"Regarding the radial nerve, all of the following are true except
+
+A) The lateral forearm cutaneous nerve is a branch of it.
+B) It runs in the spiral groove of the humerus with the deep brachial artery.
+C) It is a branch of the posterior cord of the brachial plexus.
+D) It innervates the brachioradialis muscle.
+E) Injury to it causes hand drop.","تنصف الوحدة الوظيفية للرئتين بـ:
+
+A) تحت انقسام من الرئة.
+B) تتوضع الشجرة القصبية والوريد الرئوي مركزيا.
+C) توزع الشريان الرئوي محيطية.
+D) نصاب مرضياً مع مجاوراتها.
+E) ولا واحدة مما علا.",
+2624,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,C,"The intensity of fluorescence is proportional to the laser illumination.
+
+A) Directly with
+B) Inversely with
+C) Directly with the square of
+D) Inversely with the square of","اختر ناتج تفاعل المعادلة الأيونية NaOH29(aq) + FeSO4(aq)
+
+A) Fe(OH)25 +Na2SO4
+B) Na2SO4
+C) Fe(OH)2 +Na2SO6
+D) Fe(OH)2",
+4450,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,D,"The plateau phase in cardiac muscle fiber action potential is due to the opening of the channels for
+
+A) sodium
+B) calcium
+C) potassium
+D) chloride","تزداد قوة القلب التقلصية بازدياد كل مما يلي ما عدا:
+
+A) التنبيه الودي.
+B) طول الألياف قبل تقلصها.
+C) الديجتال والأدرينالين.
+D) زيادة شدة المنبه.",
+1073,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,D,"Ulna bone: (2007)
+
+A) The head of the ulna is superior.
+B) The medial edge of its body is acute.
+C) It lies medially to the radius.
+D) It articulates with the triangular bone.",". يضم جدار الصفن كل مايلي عدا
+
+A) الجلد
+B) اللفافة المنوية الخارجة
+C) لفافة العضلة المشمرة
+D) لفافة بوك",
+893,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,D,"The fibrous sheath of the flexor muscle
+
+A) forms a distal occluded tunnel
+B) in the thumb contains two tendons
+C) has a synovial membrane
+D) rests on the deep fascia","الطحال اختر الإجابة الخاطئة :
+
+A) أضخم كتلة مفردة من النسيج اللمعي في الجسم
+B) يقوم بتصفية الدم
+C) له دور مناعي
+D) يتوضع بين المعدة والحجاب الحاجز
+E) يسكن المراق الأيمن",
+1668,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,A,"The normal location of the ABL oncogene is
+
+A) 22q11
+B) 9q34
+C) 13q1
+D) Bq24","تستخدم تقنية dHPLC في:
+
+A) كشف وفصل المثنويات المتغيرة والمتماثلة الناجمة عن الطفرات النقطية
+B) التمييز بين النمطين المتماثل والمتخالف للأليل الطافر
+C) نكشف الاختلاف في نكليوتيد واحد دون الحاجة لإنزيمات
+D) تمييز التغيير في طول نواتج التفاعل",
+658,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,B,"The first layer of plantar fascia muscles includes, but is not limited to
+
+A) Extensor digitorum valgus
+B) Flexor hallucis
+C) Flexor dimorphicum
+D) Abductor hallucis","أي العظام التالية يساهم في تشكيل سقف جوف الحجاج: (2015تكميلي)
+
+A) الفكي العلوي.
+B) الجبهي.
+C) الوجني.
+D) الدمعي.
+E) الحنكي.",
+4343,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,D,"The hypoxic response occurs when PO2 decreases through
+
+A) the aorta
+B) the carotid body
+C) central chemoreceptors
+D) all of the above","تعمل الحاصرات الغير مباشرة في الجهاز العصبي المستقل باأللية التالية:
+
+A) ترتبط بمستقبل الناقل وتثبط فعله
+B) تنقص فعالية العصبون قبل المشبكي
+C) تحرض األنزيمات المخربة للناقل العصبي
+D) تثبط فعالية العصبون بعد المشبكي",
+2711,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,C,"If a body does not exceed the limits of a certain range of stresses and their corresponding strains, it will not return to its original dimensions or shape and is described as being in the range of
+
+A) Elastic
+B) Plastic
+C) Volumetric
+D) Structural","عامل μ هو:
+
+A) المرونة الحجمي
+B) عامل القص ويعير عن قساوة النسيج
+C) عامل مرونة المادة
+D) الكتلة الخطية m/l",
+4867,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,D,"A 25-year-old patient has presented with general malaise, weight loss, fever, and intermittent bloody stools over the past six weeks following his return from the Indian subcontinent, where he worked for six months. Clinical examination reveals hepatomegaly with tenderness in the right upper quadrant, and hypoechoic echocardiography shows a right hepatic lobe with well-defined borders. What is the likely diagnosis?
+
+A) Purulent hepatic abscess.
+B) Dysenteric hepatic abscess.
+C) Hepatic hydatid cyst.
+D) Viral hepatitis.","شابة في ربيعها الأربعين تشكو من نقص وزن مع خفقان وجحوظ في العينين. بالفحص السريري تبين وجود سلعة درقية متوسطة الحجم منتشرة ومتجانسة، بالفحوص الدموية تبين وجود فرط نشاط درق بدني، ما هو العلاج غير المرغوب به في هذه الحالة؟
+
+A) إعطاء الميتيمازول Methimazoli
+B) إعطاء محلول اللوغول Lugols iodine
+C) المعالجة الشعاعية باليود I 131
+D) استئصال الدرق التام.
+E) الستيروئيدات.",
+3127,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,A,"Examples of synergy between the sympathetic and parasympathetic nervous systems include
+
+A) Innervation of the thyroid gland.
+B) Regulation of heartbeat.
+C) Regulation of salivation.
+D) None of the above.","الناقل الكيميائي الذي تحرره جميع العصبونات قبل العقدة هو:
+
+A) الأستيل كولين.
+B) السيروتونين.
+C) الأدرينالين.
+D) النور أدرينالين.",
+1652,Mistral-7B-Instruct-v0.3,access_gap,1,0,D,D,A,"Energy
+
+A) Dissipates and requires a continuous and constant source.
+B) Is used in building living organisms and as mechanical kinetic energy.
+C) Dissipates as heat into outer space.
+D) All of the above are true.","يشارك في تشكيل مغزل الانقسام كل ما يلي ما عدا
+
+A) الجسيم المركزي .
+B) النجماء .
+C) الغشاء النووي .
+D) بروتينات التوبيولين .",
+2865,Mistral-7B-Instruct-v0.3,access_gap,1,0,D,D,C,"The sunrise effect (active spectrum) equals the product of
+
+A) Sunlight spectrum and erythematous effect spectrum
+B) Radiation intensity and skin reddening
+C) Radiation intensity and skin sensitivity
+D) All of the above are correct","يتضمن تحليل البول ايونا قياسيا للوزن النوعي عادة من:
+
+A) 1.015 الي 1.035
+B) 1.020 الي 1.040
+C) 1.015 الي 1.030
+D) كل ما سبق صحيح",
+3723,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,D,"White blood cells are characterized by the following
+
+A) They are elongated in shape
+B) They contain coarse, shiny granules
+C) They have a diameter of 100 micrometers
+D) They are soluble in alcohol","يعتبر كل مما يلي من أسباب عوز الحديد ما عدا:
+
+A) التلاسيميا
+B) المدخول القوتي الفقير بالحديد
+C) النزف من دوالي المريء
+D) وجود طفيليات في الأمعاء",
+1970,Mistral-7B-Instruct-v0.3,access_gap,1,0,D,D,A,"In the apoptosis mechanism
+
+A) The caspase proteinase family is involved.
+B) The proactivation of the Bcl2 family is regulated.
+C) The BAK and BAX proteins are among the most important apoptotic proteases.
+D) All of the above.","كل ما يلي صحيح في متيلة الدنا ما عدا:
+
+A) من آليات تنظيم عمل المورثة على مستوى الصبغيات
+B) تحجب عوامل الانتساخ
+C) ترخي الدنا حول الهستونات
+D) عملية معاكسة لعملية الأستلة",
+3827,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,A,"Nicotinic receptors are found in all of the following except
+
+A) Synapses between preganglionic and postsynaptic neurons of the sympathetic and parasympathetic nervous systems
+B) The nerve endings of neurons in the cerebral cortex
+C) Cells that respond to stimulation by postsynaptic neurons of the parasympathetic nervous system
+D) The cell membranes of skeletal muscle","السعة الحياتية VC :
+
+A) IRV+ TV
+B) ERV+IRV+ TV
+C) RV+ERV+IRV+ TV
+D) ERV+TV",
+1022,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,A,"The lesser ischial notch belongs to which bone
+
+A) ilium
+B) ischium
+C) pubis
+D) none of the above","العصب القحفي الثاني :
+
+A) البصري - حاسي
+B) العيني - حاسي
+C) البصري - حسي
+D) العيني - حسي",
+9,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,D,"Branches of the internal carotid artery
+
+A) Ophthalmic
+B) Anterior inferior cerebellar artery
+C) Posterior inferior cerebellar artery
+D) Spinal",". من فروع الشريان السباتي الباطن
+
+A) Ophthalmic
+B) الشريان المخيخي السفلي الامامي
+C) الشريان المخيخي السفلي الخلفي
+D) شوكي",
+88,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,D,"The pad of fatty tissue above the pubic symphysis is called
+
+A) Mount pubis
+B) labia minora
+C) labia majora
+D) vulvar vestibule","الوسادة من النسيج الدهني فوق الارتفاق العاني تدعى
+
+A) جبل العانة
+B) الشفر الصغير
+C) الشفر الكبير
+D) دهليز الفرج",
+270,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,A,"Brachial Plexus: (2017 First Edition)
+
+A) Formed in the anterior triangle of the neck.
+B) From spinal nerves C4-5-6.
+C) The lateral cord gives off the radial nerve.
+D) The posterior cord gives off the axillary nerve.","تمثل لفافة collies:
+
+A) الوريدية السطحية للفافة السطحية لجدار البطن الامامي.
+B) الوريدية العميقة للفافة السطحية لجدار البطن الامامي.
+C) الوريدية العميقة للفافة السطحية للعجفن.
+D) اللفافة العميقة للقضيب.
+E) الوريدية العميقة للفافة السطحية للعجفن.",
+4112,Mistral-7B-Instruct-v0.3,access_gap,1,0,D,D,B,"All of the following are characteristics of the dorsal vertical tract EXCEPT
+
+A) Its fibers are myelinated.
+B) Its fibers belong to the AB fiber group.
+C) Crossover occurs in the medulla oblongata.
+D) Crossover occurs in the medulla oblongata.","فقر الدم اللاتنسجي:
+
+A) سوي الحجم
+B) ناقص الحجم
+C) زائد الحجم
+D) اعداد الكربات الحمر طبيعية",
+212,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,D,"All of the following are folds of the dura mater except
+
+A) Thymen cerebralis
+B) Follicularis cerebralis
+C) Thymen cerebralis
+D) Follicularis cerebralis","المري :
+
+A) يبدأ عند مستوى الفقرة الرقبية السابعة
+B) يجتاز الحجاب الحاجز عند مستوى الفقرة الصدرية T10
+C) توجد الفتحة المريئية في السويقة اليسرى
+D) كل ما سبق صحيح
+E) كل ما سبق خاطئ",
+4148,Mistral-7B-Instruct-v0.3,access_gap,1,0,D,D,C,"Congenital iron deficiency anemia
+
+A) Affects females and is transmitted through males.
+B) Deficiency in the enzyme pyridoxal phosphatase.
+C) Deficiency in the synthesis of the amino acid levulin.
+D) Both c and d.","يحدث المتصاص بشكل أساسي في:
+
+A) المعدة
+B) الامعاء الدقيقة
+C) الكولون بقسمه المستعرض
+D) الكولون النهائي والمستقيم",
+1629,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,A,"Which tumor marker requires periodic monitoring for a patient who has undergone radical prostatectomy?
+
+A) CA 19-9
+B) PSA
+C) PSMA
+D) CA 15-3","امرأة مصابة بمتلازمة فرط كوليسترول الدم تزوجت من رجل سليم. احتمال إنجاب طفل مصاب:
+
+A) 1
+B) 0.5
+C) 0.25
+D) 0",
+4785,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,C,"The confidence interval is used in the case of
+
+A) Σ₁², σ₂² - A, two unknowns n1, n2 < 30
+B) σ₁², σ₂², two knowns n1, n2 ≥ 30
+C) σ₁², σ₂², two unknowns n1, n2 ≥ 30
+D) σ₁², σ₂², two knowns n1, n2 < 30","يمكن حساب الوسيط ومعامل سبيرمان لارتباط الرتب في:
+
+A) المقياس الاسمي
+B) المقياس الفتروي
+C) المقياس النسبي
+D) B+C",
+2894,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,A,"The speed of longitudinal waves in a fluid
+
+A) .
+B) .
+C) .
+D) .","كل مايلي صحيح عن الأمواج المكروية ماعدا:
+
+A) تحتل الجء والتواتر الأعلى والطول الموجي الأقصر من طيف الأمواج الراديوية
+B) أول من قام بتوليدها Hertz
+C) يتضمن الأمواج الملمترية UHE و DHF على السواء
+D) تتضمن كامل العصاية HF والهندسسة الراديوية RF",
+4855,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,C,"A 40-year-old woman of Asian origin arrived in the UK complaining of a lump in her right breast several months prior. The lump was painless, but she had a recurring abscess in her right armpit. What is the possible diagnosis?
+
+A) Inflammatory breast cancer.
+B) Breast tuberculosis.
+C) Paget's disease.
+D) Fibroadenopathy.
+
+E) Breast eczema.","أجري تنظير هضمي علوي لرجل عمره 55 سنة وتم اخباره أن لديه آفة قد تسبب فقراً دموياً والنزف الحاد منها غير شائع ما هو هذا التشخيص؟
+
+A) قرحة معدية.
+B) سرطانة معدية.
+C) قرحة عفجية.
+D) دوالي مريئية.
+E) تسحجات معدية.",
+2278,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,A,"It has been shown that the appropriate drug for 60% of breast cancer patients with ER-type cancer cells is
+
+A) Hersiamine
+B) Tamoxifen
+C) Bosindolol
+D) Dingeoxin","من الآليات التي تغير من استجابة أي مريض كل ما يلي ماعدا :
+
+A) استقلاب الدواء
+B) نقل الدواء
+C) شكل مستقبل الدواء
+D) الزمرة الكيميائية للدواء",
+3326,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,D,"The golden-eyed protozoan Clarysop is a vector for
+
+A) Bancroftianus
+B) Filiformis
+C) Loa ova
+D) Lesser burnt caterpillar
+E) Trypanosoma cruzi","كل ما يلي عن الصفات التركيبية للفطور صحيح ما عدا :
+
+A) لا تمتلك اليخضور
+B) تعتبر مملكة مستقلة لا تنتمي لمملكة الحيوانات أو النباتات
+C) هي خلايا حقيقية النواة Eucaryotes
+D) يحتوي الغشاء السيتوبلاسمي على Ergosterin
+E) يحتوي على البيبتيدو غليكان كما هو الحال عند الجراثيم",
+20,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,D,"The lateral muscles of the leg, except
+
+A) the fourth fibula
+B) the fibula brevis
+C) the third fibula
+D) the fibula longus","العضلات الوحشية في الساق عدا:
+
+A) الشظوية الرابعة
+B) الشظوية القصيرة
+C) الشظوية الثالثة
+D) الشظوية الطويلة",
+4358,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,D,"The part of the nephron that is completely watertight
+
+A) Proximal coiled tubule
+B) Descending part of loop of Henle
+C) Ascending part of loop of Henle
+D) Collecting tubule","يؤدي الى زيادة سرعة دقات القلب عدا :
+
+A) التنبيه الودي
+B) محرضات B1
+C) زيادة النفوذية ل الصوديوم
+D) نقص النفوذية Cad",
+4293,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,C,"The heart axis
+
+A) Deviates from normal due to changes in the heart's position.
+B) Its normal range is between 60 and 100 degrees.
+C) If the angle is 59 degrees, it deviates to the right.
+D) If the angle is -59 degrees, it deviates to the left.","حجم الدم الذي يضخه القلب خلال دقيقة واحدة:
+
+A) End Systolic Volume.
+B) Cardiac input.
+C) Cardiac Output.
+D) Stroke Volume.",
+101,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,D,"The following are incorrect
+
+A) The Hemiazygos Vein drains into the Azygos Vein, which drains the Superior Vena Cava.
+B) The Basilar Vein is located on the medial aspect of the arm.
+C) The Azygos Vein is formed by the left ascending lumbar vein.
+D) The Cephalic Vein gives off the medial cubital vein.","الخاطئ مما يلي هو :
+
+A) يصب Hemiazygos Veinفي Azygos Vein والذي يصب Superior Vena Cava
+B) يوجد Basilar Vein في الوجه الأنسي للذراع
+C) يتشكل Azygos Vein من الوريد القطني الصاعد الأيسر
+D) يعطي Cephalic Vein الوريد المرفقي الناصف",
+4648,Mistral-7B-Instruct-v0.3,access_gap,1,0,A,A,D,"The group that forms the base of the population pyramid is
+
+A) Children
+B) Young adults
+C) Adolescents
+D) Over 60","ان علاقة حجم العينة اللازم لتقدير متوسط المجتمع هي:
+
+A) D=(
+B) D=(
+C) D=(
+D) 5. غير ذلك",
+3048,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,D,"The organic compound formed in the following reaction is: CH3CH2OH + SOCI2 → ? + -------
+
+A) C2H5SH
+B) CH3CHO
+C) C2H5CI
+D) None of the above","وظيفة الكاشف هي:
+
+A) قياس شدة الأشعة النافذة.
+B) قياس طول الأشعة النافذة.
+C) قياس توتر الأشعة النافذة .
+D) كل ما سبق خاطئ.",
+4043,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,D,"Attractive forces occur between the actin and myosin filaments, causing them to slide past each other, due to the presence of
+
+A) Potassium
+B) Calcium
+C) Sodium
+D) Sodium and Calcium ions","كل مما يلي يزيد هرمون البرولكتين عدا:
+
+A) الحمل
+B) الإرضاع
+C) الدوبامين
+D) العامل المطلق للدوبامين",
+1122,Mistral-7B-Instruct-v0.3,access_gap,1,0,C,C,A,"The deepest region of the adrenal cortex
+
+A) Zone glomeruli
+B) Zone fasciculi
+C) Zone reticularis
+D) All of the above are incorrect","كل ما هو آت خاطئ في البنكرياس ما عدا:
+
+A) عدم احتوائه على الأقنية المخططة.
+B) إفراز الهرمونات المنظمة للنمو.
+C) غدة أنبوبية مركبة.
+D) تصنيع الانزيمات في جزر لانغرهانس",
+1653,Mistral-7B-Instruct-v0.3,access_gap,1,0,B,B,A,"The NMD mechanism prevents the formation of a protein that is
+
+A) mutant.
+B) truncated.
+C) highly active.
+D) yeast-like.","الطاقة:
+
+A) تتبدد ونكون بحاجة لمصدر مستمر ودائم لها .
+B) تستنفذ في بناء الكائنات الحية وكطاقة حركية ميكانيكة .
+C) تتبدد بشكل حرارة الى الفضاء الخارجي .
+D) كل ما سبق صحيح .",
+3527,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,D,A,"Regarding the ciliary body (false)
+
+A) It forms the anterior part of the uvea.
+B) It attaches anteriorly to the sclera spur.
+C) Its posterior border lies at the serrated margin of the retina.
+D) It consists of a mesodermal portion and a reticular portion.
+E) The ciliary body forms a closed ring 8 mm in diameter.","تقع حفيرة البكرة في الجدار العلوي للحجاج في قسمه :
+
+A) الأمامي الوحشي
+B) الأمامي الأنسي
+C) الخلفي الوحشي
+D) الخلفي الأنسي
+E) لا تفع في الجدار العلوي",
+3193,Mistral-7B-Instruct-v0.3,arabic_only,0,1,C,B,C,"All of the following are triggers for epileptic seizures except
+
+A) Physical and mental stress
+B) Alcohol
+C) Excessive use of epilepsy medications
+D) Intervening infections
+E) Flashing lights","وجود الشرائط قليلة النسيلة OCB في عينة السائل النخاعي يدل علي:
+
+A) ارتفاع الضغط داخل القحف
+B) اصفرار النخاع الشوكي
+C) تزف تحت الجافية
+D) التهاب سحايا
+E) تصلب متعدد",
+259,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,C,A,"The dorsum artery originates from
+
+A) Anterior tibial artery
+B) Posterior tibial artery
+C) Popliteal artery
+D) Femoral artery","يحتوي الجيب العجاني العميق الذكري ماعدا:
+
+A) إحليل غشائي.
+B) غدة بصلية إحليلية.
+C) معصرة إحليلية.
+D) عصب ظهر القضيب.
+E) بصلة القضيب.",
+1440,Mistral-7B-Instruct-v0.3,arabic_only,0,1,C,A,C,"Some cellular enzymes specific to certain organs include
+
+A) Alkaline phosphatase
+B) ALT
+C) Acid phosphatase
+D) LDH","الفيتامينات الذوابة في الدهن:
+
+A) عددها تسعة
+B) لا يستطيع الجسم تخزينها
+C) قد تسبب السمية عند تناولها بكميات كبيرة
+D) كل ما سبق خطأ",
+2593,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,C,D,"The previous reaction shifts in the forward direction if
+
+A) pressure increases
+B) concentration decreases
+C) concentration increases
+D) all of the above are true","تستخدم نسبة MRF في معالجة :
+
+A) Cysts
+B) أورام حميدة
+C) أورام خبيثة
+D) كل ما سبق صحيح",
+4895,Mistral-7B-Instruct-v0.3,arabic_only,0,1,C,A,C,"A 32-year-old man presented to the emergency department with a history of vomiting large amounts of bright red blood. What is the most important first step in managing this patient?
+
+A) Medical history and physical examination.
+B) Hemoglobin level determination.
+C) Fluid resuscitation.
+D) Nasogastric tube insertion.
+
+E) Emergency upper endoscopy.","أي الحالات التالية قد يستجيب على العلاج المحافظ؟
+
+A) مريضة 70 سنة مع انفتال معي متوسط.
+B) مريضة 80 سنة مع انسداد بحصة مرارية.
+C) مريضة 45 سنة بانسداد بعد 10 أيام من استئصال مرارة بالمنظار.
+D) طفل بعمر يومين لديه انسداد معوي.
+E) شاب 20 سنة لديه انسداد معوي جزئي مع فتق أربى غاصص.",
+1572,Mistral-7B-Instruct-v0.3,arabic_only,0,1,C,B,C,"All of the following statements regarding hepatitis B testing are true except
+
+A) A positive HBsAg result indicates a recent or past infection.
+B) A negative HBsAg result suggests a positive HBsAb result.
+C) A positive HBcAg result indicates a recent viral infection.
+D) HBsDNA can be ordered to determine the viral copy number.","ليس من صفات الوراثة عديدة العوامل:
+
+A) يزداد اختطار الرجعة لدى الأقرباء
+B) ليس لديها ميل للجنس
+C) تضافر كل من العوامل الجينية والبيئية
+D) يزداد اختطار الرجعة بازدياد وخامة المرض",
+1625,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,B,A,"Cysteine, except
+
+A) is non-glycogenic
+B) is involved in the synthesis of insulin
+C) is involved in the synthesis of coenzyme A
+D) is involved in the synthesis of glutathione","أنزيم الرنا بوليميراز لدى الحقيقيات: (الخطأ)
+
+A) يركب الروابط التكافؤية.
+B) يفك مؤقتا الروابط الهيدروجينية.
+C) يتألف من 14 وحيدة.
+D) لا يحتاج الى بادي.",
+4335,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,,A,"The variables that sense the following
+
+A) the receiver
+B) the monitored device
+C) the regulating variable
+D) the comparator","عندما تتجمع المراكز المثارة هنا، ويستطيع الإشعاع أن ينتشر مرات كثيرة، تُعرف هذه الظاهرة بـ:
+
+A) الانتثار المتعدد
+B) الانتثار الأحادي
+C) الانعكاس الكلي الداخلي
+D) الانتثار الإحصائي",
+1514,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,B,D,"All of the following indicate that neonatal jaundice is due to a pathological cause except
+
+A) If the jaundice persists beyond the first week after birth.
+B) If the jaundice appears within the first 24 hours after birth.
+C) If bilirubin levels rise by 7 mg/dL or more per day.
+D) If the infant's initial bilirubin level is greater than 7 mg/dL.","كل ما يلي حول الأسباراجين والغلوتامين صحيح ما عدا:
+
+A) من الحموض الأمينية القطبية غير المشحونة
+B) سبب قطبيتهما وجود الزمرة الهيدروكسيلية في بنيتهما
+C) يعتبران أميدان لحمض الأسبارتيك وحمض الغلوتاميك
+D) بالحلمهة الحمضية لهما ينتج حمض الاسبارتيك وحمض الغلوتاميك",
+4661,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,D,A,"Reasons for preferring sampling over a census include
+
+A) Difficulty in enumerating all members of the population
+B) The heterogeneity of populations
+C) The need for accurate data
+D) All of the above are incorrect","التجربة الثنائية الوحيدة يكون لها التوزيع:
+
+A) البرنولي
+B) البواسوني
+C) الحداني
+D) الطبيعي",
+1867,Mistral-7B-Instruct-v0.3,arabic_only,0,1,C,A,C,"The capsid protects the RNA strand from degradation by the following enzymes
+
+A) Nuclease
+B) Endonuclease
+C) Ligase
+D) Primase","يمكن الكشف عن حملة التلاسيميا بيتا عن طريق كل ما يلي ماعدا :
+
+A) صغر حجم الخلايا MCV
+B) نقص الهيموغلوبين من A2
+C) نقص متوسط الهيموغلوبين في الخلية MCH
+D) زيادة الهيموغلوبين F",
+1872,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,B,A,"Matrix proteins include all of the following except
+
+A) Actin.
+B) Tenasin.
+C) Osteopontin.
+D) Thrombospodin.","يطلق مصطلح ذيل احادي الطاق علي:
+
+A) امتداد الطاق الغني بالغوانين
+B) امتداد الطاق الغني بالسيتوزين
+C) اتصال امتدادي الطاقين الغني بالغوانين مع الغني بالسيتوزين
+D) ليس ايا مما سبق",
+4278,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,C,A,"The sympathetic and parasympathetic nervous systems work together to
+
+A) Regulate saliva secretion
+B) Regulate sweat secretion
+C) Regulate pupil diameter
+D) Regulate heart rate","يحول الببسين الى مولد ببسين :
+
+A) العامل الداخلي
+B) حمض كلور الماء
+C) الفيتامين b12
+D) الغلوكاكون",
+4739,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,B,A,"A second type of error is
+
+A) The error of accepting a hypothesis when it is false
+B) The error of rejecting a hypothesis when it is true
+C) The error of rejecting a hypothesis when it is false
+D) The error of rejecting a hypothesis when it is true","التوقع الرياضي لـ (C * X) حيث C ثابت ما، يساوي:
+
+A) C2=EX
+B) C=EX
+C) C=EX/C
+D) C/EX",
+2122,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,A,D,"The protein associated with the telomere is called
+
+A) Telomer
+B) Subtelomer
+C) Primosome
+D) All of the above are incorrect","تمتاز الوحيدة الكبرى للجسيمات الريبية بـ) الخاطئة: (
+
+A) معامل تسدم ٦٥s .
+B) وجود موقع واحد لارتباط mRNa.
+C) وجود ثلاث مواقع لارتباط tRNA .
+D) احتوائها على انماط متعددة من rRNA والبروتينات .",
+2794,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,A,D,"A laser consists of
+
+A) A gain medium within a highly reflective optical cavity
+B) A means of generating the energy-gaining gain medium
+C) A powerful reflector, output comparator, and laser beam
+D) All of the above are true","تعتبر النسج البرنشيمية كالكبد والطحال والغضاريف والدم من الكثافة:
+
+A) المائية.
+B) الدهنية.
+C) الكلسية.
+D) الهوائية.",
+4640,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,B,D,"All sources of medical statistics data are excluded
+
+A) Epidemiological investigations and surveys
+B) Scientific research
+C) Reporting of communicable diseases
+D) Community data","يتم الحصول على بيانات تتعلق بضغط الدم ونسبة الكوليسترول بالدم لعينة من المرضى خلال فترة زمنية معينة عن طريق:
+
+A) البريد
+B) التسجيل
+C) الإنترنت
+D) الملاحظة أو المشاهدة",
+696,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,C,B,"Papillae with a rounded red head and a narrow base
+
+A) Filamentous
+B) Fungal
+C) Foliar
+D) Enclosing","يتصل المدورين بالخلف في الفخذ بــ:
+
+A) الخط بين المدورين
+B) العرف بين المدورين
+C) الثلمة بين المدورة
+D) لا شيء مما سبق",
+395,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,C,B,"It extends directly onto the humerus bone: (2007 First Edition)
+
+A) Ulnar nerve.
+B) Musculocutaneous nerve.
+C) Radial nerve.
+D) Deep brachial artery.","يعطي الرباط الحرقفي القطني منشأ ل:
+
+A) العضلة المربعة القطنية.
+B) العضلة الحرقفية.
+C) العضلة الإليوية الوسطى.
+D) العضلة رباعية الرؤوس الفخذية.
+E) كل ما سبق خاطئ.",
+243,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,D,B,"The cricoid cartilage is located opposite the vertebra
+
+A) T6
+B) C6
+C) L6
+D) None of the above",". اي من الاتي يشاهد على الوجه الوحشي لنصف الكرة المخية
+
+A) Collateral sulcus
+B) Paracentral gyrus
+C) Superior temporal gyrus
+D) Uncus",
+4683,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,A,B,"In a two-sided test under normal distribution, the acceptance region lies in the interval
+
+A) [Z1.a/2, +∞]
+B) [Za/2, Z1.a/2]
+C) [∞, Za/2]
+D) None of the above","إذا أجرى طبيب دراسة على مجموعة من المرضى الذين يراجعونه تكون هذه المجموعة هي عينة:
+
+A) حصصية
+B) مصادفة
+C) قصدية
+D) عنقودية",
+2365,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,B,D,"The collective movement of charges leads to
+
+A) Intense absorption of microwave radiation
+B) Tissue changes and burns
+C) Further accelerated charge separations leading to the generation of new electromagnetic radiation
+D) A,C","يشير المسقط وفق خط الاشعة السينية:
+
+A) شدة الحزمة عند المنبع المطروح منها شدة الحزمة النافذة.
+B) الامتصاص الكلي وفق خط الحزمة .
+C) الاستثار الكلى .
+D) A,B .",
+3209,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,B,D,"All of the following are true about trigeminal neuralgia EXCEPT
+
+A) It occurs along the course of the second and third branches of the nerve
+B) Neurological examination is normal
+C) First-line treatment is anticonvulsants
+D) MRI is not helpful in diagnosis
+E) It occurs in middle or late adulthood","صداع غير نابض ثنائي الجانب قد يرتبط بتشنج عضلات الرقبة:
+
+A) الشقيقة
+B) الصداع العنقودي
+C) صداع التوتر
+D) ألم العصب مثلث التوائم
+E) الألم العصبي التالي للهوبس",
+3754,Mistral-7B-Instruct-v0.3,arabic_only,0,1,C,A,C,"Brompelins are extracted from
+
+A) Syrian khella seeds
+B) Areca seeds
+C) Pineapple fruits
+D) Golden root
+E) All of the above are incorrect","ال اميلوياربيتون من الباربيتوريات :
+
+A) طويلة مدة التأثير
+B) متوسطة مدة التأثير
+C) قصيرة مدة التأثير
+D) قصيرة مدة التأثير جدا
+E) كل ماسبق خطأ",
+3605,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,C,D,"In cases of refractory and treatment-resistant pseudotumor orbitofrontal candidiasis, the following measures should be taken
+
+A) Continue antibiotic treatment
+B) Perform surgery immediately
+C) Continue monitoring
+D) Obtain a biopsy of the tumor","كل ما يلي عن الجحوظ الغازي صحيح ما عدا:
+
+A) هو دخول الهواء إلى الحجاج اتياً من الأنف
+B) يكون تدريجيا مع انتباج في الاجفان مع جس فرقعة
+C) يزداد اذا أكثر المريض من إخراج الهواء من الأنف بعنف
+D) يمتص الهواء المندخل في الحجاج تلقائياً ولا يحتاج لاي علاج",
+4031,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,A,D,"The following hormones promote the use of fat as the primary energy source
+
+A) Growth hormone
+B) Thyroxine
+C) Testosterone
+D) Cortisol","ارتفاع درجة الباءهاء في الجهاز الهضمي ينقص كل مما يلي عدا:
+
+A) امتصاص الكالسيوم المعوي
+B) امتصاص الحديد المعوي
+C) تحويل مولد البيبسين إلى بيبسين
+D) فعالية الأميلاز البنكرياسي",
+4582,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,D,A,"Statistics is defined as the science of estimation and probability by
+
+A) Boodington
+B) Lovitt
+C) A group of experts
+D) Cowdencroxton","دالة (تابع) التوزيع الاحتمالي للمتغير العشوائي X يعطى بالصيغة:
+
+A) F(t) = P(X ≤ t)
+B) F(t) = P(X ≥ t)
+C) F(t) = 1 . P(X ≤ t)
+D) F(t) = 1 . P(X ≥ t)",
+411,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,C,A,"Muscle responsible for flexing the thigh and leg
+
+A) Syretius
+B) Graves
+C) Adderius major
+D) Adderius longus",". تاتي اهمية الضلع الاولى من علاقته مع
+
+A) الشريان والوريد تحت الترقوة
+B) الشريان السباتي الخارجي
+C) الشريان السباني المشترك
+D) العضلة الاخمعية الخلفية",
+184,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,A,B,"The bulb continues forward to form in the shaft of the penis
+
+A) Corpus cavernosum
+B) Corpus cancellous tissue
+C) Midrib
+D) None of the above","الألياف التي تربط المراكز القشرية بالمحيط تُدعى:
+
+A) إسقاطية
+B) ترابطية
+C) مشاركة
+D) صوارية",
+2618,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,D,A,"The bond that always remains strong is
+
+A) Ionic
+B) Metallic
+C) Simple molecular bond
+D) Covalent","يعد الماء ماصا جيدا للأمواج المكروية لأن:
+
+A) جزئ الماء عاكس
+B) جزئ الماء لاقطبي
+C) جزئ الماء قطبي
+D) A, B",
+2520,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,,A,"We have two media with acoustic impedances Z and Z1, and densities p1 and p. The speed of sound in these media is
+
+A) V =
+B) V =
+C) V = PZ
+D) V = PZ2","قانون استیمان بولومان:
+
+A) تتناسب الكثافة الإجمالية لتدفق الإشعاع طردياً مع القوة الرابعة لدرجة الحرارة .T
+B) تتناسب الكثافة الإجمالية لتدفق الإشعاع عكسياً مع القوة الرابعة لدرجة الحرارة T .
+C) تتناسب الكثافة الإجمالية لتدفق الإشعاع عكسياً مع القوة الثالثة الدرجة الحرارة T .
+D) تتناسب الكثافة الإجمالية لتدفق الإشعاع طردياً مع القوة الثالثة الدرجة الحرارة. T",
+148,Mistral-7B-Instruct-v0.3,arabic_only,0,1,C,A,C,"The muscles that extend the arm over the shoulder are
+
+A) Latissimus dorsi.
+B) Teres major.
+C) Biceps brachii longus.
+D) Pectoralis major.","العضلات التي تقوم ببسط الذراع على الكتف ما يلي:
+
+A) العريضة الظهرية.
+B) المدورة الكبيرة .
+C) الوتر الطويل لذات الرأسين العضدية.
+D) الصدرية الكبيرة.",
+3350,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,A,B,"Fleas are distinguished from one another by their combs and by
+
+A) color
+B) erect hairs
+C) number of thoracic segments
+D) number of abdominal segments
+E) presence of sexual appendages","من افضل وسائل الوقاية المتبعة لمنع انتشار المتورقة الكبدية
+
+A) عدم اطعام الحيوانات النباتات الملوثة
+B) غسل النباتات المائية او غليها قبل تناولها
+C) بالقضاء على العائل المتوسط
+D) ارتداء احذية واقية اثناء العمل بالارض
+E) عدم تلويث المياه بالمخلفات البشرية أو الحيوانية",
+1142,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,C,A,"The angle between the grip and the sternum
+
+A) Lewis
+B) Montgomery
+C) Bell
+D) None of the above","مرض هاشتيوتو :
+
+A) نقص نشاط الدرق مناعي ذاتي
+B) نقص نشاط درق عند الأطفال
+C) ضخامة غدة درقية بنقص اليود
+D) C+D
+E) كل ما سبق خاطئ",
+559,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,C,B,"It has an L-shaped body and two branches
+
+A) ilium
+B) ischium
+C) pubis
+D) hip","العبارة الخاطئة عن السحب الحلولي:
+
+A) 15mmHg
+B) يحصل في النهاية الوريدية للشعيرة.
+C) هو المسؤول الوحيد عن إعادة السوائل للأوعية الدموية
+D) يسعى لسحب السوائل من النسج نحو الدموية",
+4783,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,C,A,"If n = 150 and Fi = 30, then the percentage frequency is
+
+A) 0.2
+B) 0.002
+C) 0.0002
+D) 0.0002","لتكن لدينا عينة عشوائية حجمها n من توزيع برنولي بالوسيط P، فإن توزيع مجموع متغيرات هذه العينة يتوزع وفق التوزيع:
+
+A) البرنولي
+B) الثنائي
+C) الطبيعي
+D) الأسي",
+2543,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,C,A,"Ultrasound waves are used in
+
+A) The pharmaceutical market
+B) Stopping bleeding and breaking up blood clots
+C) Lithotripsy
+D) All of the above","الظاهرة التي تنقسم فيها نواة ذات عدد كتلى كبير إلى نواتين أو أكثر لكل منهما عدد كتلي متوسط :
+
+A) ظاهرة الإندماج النووي
+B) ظاهرة الإنشطار النووي
+C) ظاهرة التبعثر
+D) ظاهرة الإنعكاس",
+746,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,C,D,"Mesenchyme is the origin of
+
+A) Blood cells
+B) Smooth muscle cells
+C) Connective tissue cells
+D) All of the above are true
+E) All of the above are false.","كل ما يلي من وجوه الجناح الكبير عدا:
+
+A) مخي
+B) صدغي + تحت صدغي
+C) فكي علوي
+D) فكي سفلي",
+2469,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,A,B,"The anode in an Röntgen tube is cooled for the purpose of
+
+A) Generating X-rays.
+B) Extending its lifespan.
+C) Generating an electron beam.
+D) Making it rotate.","التصوير الحراري يجعل المرء قادرا على رؤية بيته:
+
+A) بوجود إنارة
+B) من دون وجود إنارة
+C) بوجود أجسام معينة
+D) A,B",
+1087,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,A,D,"Which of the following is NOT a means of adhesion between epithelial cells?
+
+A) Terminal barriers
+B) Intercellular bridges
+C) Intracellular adhesive
+D) Collagen fibers","كل ما يلي صحيح عن النخامي الأمامية عدا :
+
+A) تدعى النخامي الغدية
+B) تنتج ستة هرمونات ببتيدية
+C) تنتج هرمون النمو
+D) تنتج الهرمون المضاد للإبالة ADH",
+1517,Mistral-7B-Instruct-v0.3,arabic_only,0,1,C,D,C,"Molecule not transcribed by RNA polymerase 3
+
+A) tRNA.
+B) snRNA.
+C) mRNA.
+D) 5S rRNA.","الجين الرئيسي الذي له علاقة بتحديد الجنس:
+
+A) PAX .
+B) MSX .
+C) SOX8 .
+D) AZF .",
+1451,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,B,A,"Galactokinase deficiency in newborns may cause
+
+A) Cataracts
+B) Intellectual disability
+C) Liver failure
+D) Death","تتعلق الكثافة النوعية للبول ب؟
+
+A) كمية السوائل المتناولة
+B) الجهد الفيزيائي
+C) الأول والثاني
+D) كل ما سبق خاطئ",
+254,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,B,A,"The facial nerve passes through
+
+A) the styloid foramen
+B) the round foramen
+C) the spinal foramen
+D) the oval foramen","العضلة شبه المنحرفة:
+
+A) تتألف من جزئين علوى وسفلى
+B) تعصب من الضفيرة العضدية مباشرةً
+C) لها ارتكاز جزئى على الترقوة
+D) ليس لها ارتكاز على الاخرمى",
+1506,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,C,D,"Pancreatic juice contains
+
+A) Sugar-digesting enzymes
+B) Pancosamine hormone is secreted
+C) Pancreatic amylase
+D) A.C.","السلبية الكاذبة للبروتين سببها؟
+
+A) وجود الألبومين في البول
+B) البول الممدد
+C) البروتين الموجود ليس ألبومين
+D) B&C كل من",
+1255,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,D,B,"During anesthesia of a patient with coronary artery disease, the following should be avoided
+
+A) Fentanyl
+B) Isoflurane
+C) Desflurane
+D) Rimfentalil
+E) Cisalrakurium","مريض سيخضع جراحي اسعافي ويعاني من قصور كلوي يفضل استعمال المرخي العضلي التالي
+
+A) بانكورانيوم
+B) أتراكوريوم
+C) بيبيكورونيوم
+D) ميفاكوريوم
+E) دوكساكوريوم",
+3302,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,B,A,"The optimal environment for Trichomonas vaginalis to multiply is at a pH of
+
+A) 2025-05-06 0:00:00
+B) 4-4.5
+C) 2025-03-04 0:00:00
+D) 2025-07-08 0:00:00
+E) More than 8","أطول الديدان التالية
+
+A) ثنائية الفوهات الكلبية.
+B) الصفر الخراطيني
+C) المسلكة شعرية الراس
+D) المحرشفة القزمة
+E) المشوكة الحبيبية",
+70,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,E,A,"Cells whose nuclei resemble a clock face or wheel.
+
+A) Plasma cells
+B) Macrophages
+C) Neutrophils
+D) Basophils
+E) All of the above are incorrect.","خلايا تمتاز نواها بمظهر وجه الساعة أو العجلة.
+
+A) Plasma cells
+B) Macrophages
+C) Neutrophils
+D) Basophils
+E) كل ما سبق خطا.",
+4530,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,C,B,"Given data consisting of 45 values where Xmax = 3.35, Xmin = 2.3, and K = 7, what is the minimum value for the third class
+
+A) 2.61
+B) 2.76
+C) 2.44
+D) 2.9","في حال Ho منطقة القبول من دالة الاختبار و H1 منطقة الرفض وكانت H1: θ>θ₀ هنا تشغل منطقة الرفض:
+
+A) الطرف الأيمن من توزيع دالة الاختبار
+B) الطرف الأيسر من توزيع دالة الاختبار
+C) نضع منطقة الرفض في كل طرف من طرفي توزيع دالة الاختبار
+D) كل ما سبق خاطئ",
+2588,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,C,A,"Bernoulli's equation applies to the flow of any ideal fluid as long as the two points lie on
+
+A) the same line of curvature
+B) the same line of current
+C) the line of current perpendicular to the direction of propagation
+D) all of the above are true","الضغط القياسي guage pressure بالتعريف هو:
+
+A) الضغط المسجل لغاز محصور في وعاء مغلق .
+B) الفرق بين الضغط المطلق للغاز والضغط الجوي.
+C) مجموع الضغط المطلق للغاز والضغط الجوي .
+D) كافة الإجابات خاطئة .",
+2923,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,C,D,"The resulting vibration is determined by
+
+A) Natural vibration
+B) Free vibration
+C) Forced vibration
+D) A,C","مجال الأمواج فوق الصوتية أكبر من :
+
+A) 20 Hz
+B) 200 Hz
+C) 2000 Hz
+D) 20KHz",
+962,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,C,D,"Thyroid follicular cells produce
+
+A) T3
+B) Calcitonin
+C) T4
+D) A+C","صحيح عن الانف عدا: (الفصل الثاني عشر)
+
+A) المنطقة الشمية في سقف الانف.
+B) المنطقة الشمية اسفل الانف.
+C) المنطقة الشمية تشكل اقل من ربع مساحة المنطقة التنفسية.
+D) كل ما سبق صحيح.",
+2448,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,D,A,"Which of the following are features of digital television broadcasting except
+
+A) The image formed on the secondary brightness amplifier screen is recaptured by a digital-to-analog converter that assigns a number to each pixel.
+B) Current equipment allows for the representation of more than two hundred brightness values.
+C) The number of image elements is approximately 250,000 pixels.
+D) The digital image is stored in magnetic memory for processing by a computer, and then re-encoded on a screen via a digital-to-analog converter.","تدل البقع الداكنة السواد في فيلم التصوير الشعاعي على وجود؟ في مسار حزمة الأشعة السينية:
+
+A) نسيج رخو قليل الكثافة.
+B) هواء.
+C) نسيج عظمي عالي الكثافة.
+D) نسيج شحمي.",
+845,Mistral-7B-Instruct-v0.3,arabic_only,0,1,C,D,C,"The correct information about the palatine process is
+
+A) It has two incisive grooves that connect with the nasal spine.
+B) The alveoli of the teeth connect with it.
+C) The palatine crest connects with the vomer.
+D) It forms most of the hard palate.","من أقسام الأنف الظاهر :
+
+A) APEX
+B) ROOT
+C) DORSUM OF THE NOSE
+D) كل ما سبق صحيح",
+1889,Mistral-7B-Instruct-v0.3,arabic_only,0,1,C,A,C,"The malfunction of protein-dissolving molecules leads to
+
+A) Zellweger disease
+B) Tay-Sachs disease
+C) Huntington's disease
+D) a+c disease","المعطي الصحيح فيما يتعلق بالإنترونات:
+
+A) جزء من mRNA تتم عليها عملية الترجمة
+B) ليس لها دور وظيفي
+C) تلعب دورآ في تنظيم الانتسلخ الجيني
+D) تتصل الإنترونات مع بعضها في mRNA الناضج بعد عملية التضفير",
+4905,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,C,D,"The suggested diagnostic tests for the previous patient are
+
+A) Abdominal ultrasound.
+B) Standing abdominal X-ray.
+C) Non-invasive abdominal CT scan.
+D) Anorectal radiography.
+
+E) Stool examination.","في المريضة السابقة إذا كانت الصورة البسيطة تدل على سويات معوية دقيقة وغياب لارتسام الكولونات وكانت مقاطع التصوير الطبقي المحوري تشير لتوسع عرى المعي فالتشخيص المحتمل هو:
+
+A) وجود تنشؤ على حساب الكولون.
+B) المريضة مصابة بداء كرون ساد.
+C) وجود التهاب قولون سمي.
+D) التصاقات معوية.
+E) التهاب زائدة دودية حاد.",
+4946,Mistral-7B-Instruct-v0.3,arabic_only,0,1,C,D,C,"8. A 30-year-old woman presented with joint pain and myasthenia gravis. Her physical examination was normal. Her blood work showed the following results: normal hemoglobin, normal renal function (uria and creatinine), and serum calcium 11-12 mg/dL. Which of the following is inconsistent with this patient's condition?
+
+A) 1. Myoglobin in the urine.
+B) 2. Elevated serum PTH.
+C) 3. Elevated urinary calcium excretion.
+D) 4. Pancreatic tumors may be present.
+
+E) 5. Pituitary tumors may be present.","5. عولجت مريضة تبلغ من العمر 40 سنة لالتهاب مرارة حاد حيث لوحظ وجود مرارة مجسوسة غير ممضه، لم يكن هناك ترفع حروري وكانت المريضة بشكل عام بصحة جيدة، ما هو التشخيص المحتمل؟
+
+A) 1. تقيح مرارة.
+B) 2. التهاب مرارة حاد.
+C) 3. قيلة مخاطية في المرارة.
+D) 4. التهاب طرق صفراوية صاعد
+E) 5. خزل معوي بسبب حصاة مرارية.",
+4270,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,D,B,"Symptoms seen in secondary cold agglutinin immune hemolytic anemias include
+
+A) Pulmonary fragmentation.
+B) Hemoglobinuria.
+C) Hippocratic fingers.
+D) Both b and c.","هو طليعة انزيم يتحول الى شكله الفعال تحت تأثير الخنثرين:
+
+A) العامل العاشر
+B) العامل الحادي عشر
+C) العامل الثاني عشر
+D) العامل الثالث عشر",
+2609,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,C,D,"The microscope that scans the sample point by point but detects passing electrons is
+
+A) STM
+B) SEM
+C) TEM
+D) STEM","يكون معامل التخامد بالـ : dB/m
+
+A) 4.343μ
+B) μ
+C) 5.5μ
+D) كل ما سبق خاطئ",
+6,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,C,A,"The cytoplasmic walls contain
+
+A) cisternae of fine cytoplasmic reticulum.
+B) mitochondria.
+C) ribosomes.
+D) a small Golgi complex.","ال تحتوي سيتوبلاسما جدر الشعيرات :
+
+A) صهاريج من شبكة سيتوبالاسمية ناعمة.
+B) متقدرات.
+C) ريبوزوم.
+D) معقد كولجي صغير.",
+3816,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,C,B,"Fine touch receptors
+
+A) Pacinian
+B) Meister
+C) Merkel discs
+D) Ruffini","مقدرة شخص على ادراك منبهيين لمسيين مطبقين على منطقة من سطح الجسم على انهما منفصلتان :
+
+A) التعرف الحيزي
+B) تمييز حس النقطتين
+C) الحس المجسم
+D) اضطراب نظم",
+2280,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,A,B,"Suleiman's parents had two children (a boy and a girl) with a metabolic disorder that began manifesting early. The first possible inheritance pattern for this genetic disorder is
+
+A) Autosomal recessive
+B) Autosomal dominant
+C) X-linked
+D) Mitochondrial","تبين أنّ الدواء المناسب لدى %60 من مريضات سرطان الثدي في حال كانت الخلايا السرطانية من نمط ER- :
+
+A) الهرستبين
+B) التاموكسيفين
+C) بوسيندولول
+D) الدينجوكسين",
+1705,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,D,A,"The protein kinase enzyme CPKc binds only to the cytoplasmic surface.
+
+A) The reason CPKc binds to the inner surface is the necessary negative charge for binding.
+B) Choose the incorrect statement.
+C) Phosphatidylositol is one of the most common phospholipids in the cell membrane.
+D) It is located entirely in the inner membrane.","كل البروتينات التالية تنقص الشهية ما عدا:
+
+A) Lepton
+B) PYY
+C) Sterol COA denaturize 1
+D) Melanocortin 4 receptor",
+1714,Mistral-7B-Instruct-v0.3,arabic_only,0,1,C,A,C,"The following amino acids are acetyled
+
+A) Lysine
+B) Arginine
+C) Leucine
+D) Serine","نوزع المتقدرات الطافرة بين الخلايا خلال تشكيل الأنسجة الجينية:
+
+A) يعتمد علي عوامل بيئية
+B) يعتمد علي المصادفة أي بشكل عشوائي
+C) يعتمد علي عوامل جينية
+D) ليس أيآ مما سبق",
+40,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,A,B,"Kupffer cell to hepatocyte ratio
+
+A) 0.05
+B) 0.15
+C) 0.2
+D) 0.3","نسبة خلايا كوبفر للخلايا الكبدية :
+
+A) 0.05
+B) 0.15
+C) 0.2
+D) 0.3",
+3463,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,B,D,"It may conceal a sclera wound
+
+A) Crystalloid wounds
+B) Sclera wounds
+C) Corneal wounds
+D) Conjunctival wounds","في العصب البصري كل مما يلي صحيح ما عدا:
+
+A) يتكون من محاوير الخلايا العقدية في الشبكية
+B) تتجمع في حليمة العصب البصري في حزم منفصلة
+C) تمر عبر الصفيحة المصفوية من كرة العين
+D) تمر ألياف العصب البصري الآتية من القسم الأنسي من الشبكية عبر الجزء الوحشي من حليمة العصب البصري
+E) تمر الحزم الآتية من البقعة الصفراء عبر الحافة الصدغية للحليمة",
+868,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,B,D,"The parotid is innervated by
+
+A) the vagus nerve
+B) the cranial nerve
+C) the otolithic ganglia
+D) B+C","عظم الفخذ (الخاطئة):
+
+A) إن جسم الفخذ ناعم ومستدير في سطحه الأمامي.
+B) يقع السطح المأبضي على الوجه الخلفي لجسمه.
+C) يصل بين المدورين الكبير والصغير خط في الخلف يسمى الخط بين المدورين.
+D) تملك نهايته السفلية لقمتين أنسية ووحشية ولقيمتين تقعان على اللقمتين.",
+3846,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,A,B,"The rate of oxygen diffusion across the cell membrane depends on
+
+A) The amount of protein in the cell membrane
+B) Its solubility in lipids
+C) The function of the cell
+D) All of the above are incorrect","يعني وجود المقوية الودّية أو اللاودّية:
+
+A) قدرة جهاز على زيادة فعّالية عضو
+B) قدرة جهاز واحد أو أكثر على ضبط فعّالّية العضو زيادة أو نقصاناً
+C) قدرة الجهاز على إنقاص فاعلية عضو
+D) وجود تفريغ متقطّع من الجملة الودّية أو اللاودّية",
+4208,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,A,B,"Examples of unipolar neurons
+
+A) Pyramid cells
+B) Sensory ganglia of the posterior root of the brain
+C) Purkinje cells
+D) Retinal cells","الناقل العصبي الرئيسي الذي تحرره الالياف بعد العقدية الودية:
+
+A) الاستيل كولين
+B) النورادرينالين
+C) السيروتونين
+D) الانكيفالين",
+1427,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,A,D,"Ethylene can be converted to ethanol in industrial processes. In addition to ethylene gas, which of the following substances is required to produce ethanol industrially?
+
+A) Hydrogen
+B) Steam
+C) Phosphoric acid
+D) B+C","كل ما يلي حول الميوغلوبين صحيح ما عدا:
+
+A) يوجد في الكلية والدماغ
+B) يتألف من سلسلة ببتيدية وحيدة مؤلفة من 153 حمض أميني
+C) أهم ما يميز بنيته هو وجود جيب خاص يتسع تماما لجزيء الهيم
+D) يعتبر خازن للأكسجين يحتفظ به ليقدمه أثناء عمليات الأكسدة",
+1724,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,C,B,"Third- and fourth-degree relatives share with the borrower
+
+A) One-third of their genetic material
+B) One-sixth of their genetic material
+C) One-eighth of their genetic material
+D) One-quarter of their genetic material","تكون الروامز المرمزة للأحماض الأمينية :
+
+A) مختلفة بالخصائص الكيميائية وتختلف عادةً بنوكليوتيد واحد
+B) متشابهة بالخصائص الكيميائية وتختلف عادةً بنوكليوتيد واحد
+C) مختلفة بالخصائص الكيميائية ومتشابهة
+D) كل ما سبق خاطئ",
+146,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,B,A,"Under the anterior tarsal extensor tendon: (2017 First)
+
+A) Anterior tibial tendon on the medial end
+B) Extensor pollicis longus tendon on the lateral shelf
+C) Anterior tibial nerve passes over the tarsal
+D) Anterior tibial artery passes over the tarsal","تحت قيد الباسطات أمام الكاحل : (2017 أولى(
+
+A) وتر الظنبوبية الأمامية على الطرف الأنسي
+B) وتر باسطة الإبهام الطويلة على الرف الوحشي
+C) العصب الظنبوبي الأمامي يمر فوق القيد
+D) الشريان الظنبوبي االأمامي يمر فوق القيد",
+3777,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,E,D,"Propranolol can be used to manage all of the following except
+
+A) Migraine.
+B) Angina.
+C) Hypertension.
+D) Cold extremities.
+
+E) Hyperthyroidism.","كل ممايلي يمكن أن يستخدم في تدبير الأعراض الوظيفية الناجمة عن فرط تنسج الموثة الحميد ما عدا:
+
+A) تیرازوسين.
+B) برازوسين.
+C) تامسولوسين.
+D) ألفوزوسين.
+E) أوكسي بوتينين.",
+3365,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,A,B,"Ascaris
+
+A) Spiral filamentous
+B) Head filamentous
+C) For the diagnosis of filamentous infections, a hematopoietic stain is used
+D) Gram stain
+E) Hematoxylin stain","المسبب لداء هجرة اليرقات الجلدي :
+
+A) الشريطية
+B) الديدان القوسية
+C) الشعرية الحلزونية
+D) مشركة الشفة اللجوجة",
+1786,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,B,A,"Mineral salts play a role in maintaining cell life by preserving
+
+A) Covalent bonds.
+B) Osmotic pressure.
+C) Cell division.
+D) Cell pH.","تنجم متلازمة ولف هيرشون عن:
+
+A) خبن انتهائي في الذرع القصير من الصبغي الرابع
+B) خبن خلالي في الذرع القصير من الصبغي X
+C) خبن خلالي في الذرع الطويل من الصبغي X
+D) خبن انتهائي في الذرع القصير من الصبغي الخامس",
+2619,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,C,A,"In an X-ray scattering experiment, Compton observed that
+
+A) The frequency of the scattered rays is slightly lower than the frequency of the incident rays.
+B) The frequency of the scattered rays is equal to the frequency of the incident rays.
+C) The frequency of the scattered rays is slightly higher than the frequency of the incident rays.
+D) All of the above are false.","يعزي الاختلاف بين الاستئصال المتحرض بالبلازما و:
+
+A) كثافتيهما الاستطاعيتين
+B) كثافتيهما الطاقيتين
+C) زمنيهما
+D) A,C",
+2313,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,A,B,"When the subclavian artery on one side of the body is partially blocked, the blood flow velocity on that side will
+
+A) decrease
+B) increase
+C) remain unchanged
+D) all of the above are true","يدعى المقدار اسم :
+
+A) مغنطون
+B) مغلطون دور
+C) طول الموجة كومتون
+D) كل ما سبق صحيح",
+57,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,B,D,"The inferior orbital fissure is crossed by
+
+A) Cranial nerve IV
+B) Cranial nerve III
+C) A+B
+D) None of the above","يعبر الشق الحجاجي السفلي:
+
+A) العصب القحفي الرابع
+B) العصب القحفي الثالث
+C) A+B
+D) لا شيء مما سبق",
+4669,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,D,A,"The data we obtain from a company or organization, based on its documents, records, invoices, and periodic reports, is considered a
+
+A) Internal source
+B) External source
+C) Disclosure source
+D) Public source","إن تقدير معدل الامطار في سوريا يكون:
+
+A) المجتمع متجانس وحجم العينة صغير
+B) المجتمع متجانس وحجم العينة كبير
+C) المجتمع غير متجانس وحجم العينة كبير
+D) غير ذلك",
+4105,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,C,B,"Stimulation of beta-adrenergic receptors leads to all of the following except
+
+A) Tachycardia
+B) Bladder sphincter contraction
+C) Bronchiectasis
+D) Lipid breakdown","أكبر كمية من الماء توجد عند:
+
+A) الأطفال حديثي الولادة.
+B) الشباب.
+C) الإناث اليافعات.
+D) الرجال المسنين.",
+1913,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,A,D,"All of the following are true except
+
+A) The genome in early organisms is less complex.
+B) The DNA molecule in prokaryotes is linear compared to eukaryotes.
+C) We have more than one chromosome in eukaryotes.
+D) Translation occurs in the cytoplasm.","كل ما يلي صحيح عن القلنسوة ماعدا :
+
+A) تضاف على النهاية 5` للرنا المرسال
+B) ترتبط مع مقدمة المنتسخ عبر رابط فوسفاتي 5 إلى 5`
+C) عبارة عن 7 متيل غوانوزين
+D) يحفز إضافتها إنزيم واحد",
+394,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,E,A,"The iliopsoas ligament gives rise to
+
+A) The quadratus lumbar muscle.
+B) The iliac crest muscle.
+C) The gluteus medius muscle.
+D) The quadriceps femoris muscle.
+
+E) All of the above are incorrect.","يصل بين الأذينة اليسرى والبطين الأيسر :
+
+A) فوهة مثلث الشرف
+B) فوهة التاجي
+C) الفوهة الرئوية
+D) الفوهة الأبهرية",
+2251,Mistral-7B-Instruct-v0.3,arabic_only,0,1,C,D,C,"Individuals that, when crossed with each other, exhibit traits different from those seen in the parent generation are called
+
+A) True takeover
+B) False takeover
+C) Self-claimed
+D) Monogenic hybrid","عندما صالب ماندل نباتات تعطي بذورآ مدورة مع تلك التي تعطي بذورآ مجعدة كانت نسبة البذور المدورة إلي المجعدة في الجيل الثاني:
+
+A) 3 إلي2
+B) 4 إلي 5
+C) 4 إلي1
+D) 1 إلي 3",
+64,Mistral-7B-Instruct-v0.3,arabic_only,0,1,C,,C,"The motor for the tongue muscles
+
+A) 11
+B) 7
+C) 12
+D) 9","المحرك لعضلات اللسان :
+
+A) 11
+B) 7
+C) 12
+D) 9",
+417,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,C,A,"Length of the rope
+
+A) 45 cm
+B) 15 cm
+C) 6 meters
+D) 1 meter","كل ما يلي عن تروية المفصل الفكي الصدغي صحيح عدا :
+
+A) الشريان الصدغي السطحي.
+B) الشريان الأذني الخلفي.
+C) الشريان الأذني الصدغي.
+D) الشريان الصدغي العميق.",
+264,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,C,A,"Which of the following are characteristics of the clavicle EXCEPT
+
+A) The upper surface has the groove of the subclavius muscle
+B) The medial end is flat
+C) The upper surface is smooth
+D) It is a long bone with an S-shape","مايلي صحيح عن الخصية testes عدا :
+
+A) تحاط ب الغاللة البيضاء (نسيج ضام كثيف)
+B) الحجب الضامة التي تقسم الخصية إلى فصوص تكون غير كاملة.
+C) فصيصات الخصية تكون مفصولة عن بعضها تماما.
+D) كل فصيص فيها يحوي 4-1 أنابيب منوية.",
+1546,Mistral-7B-Instruct-v0.3,arabic_only,0,1,C,A,C,"All of the following statements about hepatitis C testing are true except
+
+A) A positive HCV A test indicates recent infection.
+B) A positive HCV A test indicates that the virus is replicating.
+C) In 50% of hepatitis C cases, there may be a chronic carrier.
+D) Hepatitis C antibodies may not appear until months after infection.","ان العنصر الذي يضيف ذرة الكربون ال سلسلة هالوجين الكان عند تفاعله معها هو:
+
+A) غير خاملة كيميائيآ
+B) قابلة للاتهاب
+C) سامة
+D) كل ما ذكر صحيح",
+4081,Mistral-7B-Instruct-v0.3,arabic_only,0,1,C,A,C,"The amount of air in the lungs at the end of a normal inspiration is
+
+A) Inspiratory capacity
+B) Vital capacity
+C) Functional storage capacity + Flowing volume
+D) Inspiratory storage volume","كل مما يلي ُيعد هرمون نخامي أمامي عدا:
+
+A) GH
+B) ACTH
+C) البرولكتين
+D) الفازوبرسين",
+4747,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,C,B,"We have a sample size of 50, with the smallest unit being 13.5 and the largest unit being 18.5. Therefore: K=6
+
+A) W=0.81
+B) W=0.8
+C) W=6
+D) All of the above are incorrect","إذا علمت أن 2 = B فإن r₀ هي:
+
+A) 2025-01-16 0:00:00
+B) 0.25
+C) 2025-02-06 0:00:00
+D) 0.707",
+510,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,C,A,"The wrong information about the pancreas
+
+A) It is located in front of the stomach.
+B) It is an endocrine and exocrine gland.
+C) It has a firm consistency.
+D) It secretes amylase.","من الفؤاد إلى البواب الحافة اليسرى للمعدة:
+
+A) الانحناء الصغير
+B) الثرب الصغير
+C) الانحناء الكبير
+D) الجسم",
+1376,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,D,A,"Citrate synthase is activated allotropically by
+
+A) ADP
+B) ATP
+C) NADH
+D) Succinyle-CoA","الخواص العامة للإنزيمات ما يلي عدا:
+
+A) تأثيرها النوعي
+B) التثبيط
+C) تثبيط تنافسي
+D) لا شيء مما سبق",
+4697,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,A,B,"A method that allows us to observe reactions to certain questions and obtain accurate answers
+
+A) Experiment
+B) Confrontation
+C) Mail
+D) Recording","لتكن لدينا قياسات العينة الآتية 3,4,5,6,7 والمسحوبة من مجتمع حجمه 10 وتباينه 3 فإن قيمة الانحراف المعياري للعينة السابقة:
+
+A) 1.58
+B) 1.41
+C) 2
+D) 2.5",
+1117,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,A,D,"From the contents of the esoteric region, one answer is correct
+
+A) Left lobe of the liver and stomach
+B) Spleen
+C) Ascending colon and right kidney
+D) Intestinal loops","عند الوضعية التشريحية يكون الساعد
+
+A) Pronation
+B) Supination
+C) Opposition
+D) Reposition",
+1701,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,C,B,"Which of the following are characteristics of monosaccharides except
+
+A) They have a carbon skeleton
+B) They are small molecules
+C) They are poorly soluble in water
+D) They cannot be hydrolyzed","يشير الرمز X 81 Arg إلى طفرة:
+
+A) أصابت موقع التضفير في الموقع 8
+B) استبدال للحمض الأميني الأرجينين في الموقع81
+C) هرائية للحمض الأميني الأرجينين في الموقع 81 حولّته إلى رامز توقف
+D) إنزياح إطار أدت لإقحام عند الموقع 81",
+2583,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,A,D,"Instantaneous emission of light from a substance that has previously been exposed to light
+
+A) Fluorescence
+B) Phosphorescence
+C) A form of fluorescence
+D) A, B","تنخفض طاقة التأين الأولى ضمن مجموعة العناصر من الأعلى إلى الأسفل بسبب:
+
+A) ازدياد العدد الذري
+B) بعد الإلكترون عن النواة
+C) ازدياد فعل الحجب
+D) كل ما سبق صح",
+2133,Mistral-7B-Instruct-v0.3,arabic_only,0,1,A,C,A,"Which of the following are characteristics of polysaccharides except
+
+A) They are odorless
+B) They are soluble in water
+C) They are not reducible
+D) They are structural or storage-forming","اكسدة الاحماض الدسمة في الجسيمات المؤكسدة يعطي:
+
+A) كمية كبيرة من الطاقة .
+B) كمية قليلة من الطاقة .
+C) ماء CO2+ .
+D) لا شيء مما سبق .",
+579,Mistral-7B-Instruct-v0.3,arabic_only,0,1,B,E,B,"The gastric supply is characterized by all of the following except
+
+A) Arterial supply originates from branches of the celiac trunk.
+B) The posterior gastric artery is a constant branch of the splenic artery.
+C) The right gastric artery supplies the lower part of the stomach.
+D) Short gastric arteries supply the fundus.
+
+E) Venous return primarily drains into the portal vein.","حركة خاصة بالساعد
+
+A) الكب
+B) العودة
+C) المقابلة
+D) الشتر",
+637,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,A,D,"Regarding the lips and cheeks
+
+A) The skin is external
+B) The mucous membrane is internal
+C) They consist of internal muscles
+D) All of the above are correct",". كل مايلي صحيح حول النفرون عدا
+
+A) تصب القنوات الجامعة في الحويضة
+B) يصنف حسب طول عروة هانلة
+C) النفرونات ذات عرى هانلة الطويلة لها دور مهم في تكثيف البول
+D) يتألف من كبيبة كلوية ونبيب كلوي",
+4303,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,C,D,"Following liver resection, the levels of
+
+A) Blood glucose
+B) Vitamin D
+C) Fibrinogen and conjugated bilirubin decrease
+D) All of the above","من اهم اسباب خلل الوظيفة القلبية
+
+A) شذوذ النظم في ناظم الخطأ.
+B) وجود سبل نقل شاذة.
+C) توليد نبضات عفوية من أي جزء من القلب.
+D) كل ماسبق صحيح.",
+2447,Mistral-7B-Instruct-v0.3,arabic_only,0,1,D,B,D,"Heating 2-nitrophenol with tin and concentrated hydrochloric acid gives
+
+A) 2-hydroxybenzene
+B) 2-hydroxynitrobenzene
+C) phenylamine
+D) 2-aminophenol","كل مايلي صحيح عن الإصدارية ماعدا:
+
+A) تدل على الإشعاع الممتص عند الطول الموجي
+B) عندما يعبر الإشعاع كنه أو يرتد عنه فان إصداريته تساوي الصفر
+C) عندما يمتص كله فإن إصدار يته تساوي الواحد من أجل كل الأطوال
+D) هي عدد ليس له أبعاد قيمته بين الصفر والواحد وهي نسبة الموجية معدل الإشعاع من سطح معين إلى معدل الإشعاع من مساحة مختلفة من سطح مشع أسود مثالي في درجة الحرارة نفسها.",
+422,Mistral-7B-Instruct-v0.3,both_wrong,0,0,C,D,A,"The nail bed contains
+
+A) The cuticle and adductor layers
+B) The basal, cuticle, and adductor layers
+C) The basal and cuticle layers only
+D) All of the above are incorrect","تحوي الخاصرة اليسرى:
+
+A) الكولون النازل
+B) الطحال
+C) الفص الكبدي الأيسر
+D) المعدة",
+1511,Mistral-7B-Instruct-v0.3,both_wrong,0,0,C,D,D,"In case of kidney failure
+
+A) Creatinine decreases
+B) Renal creatinine clearance increases
+C) Renal creatinine clearance decreases
+D) Both a and b","الدور الحيوي للتمائم (FMN) و (FAD) هو:
+
+A) حامل عابر للزهرة الأسباية.
+B) حامل عابر الزمرة أمينية.
+C) حامل عابر الزهرة الكربوكسيل.
+D) كل ما سبق خطأ.",
+2327,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,C,C,"It is the width of the stratified line that approximates the width of the helium seed without polymorphism when it is monomorphic.
+
+A) 10cm-20cm
+B) 100cm-200cm
+C) 100cm-20cm
+D) 50cm-20cm","كثيرا ما تتضمن الحفازات المتجانسة تغيرا في رقم أكسدتها وبذلك يشترط لعمل الحفازات:
+
+A) أن تكون كمونات المساري التي تتضمن الحفاز أعلى من كمونات المساري التي تتضمن المتفاعلين
+B) أن تكون كمونات المساري التي تتضمن الحفاز قيمة جبرية بغض النظر عن كمونات مساري المتفاعلين
+C) أن تقع كمونات المساري التي تتضمن الحفاز بين كمونات المساري التي تتضمن المتفاعلين
+D) ان تكون كمونات المساري التي تتضمن الحفاز أخفض من كمونات المساري التي تتضمن المتفاعلين",
+403,Mistral-7B-Instruct-v0.3,both_wrong,0,0,C,A,A,"Which of the following is not an expressive facial muscle?
+
+A) Orofacial muscle
+B) Masseter muscle
+C) Zygomatic muscle
+D) Depressor muscle","تقع الباحة الحركية الأولية:
+
+A) أمام التلفيف الجانبي.
+B) في التلفيف أمام المركزي .
+C) خلف شق رولاندو.
+D) في قص الجزيرة.",
+1010,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,B,A,"Each lung has
+
+A) One primary fissure and four surfaces
+B) Two fissures, two surfaces, an apex, and a base
+C) Two fissures and three surfaces
+D) One primary fissure, one surface, an apex, and a base",". كل مايلي صحيح عن الجهاز في الكلية عدا
+
+A) تتصل الحويضة بالحالب
+B) تصب على الحويضة خمسة رؤوس كبيرة
+C) يصب على الكؤويس 2 الى 3 كؤوس
+D) يصب كل هرم كلوي في كأس صغيرة عبر الحليمة",
+4133,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,B,A,"Which lasers are generated by a glowing electrical discharge?
+
+A) Argon ion lasers
+B) Helium-neon lasers
+C) CO2 lasers
+D) Nitrogen lasers","كل ما يلي صحيح عن النواقل العصبية عدا :
+
+A) تحررها نهاية المحاوير العصبية
+B) من الرسل الكيميائية التي تصون الاستتباب
+C) تفرز في المشابك
+D) تأثيرها عام في الجسم",
+3136,Mistral-7B-Instruct-v0.3,both_wrong,0,0,C,D,B,"The force of cardiac contraction increases with increasing levels of all of the following except
+
+A) Length of the primary fiber
+B) Calcium concentration
+C) Stimulus intensity
+D) Adrenaline","يزداد عمل القلب وحاجته لـ O2 بتفعيل مستقبلات:
+
+A) ألفا 1
+B) بيتا 2
+C) الموسكارينية
+D) بيتا 1",
+4695,Mistral-7B-Instruct-v0.3,both_wrong,0,0,B,D,A,"To test the hypothesis H0: P = P0 against the hypothesis H1: P ≠ P0 at a significance level of 0.05, the rejection region for H0 is
+
+A) [Z0.05, +∞]
+B) [-Z0.05, Z0.05]
+C) [0, Z0.05]
+D) [-Z0.05, +∞]","في مخطط الساق والورقة:
+
+A) الساق القسم الصحيح من العدد والورقة تضم عدد التكرارات
+B) الساق القسم العشري والورقة القسم الصحيح
+C) الساق القسم الصحيح ولورقة القسم العشري
+D) الورقة القسم الصحيح والساق يضم عدد التكرارات",
+3298,Mistral-7B-Instruct-v0.3,both_wrong,0,0,C,E,A,"Factors that increase the risk of Aseptic E. coli infection include
+
+A) Certain geographic locations
+B) High consumption of meat
+C) High consumption of starches
+D) High consumption of seafood
+E) Long-term use of tetracycline antibiotics","البابيسيا
+
+A) الشعرينة الحلزونية احياناً
+B) المتقبية الكروزية
+C) تتمايز المتحولة اليودية البوتشيلية بكل مايلي عدا
+D) قطر ۱۰ میکرون
+E) فجوات هيولية خشنة",
+4389,Mistral-7B-Instruct-v0.3,both_wrong,0,0,C,D,A,"The following are not absorbed via sodium-bound facilitative diffusion
+
+A) Glucose
+B) Galactose
+C) Fructose
+D) Both a and b","طور الانقباض البطيني:
+
+A) البطينان والأذينان في حالة استرخاء.
+B) يستمر نحو 0.15 ثانية.
+C) الصمامات السينية مغلقة.
+D) انقباضه يقذف ثلثي الدم الموجود.",
+526,Mistral-7B-Instruct-v0.3,both_wrong,0,0,B,C,A,"Muscles whose fibers point downwards and medially
+
+A) Transverse abdominal
+B) External oblique
+C) Internal oblique
+D) Crestor","تقع صفيحة الأكيمات في :
+
+A) الدماغ المتوسط .
+B) البصلة.
+C) المخيخ.
+D) الجسر.",
+2256,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,D,C,"None of the four different single-gene patterns in which a trait can be inherited at a single gene locus are
+
+A) Autosomal dominant
+B) Cross-linked
+C) Sex-linked dominant
+D) Autosomal recessive","في حالة التفارز المستقل يؤدي التزاوج ما بين ثنائي متخالف الألائل مع ثنائي متماثل الألائل المتنحي إذ تتوضع كلتا الجينتين علي صبغيين غير متماثلين إلي تشكيل ... من التراكيب الجينية الجديدة:
+
+A) 0
+B) 0.5
+C) 0.2
+D) 0.4",
+2523,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,C,C,"The beam deflector in an SEM microscope consists of a series of
+
+A) Electromagnetic coils
+B) Electrical coils
+C) Magnetic coils
+D) All of the above","الليزر الياقوتي المشوب بالتيتانيوم يصدر الطول الموجي في المجال :
+
+A) المرئي .
+B) تحت الأحمر .
+C) فوق البنفسجي .
+D) لا شيء مما سبق .",
+3378,Mistral-7B-Instruct-v0.3,both_wrong,0,0,E,B,D,"All of the following are considered types of pseudofungi except
+
+A) Mucophytes
+B) Legionella
+C) Actinophytes
+D) Nocardia
+E) Ascomycetes","تتصف الخيفاتة الخيفاء بكل ما يلي عدا
+
+A) اصغر المنقوبات
+B) بدورة حياة قصيرة تندر باسبوع . العدوى منطقة بأكل لحوم الاسماك نوع Mullet
+C) تعيش في الجزء الأمامي من الاسماء الدقيقة
+D) بعائلين متوسطين",
+2744,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,C,C,"A pulse oximeter measures changes in arterial oxygen saturation and uses two wavelengths at which hemoglobin uptake is at its maximum
+
+A) 830 nm for oxygenated blood and 780 nm for deoxygenated blood.
+B) 950 nm for oxygenated blood and 650 nm for deoxygenated blood.
+C) 780 nm for oxygenated blood and 830 nm for deoxygenated blood.
+D) 650 nm for oxygenated blood and 950 nm for deoxygenated blood.","البوزترون هو :
+
+A) من الجسيمات الثقيلة
+B) جسيم مضاد للالكترون
+C) جسيم مضاد للبروتون
+D) من الفوتونات",
+1508,Mistral-7B-Instruct-v0.3,both_wrong,0,0,B,A,D,"The following statements about hydroxylase-218 deficiency are true except
+
+A) It is the most common form of genital infidelity syndrome.
+B) It involves a deficiency in testosterone production.
+C) It involves a deficiency in cortisol production.
+D) If left untreated, it is a life-threatening condition.","العلاج الثاني لمرض التلاسيميا بيتا:
+
+A) زرع كبد
+B) تناول الحديد فمويا
+C) استئصال الطحال
+D) زرع نقي عظام",
+938,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,C,B,"The osmotic pressure in blood vessels is characterized by
+
+A) its presence due to the presence of hematopoietic components such as red blood cells and blood vessels
+B) its variation depending on the body region and vessel type
+C) its ability to reach up to 35 mmHg
+D) its constant throughout the body","أحد ما يلي من الأوردة السطحية للطرف العلوي :
+
+A) الوريد القاعدي
+B) الوريد الزندي
+C) الوريد العضدي
+D) الوريد الابطي",
+1527,Mistral-7B-Instruct-v0.3,both_wrong,0,0,C,A,D,"In the types of genes: (Incorrect)
+
+A) Housekeeping genes.
+B) Specific genes.
+C) Housekeeping genes function intermittently.
+D) Specific genes function at specific times.","منطقة المشغل ال Operator في ال Operone عند طلائعيات النواة: (الخطأ)
+
+A) تتوضع قبل المحضض مباشرة.
+B) تكون مسؤولة عن بدء تشغيل المورثات الثلاث.
+C) لها شكل العروة.
+D) يربط بها بروتين كاظم Repressor.",
+3485,Mistral-7B-Instruct-v0.3,both_wrong,0,0,E,C,D,"Yellow eyelid tumors
+
+A) They are cholesterol deposits in the dermis
+B) They are usually associated with high blood cholesterol
+C) Excision of yellow eyelid tumors is indicated in pregnant women due to the possibility of malignancy
+D) All of the above are true
+E) All of the above are false","في التهاب المشيمية النضحي (النتحي) نجد ما يلي ما عدا:
+
+A) تبدو البقعة الالتهابية الحديثة بمستوى أعمق من الأوعية الشبكية
+B) ما يميزه هو تخرب غشاء بروك في المراحل الباكرة للمرض
+C) توضع الإصابة في المحيط فلما يترافق مع أعراض تذكر
+D) في إصابة القطب الخلفي يشكو المريض من تشوه الأشكال
+E) الشبكية متغيمة وكثافات منتشرة في الزجاجي",
+1502,Mistral-7B-Instruct-v0.3,both_wrong,0,0,C,A,D,"It is used as an additive to all amino acid-group transferases
+
+A) Thiamine pyrophosphate
+B) Biostin
+C) Pyridoxal phosphate
+D) NADH","في وراثة الزمر الدموية ABO :
+
+A) تتوضع مورثة الزمر الدموية على الصبغي السادس.
+B) تكون سيادة الأليل A تامة على الأليلO.
+C) تكون سيادة الأليل B تامة على الأليل O.
+D) تكون سيادة الأليل A مشتركة ( غير تامة ) على الأليل B.
+E) تملك مورثات الزمر الدموية ثلاثة أليلات.",
+1444,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,B,B,"The chromosomal formula for female Edward syndrome is
+
+A) XXY+44
+B) XXY+45
+C) XY+45
+D) XX+45","المنطقة (-20.-40) من المحضض تحوي:
+
+A) Cat Box
+B) TATA BOX
+C) TEAMCG Box
+D) Octamer Box",
+4909,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,E,C,"A 60-year-old patient with ten years of Crohn's disease presented with a history of fever and chills, followed by flatulence and intestinal discharge upon urination. The diagnosis is
+
+A) Gastro-vesical fistula.
+B) Colonic fistula.
+C) Gastro-vesical fistula.
+D) Colonic-ureteral fistula.
+
+E) Enterovesical fistula.","إن خط العلاج للمريض السابق تتضمن ما يلي ما عدا:
+
+A) تعويض السوائل والشوارد.
+B) عمل جراحي عاجل بعد تحسن الحالة العامة.
+C) تأخير العمل الجراحي حت تتحسن الحالة العامة.
+D) قثطرة وعائية مساريقية عاجلة إن توفرت ...
+E) وضع المريض على المميعات.",
+638,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,D,C,"The following are all superficial posterior forearm muscles except
+
+A) Extensor pollicis brevis
+B) Extensor digitorum pinnatum
+C) Extensor digitorum common
+D) Elliott","بالنسبة للشفة والشدقين فإن:
+
+A) الجلد يكون خارجياً
+B) المخاطية تكون داخلية
+C) تتكون من عضلات داخلية
+D) م كل ما سبق صحيح",
+858,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,C,C,"In bone tissue
+
+A) Primary bone is the same as woven bone.
+B) Mature bone is the same as woven bone.
+C) Primary bone is more mineralized than secondary bone.
+D) Primary bone has fewer osteocytes.
+E) All of the above are false.",". التيه الغشائي
+
+A) الكييس
+B) القوقعة
+C) الدهليز
+D) الانفاق نصف الدائرية",
+227,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,B,A,"The number of coccygeal segments in the spinal cord is
+
+A) 5
+B) 4
+C) 2
+D) 1","الخاطئ حول اللسان :
+
+A) له دور لمسي ذوقي ويساهم في التصويت
+B) يوصف له ذروة وجذر ووجه سفلي وظهر
+C) يوجد مكان اتصال الثلثين الامامين مع الثلث
+D) تبرز فيه بروزات هي حليمات لسانية",
+150,Mistral-7B-Instruct-v0.3,both_wrong,0,0,E,B,C,"The following are examples of general, dense, regular tissue
+
+A) Perichondrium
+B) Periosteum
+C) Dura mater of the brain
+D) All of the above are incorrect
+
+E) Tendons","ما يلي يعتبر مثالا للنسيج العامة الكثيفة المنتظمة:
+
+A) Perichondrium
+B) Periosteum
+C) الأم الجافية في الدماغ.
+D) كل ما سبق خطا.
+E) Tendons",
+685,Mistral-7B-Instruct-v0.3,both_wrong,0,0,E,A,D,"The medial epicondyle of the humerus (the origin of the flexors) gives rise to all of the following except
+
+A) palmaris longus
+B) flexor carpi radialis
+C) pronator teres
+D) flexor carpi ulnaris
+E) flexor pollicis longus",". تتميز الرئة اليمنى عن اليسرى بكل مايلي عدا:
+
+A) لها ثلاث فصوص
+B) القبضة الرئيسية
+C) لها شقان
+D) اثقل وزنا",
+1688,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,B,B,"The following syndromes require evaluation by an endocrinologist
+
+A) Down syndrome
+B) Turner syndrome
+C) Klinefelter syndrome
+D) Patau syndrome","يبدأ انتساخ الجينات المرمزة للبروتينات بارتباط انزيم الرنا بوليميراز إلى
+
+A) المعزز enhances.
+B) المطلق القريب promoter .
+C) المسكتات sssiiilencers.
+D) النكليوتيد رقم 10 .",
+2493,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,C,C,"Which of the following statements about EB is true?
+
+A) It is the total binding energy of the nucleus.
+B) It is the energy that must be supplied to separate a proton from a neutron in the case of a deuterium nucleus.
+C) It is positive energy arising from the forces that hold the nucleons together in the nucleus.
+D) All of the above are true.","الجهاز الذي يعمل عكس المصورة هو :
+
+A) جهاز إسقاط الشرائح
+B) جهاز الصور المتحركة
+C) A,B
+D) كل ما سبق خاطئ",
+1584,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,C,C,"The pathway of gluconeogenesis
+
+A) 90% of gluconeogenesis occurs in the brain
+B) It does not require energy supply
+C) It can meet glucose needs for 4-5 days
+D) It is a precursor that utilizes ketone bodies","البروتين الشحمي HDL:
+
+A) يحتوي على نسبة مرتفعة من الشحوم الثلاثية.
+B) يحتوي على الصميم 100 -- apoB.
+C) يتشكل في الكبد والأمعاء.
+D) يحتوي على نسبة منخفضة من البروتينات.",
+1581,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,C,B,"The most likely cause of this patient's condition is
+
+A) Hemolytic anemia
+B) Viral hepatitis
+C) Sickle cell anemia
+D) Pancreatic head cancer","يسبب عوز الثيامين الشديد:
+
+A) داء البلاغرا
+B) فقر الدم ضخم الأرومات
+C) العشى الليلي
+D) البري بري",
+2882,Mistral-7B-Instruct-v0.3,both_wrong,0,0,B,C,D,"The pressure exerted by air on our bodies is approximately 1 atm, and we are not crushed by this pressure because
+
+A) The pressure of most fluids in our bodies is greater than the air pressure surrounding us.
+B) The pressure of most fluids in our bodies is approximately equal to the air pressure surrounding us.
+C) The pressure of most fluids in our bodies is less than the air pressure surrounding us.
+D) All of the above are true.","أي من الإشعاعات التالية ينتمي إلى طيف الإشعاعات الكهرطيسية: (الخطأ) أمواج أشعة الليزر
+
+A) أشعة بيتا .
+B) أشعة غاما .
+C) أمواج أشعة الليزر .
+D) الأشعة الضوئية .",
+4242,Mistral-7B-Instruct-v0.3,both_wrong,0,0,E,D,A,"In isometric systole, all of the following are true except
+
+A) The first heart sound occurs
+B) The mitral valve is closed
+C) The aortic valve is closed
+D) It is associated with a QRS complex crest
+E) The left ventricular pressure rises to exceed 120 mmHg","الخلايا التي تسهم في تشكيل الحاجز الدموي الدماغي هي:
+
+A) العصبونات الكبيرة
+B) الخلايا النجمية
+C) الخلايا الدبقية الصغيرة
+D) الخلايا السيسانية",
+200,Mistral-7B-Instruct-v0.3,both_wrong,0,0,B,A,D,"The deepest layer of the dental pulp, closest to the pulp nucleus, is
+
+A) the odontoblast zone
+B) the cell-rich zone
+C) the cell-free zone
+D) all of the above are incorrect.","كل ما يلي صحيح عن الغدة النخامية عدا :
+
+A) تتألف من ثلاث مناطق رئيسية : النخامي الأمامية والخلفية والوسطى
+B) وزنها نصف غرام
+C) تتصل مع الوطاء عن طريق القمع
+D) تدعى HYPOPHYSIS",
+2973,Mistral-7B-Instruct-v0.3,both_wrong,0,0,B,A,C,"Transverse waves propagate in
+
+A) Fluids
+B) Solids
+C) Gases
+D) A,B","ماذا يعني الكشف عن شدة منخفضة لأشعة غاما المنتثرة عن العظام:
+
+A) كثافة عالية.
+B) كثافة منخفضة.
+C) منبع منخفض الطاقة.
+D) الكشف عن مرض الصدفية الجلدي.",
+1327,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,D,D,"All of the following statements about chronic persistent hepatitis are true EXCEPT
+
+A) ALT and AST are usually elevated 2-5 times the normal level.
+B) Alkaline phosphatase is within the normal range or only moderately elevated.
+C) Proteins, albumin, and prothrombin time are usually within the normal range.
+D) The patient often goes into a coma.","يكون الصبغي شاذاً بنيوياً في الحالات التالية: (الخطأ)
+
+A) فقد قسم كبير منه
+B) إذا تضاعف جزء صغير منه
+C) إذا شكل حلقة
+D) فقد كاملاً",
+1698,Mistral-7B-Instruct-v0.3,both_wrong,0,0,B,A,A,"Clubfoot is inherited in a
+
+A) multifactorial manner
+B) autosomal recessive manner
+C) autosomal dominant manner
+D) no known cause","انتشار اضطراب بيلة الفينيلكيتون:
+
+A) 10000/1
+B) 20000/1
+C) 2500-01-01 0:00:00
+D) 500/1",
+4362,Mistral-7B-Instruct-v0.3,both_wrong,0,0,B,A,C,"The correct answer regarding the proportions of body components is
+
+A) Water makes up 85% of body weight
+B) Proteins make up 15-18% of body weight
+C) Fat makes up 25% of body weight
+D) Minerals make up 1-2% of body weight","فيما يتعلق بالتيروكسين والتيرونين :
+
+A) يسهمان في زيادة معدل الاستقلاب
+B) التيرونين أكثر فعالية
+C) لكلاهما التأثير نفسه
+D) كل ما سبق صحيح",
+803,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,A,B,"The median nerve
+
+A) originates in the axilla
+B) terminates in the distal forearm
+C) runs along the superficial flexor of the fingers
+D) directly innervates the pronator quadratus","يصب الوريد الكلوي في
+
+A) الوريد الفرد
+B) الوريد نصف الفرد
+C) الأجوف السفلي
+D) الأجوف العلوي",
+3505,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,C,B,"The following are complications of hyperopia except
+
+A) Open-angle glaucoma
+B) Amblyopia (lazy eye)
+C) Pseudoderma of the optic disc
+D) Esotropia (inward turning of the eye)
+E) Closed-angle glaucoma","في التهاب العين الودي: (اختر الإجابة الخاطئة)
+
+A) قد تصاب العين الشديدة بالتهاب عنبة شديد.
+B) التهاب العين الودي مرض مناعي ذاتي.
+C) تلعب خلايا العنبة دور المستضدات.
+D) تنتقل الأضداد المتولدة مع الجريان الدموي إلى العين السليمة.
+E) ينتج عن التفاعل المناعي التهاب عنبة غير حبيبي.",
+3090,Mistral-7B-Instruct-v0.3,both_wrong,0,0,C,A,D,"In membranous urethral rupture
+
+A) It often follows a pelvic fracture
+B) The bladder ball is present
+C) It is not associated with bladder rupture
+D) It is treated emergencyally with a suprapubic vesicoureteral catheter
+E) It may be associated with visceral injuries","من صفات أذيات الطلق الناري في البطن ما عدا:
+
+A) الإصابة النافذة بالسكين متعددة الأعضاء إذا ما قورنت بالطلق الناري
+B) إن ازدياد سرعة الطلق الناري وقربه من المصاب يؤدي الزيات نسيجية تتعدى مسار الطلقة
+C) قد يحدث تغير في مسرى الطلق الناري
+D) تعدد إصابة الأحشاء
+E) كل فوهة دخول ال تحتم وجود فوهة خروج",
+2639,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,A,A,"The nucleon number in the nucleus of an atom represents the number of
+
+A) Neutrons
+B) Protons
+C) Electrons
+D) Total number of protons and neutrons","تتصل مجموعة الكربونية في .........بذرتي كربون اخرتين
+
+A) الالدهيد
+B) الكيتون
+C) الغول
+D) ليس ايا مما سبق",
+349,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,B,B,"On its underside is a groove for the passage of the long fibula tendon
+
+A) the dice
+B) the heel
+C) the boat-like
+D) the calf","أصغر الحليمات الذوقية وأكثرها عدداً:
+
+A) الخيطية
+B) الفطرية
+C) الورقية
+D) المحوطة",
+2917,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,B,B,"Nuclei that contain the same number of neutrons and protons but differ in their excited state are
+
+A) Isotons
+B) Nuclear isomers
+C) Isomers
+D) B,C","تعود قوة تكبير المجهر الإلكتروني المقدرة ب 500 مرة قوة تكبير المجهر الضوئي:
+
+A) قدرة الفصل العالية.
+B) طاقة الإلكترونات العالية.
+C) العدسات المغناطيسية.
+D) قصر الموجة المصاحبة للإلكترون مقارنة بموجة الضوء المرئي.",
+314,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,B,B,"The order of the muscles from top to bottom on the posterior aspect of the gluteus maximus is as follows
+
+A) Piriformis - Superior Glossus - Internal Glossus - Inferior Glossus
+B) Piriformis - Superior Glossus - Inferior Glossus - Internal Glossus
+C) Piriformis - Internal Glossus - Superior Glossus - Inferior Glossus
+D) Superior Glossus - Internal Glossus - Piriformis - Inferior Glossus
+E) Internal Glossus - Piriformis - Superior Glossus - Inferior Glossus","تشمل عضلات ضرة اليد عدا:
+
+A) مبعدة الخنصر
+B) مقربة الخنصر
+C) قابضة الخنصر القصيرة
+D) مبعدة الخنصر",
+4181,Mistral-7B-Instruct-v0.3,both_wrong,0,0,B,A,C,"The sphincters before the vermicelli dilate when (choose the incorrect one)
+
+A) When linoleic acid and CO2 accumulate
+B) When the metabolic rate increases
+C) When the vascular organ is more active
+D) During rest","يشاهد التلم التصالبي:
+
+A) خلف السرج التركي
+B) أمام السرج التركي
+C) في قاع السرج التركي
+D) جانب السرج التركي",
+2081,Mistral-7B-Instruct-v0.3,both_wrong,0,0,C,B,A,"The science that studies life in all its details
+
+A) Microbiology
+B) Cell biology
+C) Neurobiology
+D) Virology","كل ما يلي يعد من الأمثلة عن الحركة الدوائية ماعدا :
+
+A) الاستقلاب
+B) فرط الحرارة الخبيث
+C) الامتصاص
+D) الإطراح",
+3398,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,D,C,"The mollusc *Brotia* is an intermediate host for
+
+A) *Breathogronomycetes*
+B) *Hepatophyllum*
+C) *Cyphophyllum*
+D) *Branchyma*
+E) *Branchyma chinensis*","عزل البيوض من براز شخص مصاب بالسرمية الدويدية تكشف
+
+A) ١٠٠%  من الاصابات
+B) 75%  من الاصابات
+C) 50% من الاصابات
+D) ١٠%  من الاصابات
+E) 5% من الاصابات",
+4730,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,C,B,"The treatment consent form is
+
+A) from the civil registry.
+B) from the medical record.
+C) composed of two sections.
+D) B+C","نقول عن مجموعة من المتغيرات العشوائية انها تشكل عينة عشوائية اذا كانت :
+
+A) مرتبطة ولها قانون التوزبع نفسه
+B) مستقلة ولها قانون التوزيع نفسه
+C) متنافية ولها قانون التوزيع نفسه
+D) مستقلة ولكل منها قانون توزيعه الخاص",
+1622,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,C,C,"CFCS is not used as
+
+A) a bleach in washing powders
+B) a refrigerant in refrigerators
+C) a solvent
+D) a polymer blowing agent","كل مما يلي حول ضخامة النهايات Acromegaly صحيح ما عدا :
+
+A) حوالي 99٪ من الحالات سببها ورم نخامي بدئي.
+B) 90% من المصابين بهذا المرض من الرجال.
+C) من الحالات سببها زيادة إفراز الوطاء لـ GHRH.
+D) يعتبر اختبار تحمل السكر من الاختبارات المساعدة في التشخيص.",
+1064,Mistral-7B-Instruct-v0.3,both_wrong,0,0,C,A,A,"Choose the incorrect answer regarding the seminal vesicle
+
+A) It is 5 cm long
+B) It is located behind the bladder
+C) It is located medial to the ureter
+D) It forms the ejaculatory duct","الحفرة الإبطية إختر الإجابة الخاطئة :
+
+A) AXILLARY FOSSA
+B) بها شكل هرمي
+C) ذروتها خلف الترقوة
+D) قاعدتها جلد الإبط
+E) تظهر بوضوح عند خفض وتقريب الذراع",
+4746,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,A,A,"Which of the following methods provides the most accurate answers?
+
+A) Recording
+B) Telephone calls
+C) Mail
+D) Personal interview","معدل الوفيات الخام:
+
+A) عدد الوفيات خلال سنة/إجمالي عدد السكان في نفس السنة*1000
+B) عدد الوفيات لفئة عمرية خلال سنة/عدد السكان من نفس الفئة العمرية في منتصف السنة*1000
+C) عدد الوفيات الأطفال دون السنة من العمر خلال سنة معينة/عدد المواليد الأحياء خلال نفس السنة*1000
+D) B + C",
+1858,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,C,B,"The RNA molecules synthesized in the nucleolus are called
+
+A) mRNA
+B) tRNA
+C) rRNA
+D) miRNA","من Chromosomal Rearangement عدا:
+
+A) Deletion
+B) Inversion
+C) Duplication
+D) Tetration",
+1626,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,,A,"A man with blood type A and a woman with blood type B cannot have a child with the following blood type
+
+A) A
+B) B
+C) AB
+D) O","السيستيلين ما عدا
+
+A) غير مولد للسكر
+B) يدخل بتركيب الانسولين
+C) يدخل بتركيب تميم A
+D) يدخل بتركيب غلوتاثيون",
+91,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,A,A,"The following structures are located in the posterior triangle: (2015) Primary
+
+A) External carotid artery.
+B) Internal carotid artery.
+C) Internal jugular vein.
+D) Occipital artery.","تتواجد العناصر التالية في المثلث الخلفي: 2015) أولي)
+
+A) الشريان السباتي الظاهر.
+B) الشريان السباتي الباطن.
+C) الوريد الوداجي الباطن.
+D) الشريان القذالي.",
+2713,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,A,C,"Heat loss by convection in air is
+
+A) less than in water
+B) greater than in water
+C) equal to water
+D) all of the above are false","إذا لم تجاوز حدود مجال مهين من الاجهادات والانفعالات المقابلة لها لا يعود الجسم إلى أبعاده الأصلية ولا إلى شكله الأصلي فيوصف بأنه في مجال
+
+A) المرن
+B) اللدن
+C) الحجمي
+D) القصبي",
+669,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,D,D,"The sacral plexus is formed by the spinal branches of
+
+A) the iliac nerve
+B) the iliac nerve
+C) the iliac femoral nerve
+D) the iliac nerve","يمتد من المنخر حتى المنعر:
+
+A) قمة الأنف
+B) ظهر الأنف
+C) جوف الأنف
+D) جذر الأنف",
+2090,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,D,C,"Collagen fibrillary 1 is absent from the structure of
+
+A) White blood cells.
+B) Cornea of the eye.
+C) Skin.
+D) Bones.","في شجرة الوراثة مربع صفير مملوء فهو يشير إلي:
+
+A) طفل مصاب مات في مرحلة مبكرة
+B) طفلة مصابة ماتت في مرحلة مبكرة
+C) طفل مصاب
+D) طفلة مصابة",
+3791,Mistral-7B-Instruct-v0.3,both_wrong,0,0,E,D,B,"If a young man intentionally ingests three ampoules of pancuronium orally, the following are expected
+
+A) Paralysis of the eyelid muscles
+B) Paralysis of the facial and jaw muscles
+C) Paralysis of the respiratory chest muscles
+D) All of the above
+E) No paralysis","أحد المركبات التالية يعمل على تثبيط تقلصات الرحم في المخاض الباكر :
+
+A) نيو ستغمين
+B) ايدروفونیوم
+C) ريتودرين
+D) بيلوكاربين
+E) اري كولين",
+1586,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,A,A,"Which of the following enzymes requires the presence of coenzyme A+?
+
+A) Pyruvate dehydrogenase
+B) Malate dehydrogenase
+C) Alpha-fetoglutarate dehydrogenase
+D) All of the above","كل ما يلي حول فيتامين E صحيح ماعدا:
+
+A) يعتبر عاملا طبيعيا مضادا للأكسدة
+B) هو الأقل سمية بين كل الفيتامينات المنحلة بالدسم
+C) ينصح بإعطائه دوائيا كوقاية من الأمراض
+D) يسبب عوزه ازدياد هشاشية الكريات الحمراء",
+296,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,B,A,"The right flank contains
+
+A) The right liver lobe
+B) The gallbladder
+C) The descending colon
+D) None of the above","البلعوم :
+
+A) يوجد توسع قبل الحنجرة يدعى باسم الردب الكمثري
+B) يوجد في مكان التقاء اللسان مع الفلكة ثلاث طيات ناصفة ووحشيتان
+C) يوجد تحت الفلكة انخفاض يدعى الوحدة
+D) يعد البلعوم الأنفي جزء من أجزاء الجهاز الهضمي",
+396,Mistral-7B-Instruct-v0.3,both_wrong,0,0,C,A,A,"The renal medulla consists of
+
+A) 6 pyramids
+B) 8 pyramids
+C) 12 pyramids
+D) 14 pyramids","يمتد مباشرة على عظم العضد: (2007 أولى)
+
+A) العصب الزندي .
+B) العصب العضلي الجلدي .
+C) العصب الكعبري .
+D) الشريان العضدي العميق .",
+3295,Mistral-7B-Instruct-v0.3,both_wrong,0,0,B,D,A,"The schistosome is characterized by all of the following except
+
+A) 4-5 testes in the male
+B) Oral, abdominal, and genital suckers close together
+C) 10-15 mm in length in the male
+D) Smooth skin in the female
+E) Elongated uterus in the female containing 20-30 eggs","يحتاج الشكل المعدي للمستخفية بارفوم ليصبح ناضجاً:
+
+A) عدة ساعات
+B) أسبوع
+C) أسبوعين
+D) شهر
+E) ناضجة فور خروجها",
+2273,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,C,C,"According to the pedigree model, the transmission of an X-linked recessive genetic disorder shows all of the following except
+
+A) Daughters of the affected individual are carriers
+B) Sons of the affected individual are affected
+C) All affected males are related through transmission of the gene via a series of carrier females
+D) The daughter of the affected parent is normal","يكون والدا الطفل المصاب حاملين متغايري الألائل عديمين الأمراض في الوراثة :
+
+A) الجسدية المتنحية
+B) الجسدية السائدة
+C) المرتبطة بالصبغي X السائدة
+D) المرتبطة بالصبغي X المتنحية",
+4531,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,,C,"Data sources in quantitative studies: EXCEPT
+
+A) Documents
+B) Medical records
+C) Questionnaires and checklists
+D) All of the above","دالة التوزيع الاحتمالي المتجمع تعطينا:
+
+A) احتمال أن يأخذ متغير عشوائي X قيمة محددة
+B) احتمال ان ياخد المتغير العشوائى x قيمه اكبر من قيمه محدده
+C) احتمال ان ياخد المتغير العشوائى x قيمه اقل او تساوى قيمه محددة
+D) كل ما ذكر صحيح",
+945,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,D,B,"The seminal vesicle
+
+A) A tightly coiled tube
+B) Lined with simple, flattened epithelium
+C) The epithelium is covered with branching cilia called
+D) A+B
+E) All of the above are correct",". تنفتح القناة الصفراوية المشتركة على:
+
+A) القطعة العفجية العلوية
+B) القطعة العفجية النازلة
+C) القطعة العفجية الافقية
+D) القطعة العفجية الصاعدة",
+3414,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,C,B,"Human infection with Fossilon bancroft requires a number of bites from the carrier, estimated at
+
+A) One bite
+B) One bite per week
+C) Dozens of bites
+D) Thousands of bites
+E) Not transmitted by insects","أكياس بيضية مقاومة للحمض تحوي أرومتين بوغيتين ذات شكل قاروري بقطر 15x25 ميكرون تعود لـ:
+
+A) المقوسة القندية
+B) المتكيسة الرئوية الكارينية
+C) المتبائغة belli
+D) المستخفية paravum
+E) المتصورة المنجلية",
+84,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,C,B,"Brachial plexus cords: (2007 First Edition)
+
+A) The medial cord is formed from the middle trunk
+B) The lateral cord is formed from the inferior trunk
+C) The posterior cord lies behind the axillary vein
+D) The lateral cord extends superiorly and laterally to the axillary artery","حبال الضفيرة العضدية: (2007 أولى)
+
+A) الأنسي يتشكل من الجذع المتوسط
+B) الوحشي يتشكل من الجذع السفلي
+C) الخلفي يتوضع خلف الوريد الإبطي
+D) يمتد الوحشي أعلى ووحشي الشريان الإبطي",
+1057,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,A,B,"Choose the incorrect answer regarding the right ventricle
+
+A) It is larger than the left atrium
+B) It connects to the right atrium via the tricuspid valve
+C) It contains the infundibulum
+D) It contains four papillary muscles","القلب من الداخل:
+
+A) المنشأ الجنيني للأذين الأيسر من مصدر واحد
+B) يوجد الشريط الوسيط في جدران البطين الأيسر
+C) فتحة الوريد الأجوف العلوي مجهزة بصمامين رديمين
+D) سماكة جدران البطين الأيسر تساوي ثلاثة أمثال جدران الأذين الأيسر
+E) بالمقطع العرضي البطين الأيسر هلالي الشكل",
+3394,Mistral-7B-Instruct-v0.3,both_wrong,0,0,B,C,D,"The characteristics of unfertilized, shelled Scroft eggs are all EXCEPT
+
+A) Length 90 µm
+B) Outer layer
+C) Contains photorefractory granules
+D) Do not float readily in saturated solutions
+E) Elongated shape","تزداد الإصابة بالجيارديا اللمبلية مع كل مما يلي، عدا:
+
+A) التهاب البنكرياس المزمن
+B) سوء الامتصاص
+C) نقص حموضة المعدة
+D) بعض الأمراض المناعية الخلقية والمكتسبة
+E) داء السكري",
+1892,Mistral-7B-Instruct-v0.3,both_wrong,0,0,B,A,D,"Neutral polar amino acids containing an NH2 group
+
+A) Asparagine
+B) Glutamine
+C) Protein
+D) A+b","الأحماض الأمينية الداخلية ببنية الكولاجين ما عدا:
+
+A) غليسين
+B) فالين
+C) برولين
+D) هيدروكسي برولين",
+2104,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,C,D,"Long-term energy stores
+
+A) Represented by the energy stored in the covalent bond (C
+B) Are released only as a result of complex metabolic reactions.
+C) Energy is extracted from them and converted into ATP.
+D) All of the above are correct.","تصنف البيئة الكابتونية ضمن الأمراض:
+
+A) الوراثية
+B) خطأ الاستقلاب الخلقي
+C) الآفات الجلدية
+D) كل ما سبق خطأ",
+3129,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,C,D,"All of the following result from stimulation of the sympathetic autonomic nervous system except
+
+A) Sexual stimulation.
+B) Increased heart rate.
+C) Elevated blood glucose levels.
+D) Release of stored fat.","أحد الأمثلة التي تشير إلى التآزر في كل من القسمين الودي واللا ودي:
+
+A) تعصيب الغدد الدرقية.
+B) تنظيم ضربات القلب.
+C) تنظيم إفراز اللعاب.
+D) ليس أياً مما سبق.",
+1973,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,B,B,"Functions of actin filaments except
+
+A) Movement of cellular organelles
+B) Cytoplasmic separation
+C) Contribution to muscle contraction
+D) Contribution to centrosome formation","عملية تشكل عديدات الببتيد من سلاسل رنا ناضج:
+
+A) . Transcription
+B) Translation .
+C) Gene expression
+D) Reverse transcription .",
+1917,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,C,B,"The vesicles responsible for the organized and essential transport of secretory materials during ejaculation are
+
+A) Clathrin-covered vesicles.
+B) Cup-covered vesicles.
+C) Cup-covered vesicles.
+D) Cup-covered vesicles.","في سرطان عنق الرحم الموروث للورم :
+
+A) يكون اختطار الرجعة مرتفع بالمقارنة مع النسبة العامة للمجتمع.
+B) يكون اختطار الرجعة منخفض بالمقارنة مع النسبة العامة للمجتمع.
+C) يكون اختطار الرجعة مساوياً تقريبا مع الإصابة العامة للمجتمع.
+D) تقدر النسبة العامة للإصابة في المجتمع ب %88.",
+2258,Mistral-7B-Instruct-v0.3,both_wrong,0,0,B,A,D,"When a gene expresses itself to varying degrees despite being ineffective, the resulting expression of an ineffective gene pattern is termed
+
+A) Expressivity
+B) Ineffectiveness
+C) Expressivity
+D) A and C","ليس من النماذج الأربعة المختلفة الأحادية الجين التي يمكن أن تورث فيها خلة ما محددة بموقع جيني واحد:
+
+A) جسدي سائد
+B) مرتبط بالجنس مشترك
+C) مرتبط بالجنس سائد
+D) جسدي متنح",
+3190,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,E,C,"Prostaglandins cause all of the following except
+
+A) Mucus secretion.
+B) Bicarbonate secretion.
+C) Maintenance of normal blood flow.
+D) Gastric acid secretion.
+
+E) Ensuring the integrity and regeneration of the gastric mucosa.","يحدث في المعدة كل مما يلي ما عدا:
+
+A) تختزن الطعام الوارد إليها خاصة في القسم السفلي.
+B) تفتت الطعام وتمزجه مع العصارات الهاضمة.
+C) تفرغ الكيموس في العفج.
+D) تستغرق من 3 إلى 5 ساعات لإفراغ وجبة الطعام.
+E) تتعلق سرعة الإفراغ المعدي بعمل المضخة البوابية.",
+327,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,C,B,"All of the following veins are used for blood sampling except
+
+A) Axillary vein
+B) Basal vein
+C) Midcine vein
+D) Cephalic vein","يسير عميقاً من الشريان السباتي ويعصب الحجاب الحاجز.
+
+A) العصب ظهر الكتف
+B) العصب اللاحق (الشوكي)
+C) العصب المبهم
+D) العصب الحجابي
+E) لا شيء مما سبق",
+2693,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,C,C,"Terahertz radiation is emitted by
+
+A) Inanimate objects
+B) Living organisms
+C) Metals
+D) All of the above","وفقا للعلاقة M= فإن M تسمى:
+
+A) الكتلة الحرجة
+B) الطاقة المختزنة
+C) الكتلة المختزلة
+D) الكتلة المختزنة",
+3733,Mistral-7B-Instruct-v0.3,both_wrong,0,0,B,C,C,"Some reasons for decreased resistance to germs in diabetic patients include
+
+A) Increased blood flow to tissues
+B) Decreased glucose concentration in the bloodstream
+C) Decreased protein synthesis, especially globulin
+D) All of the above are incorrect","سبب تشمع الكبد عند مريض عمره 12 سنة هو:
+
+A) عوز الحديد
+B) داء ويلسون
+C) فرط حمولة الحديد
+D) نقص المغنزيوم",
+2636,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,C,B,"Aluminum oxide reacts with
+
+A) Water
+B) Acidic solutions and does not react with alkaline solutions
+C) Alkaline solutions and does not react with acidic solutions
+D) It reacts with both acidic and alkaline solutions","– عدد العدسات في مجهر SEM :
+
+A) ثلاثة
+B) اثنتان
+C) أربعة
+D) واحدة",
+3118,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,B,A,"The neurotransmitter released from neurons in the postganglionic sympathetic nervous system is
+
+A) Acetylcholine.
+B) Norepinephrine.
+C) Adrenaline.
+D) Norepinephrine or acetylcholine.","سكر لا يحتاج للصوديوم من أجل عملية امتصاصه:
+
+A) الغلوكوز.
+B) الغالاكتوز.
+C) الفركتوز.
+D) السكروز.",
+657,Mistral-7B-Instruct-v0.3,both_wrong,0,0,E,B,B,"Which of the following bones contributes to the formation of the roof of the orbit? (2015 Supplementary)
+
+A) Maxillary
+B) Frontal
+C) Zygomatic
+D) Lacrimal
+
+E) Palate",". الوريد السطحي الذي يشكل الابطي هو:
+
+A) القاعدي
+B) الراسي
+C) العضدي
+D) تحت الترقوة",
+542,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,B,A,"The optic tunnel is traversed by
+
+A) Ophthalmic artery
+B) Optic nerve
+C) Oculoplastic nerve
+D) A + B","في نقي العظم:
+
+A) تحدث زيادة المعتدلات اثناء الانتائات الجرثومية بسبب زيادة انتاجها في النقي
+B) مع نضج الخلايا اللمفاوية يصبح الكروماتين اقل كثافة وتظهر الذويات بوضوح
+C) تنضج اللمفاويات البانية في الغدة الصعتربة thymus gland
+D) الاجابتان A+C",
+3016,Mistral-7B-Instruct-v0.3,both_wrong,0,0,B,C,A,"10. Absorption and scattering make the detection of the human body by light
+
+A) Easy
+B) Difficult
+C) Sometimes A and B
+D) All of the above and others","يعبر عن حالات التبخر بين جزيئات السائل جزيئات مادة الإناء عادة:
+
+A) زاوية التماس من السطح الحر للسائل وسطح المادة
+B) زاوية حادة فقط
+C) زاوية منفرجة فقط
+D) زاوية التماس بين قاع السائل والسطح المادة",
+1448,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,B,,"The occurrence of nondisjunction between sex chromosomes in Meiosis I in women leads to the formation of gamete patterns
+
+A) XX,0
+B) X,0
+C) XX, X,0
+D) X, XXX","في الخلال المتنحية المرتبطة بالصبغي: X (الخطأ)
+
+A) لا تنتقل الإصابة من الذكر المصاب إلى ابنه.
+B) بنات الذكر المصاب مصابات.
+C) لا تشكو الأنثى متغايرة الألائل من أعراض.
+D) هناك سيطرة للذكور المصابين.",
+1797,Mistral-7B-Instruct-v0.3,both_wrong,0,0,C,B,A,"Translation in eukaryotes is characterized by all of the following except
+
+A) binds to the ribosomal RNA at the 3' end of the mRNA
+B) Messenger RNA (mRN
+C) It first binds to the small subunit of the ribosomal RNA
+D) The first amino acid is methionine","التزيق في الفرد هو:
+
+A) خلل في الانقسام الفتيلي يؤدي لفقد الصيغة الصبغية.
+B) خلل في الانقسام الانتصافي يؤدي لفقد الصيغة الصبغية.
+C) خلل في الصيغة الصبغية لكل خاليا الجسم.
+D) خلل في الصيغة الصبغية لمجموعة خاليا دون أخرى.",
+4393,Mistral-7B-Instruct-v0.3,both_wrong,0,0,B,C,C,"Drinking large amounts of water increases
+
+A) Urine osmotic pressure
+B) ADH (anti-Dramine) levels
+C) Plasma osmotic pressure
+D) Urine volume","أي العبارات التالية صحيحة :
+
+A) تمتلك العضلات التنفسية فعالية نظمية ذاتية
+B) العضلات الوربية هي العضلات الرئيسية للتنفس
+C) الابقاع التنفسى ينجم عن عصبونات موجودة في القسم البطني من البصلة
+D) مركز التنفس الجسري يحدث بشكل رئيسي الشهيق",
+3231,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,C,C,"In the large intestine, all of the following are true except
+
+A) The cecum is completely surrounded by longitudinal muscle fibers.
+B) Parts of it are supplied by branches of the superior mesenteric artery.
+C) The descending colon lies retroperitoneally.
+D) The transverse colon has a mesentery.
+
+E) Part of the lymphatic drainage is in the superior mesenteric lymph nodes.","تضم ناصيات الفقار من عضلات الظهر العميقة التالي ما عدا: السؤال للاطلاع
+
+A) 1. الطولي الرأسية
+B) 2. الطولي العنقية
+C) 3. نصف الشوكية الرأسية
+D) 4. الحرقفية الضلعية العنقية
+E) 5. الشوكية الرأسية",
+1396,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,C,A,"Symptoms of hypercalcemia include
+
+A) Abdominal pain
+B) Muscle paralysis
+C) Mental confusion
+D) All of the above","يعتبر كل مما يلى حول الحديد صحيح ما عدا:
+
+A) يوحد الحديد بشكل رئيسى فى اللحوم
+B) وظيفه الفيريتين فى تخزسن الحديد
+C) فى الحاله السويه تمتص الامعاء حوالى 100 ملغ حديد يومياً
+D) ان الوظيفه الاساسيه للحديد هى تشكيل الخضاب",
+102,Mistral-7B-Instruct-v0.3,both_wrong,0,0,E,D,D,"Damage to the origin of the mandibular nerve causes, except for: (2017 First Edition)
+
+A) Loss of sensation in the floor of the mouth.
+B) Loss of sensation in the sublingual gland.
+C) Loss of sensation in the anterior two-thirds of the tongue.
+D) Loss of sensation in the gingival margin.
+
+E) Loss of taste in the anterior two-thirds of the tongue.","تسبب أذية منشأ العصب الفكي السفلي ما عدا: (2017 أولى)
+
+A) فقدان حسي لمخاطية قاع الفم.
+B) فقدان حس الغدة تحت اللسان.
+C) فقدان حسي للثلثين الأماميين للسان.
+D) فقدان حس اللثة اللسانية.
+E) فقدان تذوق للثلثين الأماميين للسان.",
+365,Mistral-7B-Instruct-v0.3,both_wrong,0,0,C,B,A,"Melatonin's functions except
+
+A) Regulates circadian rhythms
+B) Regulates body temperature and reproduction
+C) Increases metabolism
+D) Regulates cardiac function","يضم الغمد السباتي ما يلي عدا:
+
+A) الشريان السباتي الباطن
+B) الشريان السباتي الظاهر
+C) الشريان المبهم
+D) الوريد الوداجي الباطن",
+2080,Mistral-7B-Instruct-v0.3,both_wrong,0,0,C,D,B,"Conditions that must be ruled out when diagnosing autism include
+
+A) Tuberous sclerosis
+B) Fragile X syndrome
+C) Lesch-Nyhan syndrome
+D) A+B","تتكدس النكليوزومات بعضها فوق بعض لتشكل ليف الكروماتين بمساعدة:
+
+A) H2A
+B) H2B
+C) H1
+D) H3",
+3095,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,F,C,"All of the following are protective mechanisms of the stomach except
+
+A) Mucus.
+B) Bicarbonate.
+C) Epithelial cell regeneration.
+D) Intrinsic factor secreted by the stomach lining.","مريض لديه رض رأس يفتح عينيه للألم ويصدر أنين وعند الألم تكون الاستجابة بحسب الطرف ويكون سلم غلاسكو للسبات لديه:
+
+A) 5
+B) 6
+C) 7
+D) 8
+E) 9",
+2305,Mistral-7B-Instruct-v0.3,both_wrong,0,0,B,A,C,"In echolocation, the transmission of the sound twice, when the ultrasonic barrier is exposed, leads to the withdrawal of the representative line of the echoes
+
+A) at a constant, parallel speed
+B) at a non-constant, perpendicular speed
+C) at a constant speed parallel to the ground
+D) at a constant lifetime speed perpendicular to the ground","يعبر عن شدة الموجة الصوتية :
+
+A) بالجول لكل ثانية .
+B) بالجول .
+C) بالواط على المتر المربع .
+D) طاقة الموجة التي تعبر واحدة السطوح .",
+457,Mistral-7B-Instruct-v0.3,both_wrong,0,0,A,D,B,"In joints (bone union) (incorrect)
+
+A) Synovial joint. Synostosis
+B) Joints (Greek: Arthron)
+C) Arthritis
+D) Joints (Latin: Articulates)","كل ما يلي من عظام الصف العلوي أو الداني للرسغ عدا:
+
+A) المربعي.
+B) الهلالي.
+C) الحمصي.
+D) الزورقي.",
+4420,Mistral-7B-Instruct-v0.3,both_wrong,0,0,B,A,D,"Regarding oxygen uptake
+
+A) Blood is fully oxygenated after traveling halfway through the capillary.
+B) Blood remains in a stagnant state in the pulmonary capillaries for three times the time required for complete oxygenation.
+C) Blood needs to be exposed to oxygen for a prolonged period to be fully oxygenated.
+D) All of the above are true.","تتحسس المستقبلات الكيميائية في البصلة السيسائية مباشرة لـ
+
+A) PCO2 في الدم
+B) الشوارد الهيدروجينية في الدم
+C) الشوارد الهيدروجينية في السائل الخلالي
+D) كل ما سبق
+E) كل ما سبق خطأ",
+1067,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,A,B,"The following are all superficial posterior forearm muscles except
+
+A) olecranon
+B) extensor digitorum
+C) extensor digitorum common
+D) extensor pollicis brevis","ما يلي صحيح بالنسبة للرئتين ماعدا
+
+A) الرئة اليمنى تقسم لثلاثة فصوص
+B) الرئة اليسرى أثقل من اليمني
+C) تطفوان على الماء
+D) الرئة اليسرى تقسم إلى فصيين",
+1944,Mistral-7B-Instruct-v0.3,both_wrong,0,0,D,C,A,"The mobile phase in dHPLC consists of
+
+A) TEAA
+B) Polystyrene
+C) Acetonitrile
+D) A+C","Trisomy XXY:
+
+A) متلازمة داون
+B) متلازمة ترنر
+C) متلازمة كلاينفلتر
+D) متلازمة باتو",
+1646,Mistral-7B-Instruct-v0.3,both_wrong,0,0,C,,B,"A urine glucose test will be false-positive if the concentration is less than 100 mg/dL when the patient is given large amounts of
+
+A) Vitamin A
+B) Vitamin B
+C) Vitamin C
+D) Ibuprofen","مريض يعاني من تشمع الكبد مع حلقة صفراء في القرنية فإن التشخيص:
+
+A) اليرقان
+B) ارتفاع بيليروبين المصل
+C) داء ويلسون
+D) عم يدلل المريض",

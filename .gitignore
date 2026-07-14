@@ -30,6 +30,12 @@ cache*/
 **/blobs/
 **/refs/
 
+# model checkpoints / weights
+*.pt
+*.pth
+*.safetensors
+*.bin
+
 # outputs / logs
 # results/
 figures/

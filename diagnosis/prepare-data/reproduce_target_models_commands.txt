@@ -1,0 +1,30 @@
+# Diagnosis reproduction targets:
+#   gemma        -> gemma3_27b_it
+#   mistral-7b   -> mistral_7b
+#   llama-8b     -> llama31_8b_inst
+#   falcon       -> falcon
+#   fanar        -> fanar
+#   meditron     -> meditron
+
+# 1) Run Arabic MedAraBench only where missing.
+# Existing Arabic predictions are already present for:
+#   gemma3_27b_it, mistral_7b, llama31_8b_inst
+python scripts/run_evaluation.py configs/task1/falcon_medarabench.yaml
+python scripts/run_evaluation.py configs/task1/fanar_medarabench.yaml
+python scripts/run_evaluation.py configs/task1/meditron_medarabench.yaml
+
+# 2) Run English translated MedAraBench for all six.
+python scripts/run_evaluation.py configs/task1/gemma3_27b_it_medarabench_en.yaml
+python scripts/run_evaluation.py configs/task1/mistral_7b_medarabench_en.yaml
+python scripts/run_evaluation.py configs/task1/llama31_8b_inst_medarabench_en.yaml
+python scripts/run_evaluation.py configs/task1/falcon_medarabench_en.yaml
+python scripts/run_evaluation.py configs/task1/fanar_medarabench_en.yaml
+python scripts/run_evaluation.py configs/task1/meditron_medarabench_en.yaml
+
+# 3) Merge English + Arabic predictions into diagnosis-ready sampled quadrants.
+python diagnosis/prepare-data/merge_and_sample.py --english_file results/predictions/task1/medarabench_en/gemma3_27b_it.csv --arabic_file results/predictions/task1/medarabench/gemma3_27b_it.csv --model Gemma-3-27B-IT --output_merged diagnosis/prepare-data/gemma3_27b_it_merged.csv --output_sample diagnosis/gemma3_27b_it_sampled_quadrants.csv
+python diagnosis/prepare-data/merge_and_sample.py --english_file results/predictions/task1/medarabench_en/mistral_7b.csv --arabic_file results/predictions/task1/medarabench/mistral_7b.csv --model Mistral-7B-Instruct-v0.3 --output_merged diagnosis/prepare-data/mistral_7b_merged.csv --output_sample diagnosis/mistral_7b_sampled_quadrants.csv
+python diagnosis/prepare-data/merge_and_sample.py --english_file results/predictions/task1/medarabench_en/llama31_8b_inst.csv --arabic_file results/predictions/task1/medarabench/llama31_8b_inst.csv --model Llama-3.1-8B-Instruct --output_merged diagnosis/prepare-data/llama31_8b_inst_merged.csv --output_sample diagnosis/llama31_8b_inst_sampled_quadrants.csv
+python diagnosis/prepare-data/merge_and_sample.py --english_file results/predictions/task1/medarabench_en/falcon.csv --arabic_file results/predictions/task1/medarabench/falcon.csv --model Falcon-H1-7B-Instruct --output_merged diagnosis/prepare-data/falcon_merged.csv --output_sample diagnosis/falcon_sampled_quadrants.csv
+python diagnosis/prepare-data/merge_and_sample.py --english_file results/predictions/task1/medarabench_en/fanar.csv --arabic_file results/predictions/task1/medarabench/fanar.csv --model Fanar-1-9B --output_merged diagnosis/prepare-data/fanar_merged.csv --output_sample diagnosis/fanar_sampled_quadrants.csv
+python diagnosis/prepare-data/merge_and_sample.py --english_file results/predictions/task1/medarabench_en/meditron.csv --arabic_file results/predictions/task1/medarabench/meditron.csv --model Meditron3-70B --output_merged diagnosis/prepare-data/meditron_merged.csv --output_sample diagnosis/meditron_sampled_quadrants.csv

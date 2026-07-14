@@ -1,0 +1,69 @@
+ALLAM=/scratch/ca2627/huggingface/models--humain-ai--ALLaM-7B-Instruct-preview/snapshots/a28dd1e67420cde72d3629c8633a974cf7d9c366 
+MEDGEMMA=/scratch/ca2627/huggingface/models--google--medgemma-27b-text-it/snapshots/6b08c481126ff65a9b8fa5ab4d691b152b8edb5d
+MISTRAL=/scratch/ca2627/huggingface/models--mistralai--Mistral-Small-3.2-24B-Instruct-2506/snapshots/95a6d26c4bfb886c58daf9d3f7332c857cb27b43
+LLAMA=/scratch/ca2627/huggingface/models--meta-llama--Llama-3.3-70B-Instruct/snapshots/6f6073b423013f6a7d4d9f39144961bfbfbc386b
+
+
+- Infreence on the three tasks for adapted models 
+
+
+python models/inference_lora_task1.py \
+  --test_file datasets/qa/medarabench.json \
+  --instruction_file prompts/task1.txt \
+  --base_model /scratch/ca2627/huggingface/models--mistralai--Mistral-Small-3.2-24B-Instruct-2506/snapshots/95a6d26c4bfb886c58daf9d3f7332c857cb27b43 \
+  --adapter_path outputs/lr_search_l01/trial_03_lr2.28e-05 \
+  --output_file results/predictions/task1/medarabench/lora_l1.csv \
+  --metrics_file results/metrics/task1/medarabench/lora_l1.json \
+  --offline
+
+
+
+- tuned logit lens 
+
+train:
+python tuned_lens_mistral.py     --mode train     --train_csv mistral_sampled_quadrants.csv     --model_path /scratch/ca2627/huggingface/models--mistralai--Mistral-Small-3.2-24B-Instruct-2506/snapshots/95a6d26c4bfb886c58daf9d3f7332c857cb27b43     --lens_dir ./tuned_lens_mistral     --train_n 400     --epochs 10     --train_batch 4 
+
+eval:
+python tuned_lens_mistral.py \
+    --mode eval \
+    --csv mistral_sampled_quadrants.csv \
+    --model_path /scratch/ca2627/huggingface/models--mistralai--Mistral-Small-3.2-24B-Instruct-2506/snapshots/95a6d26c4bfb886c58daf9d3f7332c857cb27b43 \
+    --lens_dir ./tuned_lens_mistral \
+    --out_dir ./tuned_lens_mistral_out \
+    --batch_size 1
+
+ALLAM=/scratch/ca2627/huggingface/models--humain-ai--ALLaM-7B-Instruct-preview/snapshots/a28dd1e67420cde72d3629c8633a974cf7d9c366
+
+python tuned_lens_allam.py \
+    --mode       eval \
+    --csv        allam_sampled_quadrants.csv \
+    --model_path $ALLAM \
+    --lens_dir   ./tuned_lens_allam \
+    --out_dir    ./tuned_lens_allam_out
+
+plot command (tuned logit lens) 
+
+python plot_tuned_lens_panel.py \
+    --mistral_npz  ./tuned_lens_mistral_out/tuned_lens_results.npz \
+    --medgemma_npz ./tuned_lens_medgemma_out/tuned_lens_results.npz \
+    --allam_npz ./tuned_lens_allam_out/tuned_lens_results.npz \
+    --llama_npz ./tuned_lens_llama_out/tuned_lens_results.npz \
+    --out_dir      ./tuned_lens_panel 
+
+
+Activation Patching 
+
+python plot_patching_line_panel.py \
+    --llama_dir    ./activation_patching_llama_out \
+    --mistral_dir  ./activation_patching_mistral_out \
+    --allam_dir    ./activation_patching_allam_out \
+    --medgemma_dir ./activation_patching_medgemma_out \
+    --out_dir      ./activation_patching_panel_out 
+
+python plot_patching_panel_reverse.py \
+    --llama_dir    ./activation_patching_llama_reverse_out \
+    --mistral_dir  ./activation_patching_mistral_reverse_out \
+    --allam_dir    ./activation_patching_allam_reverse_out \
+    --medgemma_dir ./activation_patching_medgemma_reverse_out \
+    --out_dir      ./activation_patching_panel_out 
+

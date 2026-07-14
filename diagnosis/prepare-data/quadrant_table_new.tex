@@ -1,0 +1,21 @@
+% Requires: \usepackage{booktabs,makecell,pifont}
+% \newcommand{\cmark}{\ding{51}}
+% \newcommand{\xmark}{\ding{55}}
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{Quadrant distribution across models. Each cell shows count (\%) of questions where the model answers correctly/incorrectly in English and Arabic. EN Acc / AR Acc are overall zero-shot accuracies.}
+\label{tab:quadrant_distribution}
+\begin{tabular}{lcccccc}
+\toprule
+Model & \makecell{En\checkmark\\Ar\checkmark} & \makecell{En\checkmark\\Ar\texttimes} & \makecell{En\texttimes\\Ar\checkmark} & \makecell{En\texttimes\\Ar\texttimes} & EN Acc & AR Acc \\
+\midrule
+Mistral-Small-3.2-24B & 40.83\% & 17.17\% & 10.14\% & 31.86\% & 58.00\% & 50.97\% \\
+Llama-3.3-70B & 14.94\% & 42.89\% & 9.05\% & 33.12\% & 57.84\% & 23.99\% \\
+ALLaM-7B-Instruct & 31.42\% & 12.49\% & 12.79\% & 43.30\% & 43.91\% & 44.21\% \\
+MedGemma-27B & 38.12\% & 14.41\% & 11.32\% & 36.15\% & 52.53\% & 49.43\% \\
+\bottomrule
+\end{tabular}
+\end{table}

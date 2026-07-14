@@ -1,0 +1,9 @@
+Model: ALLaM 7B
+Seed:  42
+
+both_correct: n=100  (Early: 0, Late: 100)
+access_gap: n=100  (Early: 0, Late: 100)
+arabic_only: n=100  (Early: 0, Late: 100)
+both_wrong: n=100  (Early: 0, Late: 100)
+
+Total: 400
