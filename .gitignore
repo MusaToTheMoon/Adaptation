@@ -1,10 +1,13 @@
 # specific files
+temp.md
 foo.sh
 configs/task1/test.yaml
 ztrash/
 datasets/
 outputs/
 adaptation-env.yml
+/scratch/mk8737/farah/Adaptation/diagnosis/EMNLP2026_Adaptation.pdf
+git.txt
 
 # Python
 __pycache__/
@@ -41,3 +44,8 @@ __MACOSX/
 # archives / big vendor dirs
 *.tar.gz
 glibc-*/
+
+# Agents
+.claude
+.codex
+.agents

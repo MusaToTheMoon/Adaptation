@@ -153,7 +153,7 @@ run_step() {
 #     --batch_size 1
 
 run_step "KL profiling" \
-  python diagnosis/probe_kl_profile1.py \
+  python diagnosis/probe_kl_profile_medgemma1.py \
     --data_file "$VAL_FILE" \
     --output_dir "$KL_OUT_DIR" \
     --model_name "$MEDGEMMA" \

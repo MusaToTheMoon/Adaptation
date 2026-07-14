@@ -113,11 +113,11 @@ class LoRADialogueInference:
 
         if self.model_name == "mistral":
             self._load_mistral()
-        elif self.model_name == "medgemma":
+        elif self.model_name in ("medgemma", "llama"):
             self._load_medgemma()
         else:
             raise ValueError(
-                f"Unsupported --model_name '{model_name}'. Expected 'mistral' or 'medgemma'."
+                f"Unsupported --model_name '{model_name}'. Expected 'mistral', 'medgemma', or 'llama'."
             )
 
     def _load_mistral(self) -> None:
@@ -203,7 +203,7 @@ class LoRADialogueInference:
     ) -> str:
         if self.model_name == "mistral":
             return self._generate_raw_mistral(item, instruction, max_tokens, do_sample)
-        if self.model_name == "medgemma":
+        if self.model_name in ("medgemma", "llama"):
             return self._generate_raw_medgemma(item, instruction, max_tokens, do_sample)
         raise ValueError(f"Unsupported model_name '{self.model_name}'")
 

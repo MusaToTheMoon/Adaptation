@@ -215,10 +215,26 @@ def calculate_bert_score(
     if not hyps or not refs:
         return None
 
+    # bert_score's sent_encode() calls tokenizer.build_inputs_with_special_tokens([])
+    # for any "" input, a method the installed transformers no longer exposes on
+    # BertTokenizer — so an empty hyp/ref crashes the whole batch. Score only the
+    # non-empty pairs and count the rest as 0 (a model that produced no output
+    # shouldn't be scored as a match).
+    valid = [i for i, (h, r) in enumerate(zip(hyps, refs)) if h.strip() and r.strip()]
+    if not valid:
+        return {
+            "bert_precision": 0.0,
+            "bert_recall": 0.0,
+            "bert_f1": 0.0,
+            "bert_model": model_type,
+            "bert_num_layers": num_layers,
+            "bert_rescaled": bool(rescale_with_baseline),
+        }
+
     try:
         P, R, F1 = bert_score.score(
-            hyps,
-            refs,
+            [hyps[i] for i in valid],
+            [refs[i] for i in valid],
             lang=lang,
             model_type=model_type,
             num_layers=num_layers,
@@ -230,9 +246,12 @@ def calculate_bert_score(
         # the scores are designed to sit near 0 for random pairs and can be
         # legitimately negative; clipping floors those to 0 and destroys
         # signal. Trust the raw values.
-        p = P.detach().cpu().numpy()
-        r = R.detach().cpu().numpy()
-        f1 = F1.detach().cpu().numpy()
+        p = np.zeros(len(hyps), dtype=np.float64)
+        r = np.zeros(len(hyps), dtype=np.float64)
+        f1 = np.zeros(len(hyps), dtype=np.float64)
+        p[valid] = P.detach().cpu().numpy()
+        r[valid] = R.detach().cpu().numpy()
+        f1[valid] = F1.detach().cpu().numpy()
 
         return {
             "bert_precision": float(p.mean()),
@@ -337,10 +356,17 @@ def calculate_bert_score_per_example(
     if not hyps or not refs:
         return None
 
+    # See calculate_bert_score: empty strings crash bert_score's sent_encode()
+    # on the installed transformers version, so score only non-empty pairs and
+    # report 0 for the rest.
+    valid = [i for i, (h, r) in enumerate(zip(hyps, refs)) if h.strip() and r.strip()]
+    if not valid:
+        return [{"bert_precision": 0.0, "bert_recall": 0.0, "bert_f1": 0.0} for _ in hyps]
+
     try:
         P, R, F1 = bert_score.score(
-            hyps,
-            refs,
+            [hyps[i] for i in valid],
+            [refs[i] for i in valid],
             lang=lang,
             model_type=model_type,
             num_layers=num_layers,
@@ -350,9 +376,12 @@ def calculate_bert_score_per_example(
         )
 
         # No clipping — see note in calculate_bert_score.
-        p = P.detach().cpu().numpy()
-        r = R.detach().cpu().numpy()
-        f1 = F1.detach().cpu().numpy()
+        p = np.zeros(len(hyps), dtype=np.float64)
+        r = np.zeros(len(hyps), dtype=np.float64)
+        f1 = np.zeros(len(hyps), dtype=np.float64)
+        p[valid] = P.detach().cpu().numpy()
+        r[valid] = R.detach().cpu().numpy()
+        f1[valid] = F1.detach().cpu().numpy()
 
         rows = []
         for pi, ri, f1i in zip(p, r, f1):

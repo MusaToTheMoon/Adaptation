@@ -2,6 +2,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
+#SBATCH --exclude=cn270
 #SBATCH -p nvidia
 #SBATCH --gres=gpu:1
 #SBATCH --mem=64G
@@ -78,7 +79,7 @@ export HF_HUB_ENABLE_HF_TRANSFER=1
 echo "CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-<unset>}"
 nvidia-smi -L || true
 
-# python scripts/run_evaluation.py "configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
+python scripts/run_evaluation.py "configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
 
 # Task 2/3 additional step: run judge LLM on the generated predictions
 if [[ "$TASK_NUM" == "2" || "$TASK_NUM" == "3" ]]; then
@@ -86,8 +87,25 @@ if [[ "$TASK_NUM" == "2" || "$TASK_NUM" == "3" ]]; then
     echo "Error: OPENAI_API_KEY is not set. Add it to .env or export it before sbatch."
     exit 1
   fi
-  echo "MAMA"
-  python scripts/run_judge_standalone.py "configs/task${TASK_NUM}/${MODEL_TYPE}_${DATASET}.yaml"
+
+  PREDICTIONS_CSV="${PROJECT_ROOT}/results/predictions/task${TASK_NUM}/${DATASET}/${MODEL_TYPE}.csv"
+  METRICS_JSON="${PROJECT_ROOT}/results/metrics/task${TASK_NUM}/${DATASET}/${MODEL_TYPE}.json"
+  JUDGE_PROMPT_FILE="${PROJECT_ROOT}/prompts/judge-task${TASK_NUM}.txt"
+
+  JUDGE_EXTRA_ARGS=()
+  if [[ "$TASK_NUM" == "2" ]]; then
+    TASK_TYPE="answer_generation"
+  else
+    TASK_TYPE="dialogue_completion"
+    JUDGE_EXTRA_ARGS+=(--dataset_json "datasets/task3/${DATASET}.json")
+  fi
+
+  python scripts/run_judge_standalone.py \
+    --predictions_csv "$PREDICTIONS_CSV" \
+    --metrics_json "$METRICS_JSON" \
+    --task_type "$TASK_TYPE" \
+    --judge_prompt_file "$JUDGE_PROMPT_FILE" \
+    "${JUDGE_EXTRA_ARGS[@]}"
 fi
 
 # Cleanup: Move logs to the designated directory

@@ -21,6 +21,7 @@ from .med42 import Med42MCQHandler
 from .meditron import Meditron3MCqHandler
 from .silma import Silma9BMCQHandler
 from .autocap import AutoCAPMCQHandler
+from .autocap_medgemma import AutoCAPMedGemmaHandler
 
 import os
 
@@ -304,6 +305,23 @@ def load_model_handler(config):
             model_name=model_cfg.get(
                 "name",
                 "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+            ),
+            cache_dir=model_cfg.get("cache_dir"),
+            offline=model_cfg.get("offline", True),
+            candidate_languages=model_cfg.get("candidate_languages"),
+            top_k_languages=model_cfg.get("top_k_languages", 3),
+            selection_max_tokens=model_cfg.get("selection_max_tokens", 128),
+            weight_max_tokens=model_cfg.get("weight_max_tokens", 128),
+            cot_max_tokens=model_cfg.get("cot_max_tokens", 512),
+            reasoning_max_tokens=model_cfg.get("reasoning_max_tokens"),
+            do_sample=model_cfg.get("do_sample", False),
+        )
+
+    elif model_type == "autocap_medgemma":
+        return AutoCAPMedGemmaHandler(
+            model_name=model_cfg.get(
+                "name",
+                "google/medgemma-27b-text-it",
             ),
             cache_dir=model_cfg.get("cache_dir"),
             offline=model_cfg.get("offline", True),
